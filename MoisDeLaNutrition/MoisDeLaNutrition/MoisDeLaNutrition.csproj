@@ -279,6 +279,13 @@
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\scripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -323,6 +330,31 @@
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
+    <Content Include="scss\0-base\_functions.scss" />
+    <Content Include="scss\0-base\_mixins.scss" />
+    <Content Include="scss\1-variables\_breakpoints.scss" />
+    <Content Include="scss\1-variables\_colors.scss" />
+    <Content Include="scss\1-variables\_sizes.scss" />
+    <Content Include="scss\1-variables\_typography.scss" />
+    <Content Include="scss\2-layout\_footer.scss" />
+    <Content Include="scss\2-layout\_general.scss" />
+    <Content Include="scss\2-layout\_header.scss" />
+    <Content Include="scss\2-layout\_wrappers.scss" />
+    <Content Include="scss\3-typography\_general.scss" />
+    <Content Include="scss\3-typography\_titles.scss" />
+    <Content Include="scss\4-modules\_buttons.scss" />
+    <Content Include="scss\4-modules\_carrousels.scss" />
+    <Content Include="scss\4-modules\_forms.scss" />
+    <Content Include="scss\4-modules\_menus.scss" />
+    <Content Include="scss\5-templates\_index.scss" />
+    <Content Include="scss\5-templates\_page404.scss" />
+    <Content Include="scss\application.scss" />
+    <Content Include="Views\Landing.cshtml" />
+    <Content Include="Views\Website.cshtml" />
+    <Content Include="Views\_Master.cshtml" />
+    <Content Include="Views\Partials\FooterView.cshtml" />
+    <Content Include="Views\Partials\HeaderView.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

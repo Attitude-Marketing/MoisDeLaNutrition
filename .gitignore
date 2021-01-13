@@ -24,3 +24,6 @@
 
 # Ignore the Models Builder models out of date flag
 **/App_Data/Models/ood.flag
+MoisDeLaNutrition/MoisDeLaNutrition/obj/Debug/
+MoisDeLaNutrition/MoisDeLaNutrition/App_Data/Models/all.generated.cs
+MoisDeLaNutrition/MoisDeLaNutrition/App_Data/Models/models.generated.cs

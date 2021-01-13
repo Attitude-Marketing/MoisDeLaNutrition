@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    var currentLang = Umbraco.Field("#CurrentLanguage").ToString();
+    var pageNode = Model.Content;
+    var siteid = UmbracoHelpers.GetSiteId(Request.Url.Host);
+    var lang = Umbraco.Field("#CurrentLanguage").ToString().ToLower();
+    var alt = String.Format("alt{0}", lang);
+
+    var brandNode = Umbraco.TypedContent(siteid);
+    var langNode = brandNode.Children.FirstOrDefault(x => x.Name.ToLower() == Umbraco.Field("#CurrentLanguage").ToString().ToLower());
+    var langto = langNode.Name == "FR" ? "EN" : "FR";
+}
+<p>header</p>

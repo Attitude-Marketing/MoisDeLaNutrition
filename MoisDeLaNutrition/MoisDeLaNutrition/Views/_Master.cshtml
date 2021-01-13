@@ -1,0 +1,192 @@
+﻿@using ClientDependency.Core.Mvc
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+
+    var domainRoot = Request.Url.GetLeftPart(UriPartial.Authority);
+    var siteid = UmbracoHelpers.GetSiteId(Request.Url.Host);
+    var brandNode = Umbraco.TypedContent(siteid);
+    var currentLang = Umbraco.Field("#CurrentLanguage").ToString();
+    var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+    var pageNode = Model.Content;
+
+    @*metas*@
+    var browserTitle = pageNode.GetPropertyValue<string>("browserTitle");
+    var metaDesc = pageNode.GetPropertyValue<string>("metaDescription", true);
+    var metaKeywords = pageNode.GetPropertyValue<string>("metaKeywords", true);
+    var gtmQuerystring = "";
+    Random rand = new Random();
+    int randomNumber = rand.Next(10, 10000);
+    var devrandomizer = "";
+    var domain = brandNode.UrlWithDomain();
+
+    if (domain.Contains("am-dev") || domain.Contains(".local"))
+    {
+        gtmQuerystring = "&gtm_auth=OGoVk8WH1rlMVxDBd0_KsQ&gtm_preview=env-4&gtm_cookies_win=x";
+        devrandomizer = string.Format("?v={0}", randomNumber);
+    }
+
+    @*sharing*@
+    //le true signifie que si la pagenode n'a pas de valeur, va chercher la valeur du parent.
+    //ex.: Si la page n'a pas de SEO, va chercher le seo genérique de la langnode.
+    var ogUrl = Request.Url.ToString();
+    var ogType = pageNode.GetPropertyValue<string>("oGType", true);
+
+    // Si le OG Title est vide, on prendre le title. Pareil pour le OG Description avec le Meta description
+    var ogTitle = pageNode.GetPropertyValue<string>("oGTitle").IsNullOrWhiteSpace() ? browserTitle : pageNode.GetPropertyValue<string>("oGTitle");
+    var ogDescription = pageNode.GetPropertyValue<string>("oGDescription").IsNullOrWhiteSpace() ? metaDesc : pageNode.GetPropertyValue<string>("oGDescription");
+
+
+    var ogImage = pageNode.GetPropertyValue<IPublishedContent>("oGImage", true);
+    var ogImageUrl = "";
+    if (ogImage != null)
+    {
+        ogImageUrl = domainRoot + ogImage.Url;
+    }
+    var twitterHandle = pageNode.GetPropertyValue<string>("twitterHandle", true);
+
+    @*tracking*@
+    var googleId = brandNode.GetPropertyValue<string>("gtagId");
+
+    @*custom script*@
+    var customScript = brandNode.GetPropertyValue<string>("customScript");
+    var customBody = brandNode.GetPropertyValue<string>("customBody");
+
+    Html.RequiresCss("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+    //Html.RequiresCss("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");
+    //Html.RequiresCss("https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css");
+    Html.RequiresCss("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Dosis:wght@500;700;800&family=Quicksand:wght@300;400;500;700&display=swap");
+    Html.RequiresCss("~/Content/application.css" + devrandomizer);
+
+    Html.RequiresJs("https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", 1);
+    Html.RequiresJs("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", 2);
+    //Html.RequiresJs("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", 2);
+    //Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js", 2);
+    //Html.RequiresJs("https://kit.fontawesome.com/cf10860749.js", 2);
+    //Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js", 2);
+    //Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollToPlugin.min.js", 2);
+    //Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js", 2);
+    Html.RequiresJs("~/Scripts/scripts.js" + devrandomizer, 3);
+}
+<!DOCTYPE html>
+<html lang="@currentLang.ToLower()">
+<head>
+    @*=================================================================
+        --metas
+        =================================================================*@
+    <meta charset="utf-8" />
+    @if (!browserTitle.IsNullOrWhiteSpace())
+    {
+        <title>@(browserTitle)</title>
+    }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    @if (!metaKeywords.IsNullOrWhiteSpace())
+    {
+        <meta name="keywords" content="@metaKeywords" />
+    }
+    @if (!metaDesc.IsNullOrWhiteSpace())
+    {
+        <meta name="description" content="@metaDesc" />
+    }
+    @*=================================================================
+        --sharing meta
+        =================================================================*@
+    @if (!ogTitle.IsNullOrWhiteSpace())
+    {
+        @*facebook meta sharing*@
+        <meta property="og:url" content="@ogUrl" />
+        if (!ogType.IsNullOrWhiteSpace())
+        {
+            <meta property="og:type" content="@ogType" />
+        }
+        <meta property="og:title" content="@ogTitle" />
+        <meta property="og:description" content="@ogDescription" />
+        if (ogImage != null)
+        {
+            <meta property="og:image" content="@ogImageUrl" />
+        }
+        @*twitter meta sharing*@
+        <meta name="twitter:card" content="@ogDescription" />
+        <meta name="twitter:site" content="@twitterHandle" />
+        <meta name="twitter:title" content="@ogTitle" />
+        <meta name="twitter:description" content="@ogDescription" />
+        if (ogImage != null)
+        {
+            <meta name="twitter:image" content="@ogImageUrl" />
+        }
+    }
+    @*=================================================================
+        --favicon
+        =================================================================*@
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    @*=================================================================
+        --styles
+        =================================================================*@
+    @*<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">*@
+    @Html.Raw(Html.RenderCssHere())
+
+    @*=================================================================
+        --google tag manager
+        =================================================================*@
+    @if (!googleId.IsNullOrWhiteSpace())
+    {
+        <!-- Google Tag Manager -->
+        <script>
+(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '@(Html.Raw(gtmQuerystring))'; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', '@(googleId)');</script>
+        <!-- End Google Tag Manager -->
+    }
+
+    @*=================================================================
+        --custom script
+        =================================================================*@
+    @customScript
+</head>
+<body class="no-touch @(pageNode.DocumentTypeAlias)-page">
+    @*=================================================================
+         --google tag manager
+        =================================================================*@
+    @if (!googleId.IsNullOrWhiteSpace())
+    {
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=@(googleId)@(Html.Raw(gtmQuerystring))"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    }
+
+    @*custom script*@
+    @customBody
+    @*header content*@
+    @Html.Partial("~/Views/Partials/HeaderView.cshtml")
+
+    @if (pageNode.DocumentTypeAlias.ToLower() != "landing")
+    {
+        @Html.Partial("~/Views/Partials/bannerPageView.cshtml")
+    }
+    @*body content*@
+    @RenderBody()
+    @*footer content*@
+    @Html.Partial("~/Views/Partials/FooterView.cshtml")
+    @*=================================================================
+        --scripts
+        =================================================================*@
+    @*<script src="https://kit.fontawesome.com/cf10860749.js" crossorigin="anonymous"></script>*@
+    @Html.Raw(Html.RenderJsHere())
+</body>
+</html>

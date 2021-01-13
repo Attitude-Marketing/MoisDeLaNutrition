@@ -1,0 +1,43 @@
+ /* FONTS */
+
+@mixin font-face($family, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$path}.eot');
+    src: url('#{$path}.eot?#iefix') format('embedded-opentype'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg##{$family}') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+	}
+}
+
+// ==========================================================================
+// MIXINS - MEDIA QUERIES
+// ==========================================================================
+
+@mixin screen($minmax: max, $width: 1024px) {
+  @media only screen and (#{$minmax}-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-width($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin max-width($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin print() {
+  @media only print {
+    @content;
+  }
+ }
+
+ @mixin transition($speed) {
+  transition: all $speed ease-out;
+ }

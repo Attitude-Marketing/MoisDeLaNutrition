@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+    var child = Model.Content.Children().FirstOrDefault(x => x.Name == Umbraco.Field("#CurrentLanguage").ToString());
+    if (child != null)
+    {
+        Response.RedirectPermanent(child.Url);
+    }
+}

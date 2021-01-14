@@ -51,13 +51,12 @@
     var customScript = brandNode.GetPropertyValue<string>("customScript");
     var customBody = brandNode.GetPropertyValue<string>("customBody");
 
-    Html.RequiresCss("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
-    Html.RequiresCss("https://use.typekit.net/zto4qaf.css");
-    Html.RequiresCss("~/Content/application.css" + devrandomizer);
-
-    Html.RequiresJs("https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", 1);
-    Html.RequiresJs("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", 2);
-    Html.RequiresJs("~/Scripts/scripts.js" + devrandomizer, 3);
+    //Html.RequiresCss("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+    //Html.RequiresCss("https://use.typekit.net/zto4qaf.css");
+    //Html.RequiresCss("~/Content/application.css" + devrandomizer);
+    //Html.RequiresJs("https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", 1);
+    //Html.RequiresJs("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", 2);
+    //Html.RequiresJs("~/Scripts/scripts.js" + devrandomizer, 3);
 }
 <!DOCTYPE html>
 <html lang="@currentLang.ToLower()">
@@ -124,6 +123,9 @@
         =================================================================*@
     @*<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">*@
     @Html.Raw(Html.RenderCssHere())
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zto4qaf.css">
+    <link rel="stylesheet" href="~/Content/application.css">
 
     @*=================================================================
         --google tag manager
@@ -180,5 +182,8 @@
         =================================================================*@
     @*<script src="https://kit.fontawesome.com/cf10860749.js" crossorigin="anonymous"></script>*@
     @Html.Raw(Html.RenderJsHere())
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/scripts.js"></script>
 </body>
 </html>

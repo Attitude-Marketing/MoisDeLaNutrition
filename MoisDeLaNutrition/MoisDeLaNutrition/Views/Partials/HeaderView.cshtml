@@ -9,6 +9,41 @@
 
     var brandNode = Umbraco.TypedContent(siteid);
     var langNode = brandNode.Children.FirstOrDefault(x => x.Name.ToLower() == Umbraco.Field("#CurrentLanguage").ToString().ToLower());
-    var langto = langNode.Name == "FR" ? "EN" : "FR";
 }
-<p>header</p>
+
+@*<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <div id="header-title">
+                <p class="first-line text-center">What you eat.</p>
+                <p class="second-line text-center">Unique, like you.</p>
+            </div>
+            <p id="header-intro" class="text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+        </div>
+    </div>
+</div>*@
+<section id="navs">
+    <nav id="desktop-nav">
+        <ul>
+            @* AJOUTER LA CLASSE CURRENT AU LI QUI CORRESPOND À LA PAGE ACTUEL *@
+            @* AJOUTER LE ID langSwitch AU LI DU LANGSWITCH *@
+            <li class="current"><a href="">Choose your food profile</a></li>
+            <li><a href="">Facts about nutrition</a></li>
+            <li><a href="">About the Nutrition Month</a></li>
+            <li id="langSwitch"><a href="">FR</a></li>
+        </ul>
+    </nav>
+    <div id="mobile-nav">
+        <div id="topbar">
+            <div id="hamburger">
+                H
+            </div>
+            <div id="logos">
+                logo
+            </div>
+        </div>
+        <div id="panel" class="">
+
+        </div>
+    </div>
+</section>

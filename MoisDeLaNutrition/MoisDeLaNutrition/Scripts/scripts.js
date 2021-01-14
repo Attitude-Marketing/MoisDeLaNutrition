@@ -39,4 +39,8 @@ END GLOBAL PROPERTIES
 **********************************************************************************************/
 $(document).ready(function () {
     console.log("doc ready");
+    $("#hamburger").click(function () {
+        $("#panel").toggle();
+        $("#panel").toggleClass("visible");
+    });
 }); // end doc ready

@@ -52,19 +52,11 @@
     var customBody = brandNode.GetPropertyValue<string>("customBody");
 
     Html.RequiresCss("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
-    //Html.RequiresCss("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");
-    //Html.RequiresCss("https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css");
-    Html.RequiresCss("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Dosis:wght@500;700;800&family=Quicksand:wght@300;400;500;700&display=swap");
+    Html.RequiresCss("https://use.typekit.net/zto4qaf.css");
     Html.RequiresCss("~/Content/application.css" + devrandomizer);
 
     Html.RequiresJs("https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", 1);
     Html.RequiresJs("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", 2);
-    //Html.RequiresJs("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", 2);
-    //Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js", 2);
-    //Html.RequiresJs("https://kit.fontawesome.com/cf10860749.js", 2);
-    //Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js", 2);
-    //Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollToPlugin.min.js", 2);
-    //Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js", 2);
     Html.RequiresJs("~/Scripts/scripts.js" + devrandomizer, 3);
 }
 <!DOCTYPE html>

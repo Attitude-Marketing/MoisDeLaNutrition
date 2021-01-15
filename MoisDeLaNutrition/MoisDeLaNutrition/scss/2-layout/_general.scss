@@ -49,3 +49,12 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+.noBrMobile {
+    br {
+        @media screen and (max-width: 767px) {
+            display:none;
+        }
+    }
+}
+

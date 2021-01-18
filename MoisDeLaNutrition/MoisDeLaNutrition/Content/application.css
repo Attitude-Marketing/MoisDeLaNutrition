@@ -50,6 +50,68 @@ textarea, input {
   outline: none;
   -webkit-appearance: none; }
 
+.dfcLogoSvg .a {
+  fill: #00a1ed; }
+
+.dfcLogoSvg .b {
+  fill: #fff; }
+
+.dietitianLogoSvg .a {
+  fill: #fff; }
+
+.dietitianLogoSvg .b {
+  fill: #231f20; }
+
+.dietitianLogoSvg .c {
+  fill: #be1e2d; }
+
+.dietitianLogoSvg .d {
+  fill: #61aa45; }
+
+#nutritionFactsListing {
+  margin-top: -54vh; }
+
+.pageHeader {
+  padding: 100px 0 54vh 0;
+  background: #31afc6;
+  background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%); }
+
+#headerLogosContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 40px; }
+  @media screen and (max-width: 576px) {
+    #headerLogosContainer {
+      flex-direction: column; } }
+  #headerLogosContainer .headerLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 12px; }
+    @media screen and (max-width: 576px) {
+      #headerLogosContainer .headerLogo {
+        margin-right: 0; } }
+    @media screen and (max-width: 576px) {
+      #headerLogosContainer .headerLogo {
+        flex-direction: column; } }
+    #headerLogosContainer .headerLogo:last-child {
+      margin-right: 0; }
+    #headerLogosContainer .headerLogo .headerLogoTitle {
+      color: #fff;
+      font-size: 11px;
+      line-height: 14px;
+      font-family: "century-gothic", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      margin-right: 8px;
+      max-width: 115px;
+      text-align: right; }
+      @media screen and (max-width: 576px) {
+        #headerLogosContainer .headerLogo .headerLogoTitle {
+          text-align: center;
+          margin-right: 0; } }
+
 footer #footerLeft {
   background: #fff;
   width: 100%;
@@ -169,17 +231,17 @@ footer #footerLogo {
     line-height: 14px;
     margin-left: 10px;
     max-width: 145px; }
-  footer #footerLogo .dfcLogoSvg .a {
-    fill: #00a1ed; }
-  footer #footerLogo .dfcLogoSvg .b {
-    fill: #fff; }
 
 #header-title {
   font-family: "filson-pro", sans-serif;
   font-style: normal;
   font-weight: 900;
   text-shadow: 0px 0px 6px #FFFFFF;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+  stroke: 2px #31BED7;
+  -webkit-text-stroke: 2px #31BED7; }
   #header-title .first-line {
     font-size: 6.5vw;
     line-height: 6.5vw;
@@ -194,7 +256,8 @@ footer #footerLogo {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px; }
+  line-height: 24px;
+  color: #fff; }
 
 .footerNewsletter #fnTitle {
   font-family: "filson-pro", sans-serif;
@@ -308,8 +371,20 @@ footer #footerLogo {
     margin-left: 14px;
     transition: all 0.2s ease-out; }
 
+#nutritionFactsListingBg {
+  position: relative; }
+  #nutritionFactsListingBg:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #31BED7;
+    z-index: -1;
+    content: ""; }
+
 #nutritionFactsListing {
-  background: #31BED7;
   padding: 60px 0 120px 0; }
 
 .cardClickable {

@@ -1,3 +1,59 @@
 // ==========================================================================
 // LAYOUT - HEADER
 // ==========================================================================
+$vhVar: 54vh;
+
+#nutritionFactsListing {
+    margin-top: -$vhVar;
+}
+
+.pageHeader {
+    padding: 100px 0 $vhVar 0;
+    background: rgb(49,175,198);
+    background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, rgba(49,175,198,1) 0%, rgba(77,208,229,1) 100%);
+}
+
+#headerLogosContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 576px) {
+        flex-direction: column;
+    }
+
+    .headerLogo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 12px;
+
+        @media screen and (max-width: 576px) {
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .headerLogoTitle {
+            color: $white;
+            font-size: 11px;
+            line-height: 14px;
+            @include century-400;
+            margin-right: 8px;
+            max-width: 115px;
+            text-align: right;
+
+            @media screen and (max-width: 576px) {
+                text-align: center;
+                margin-right: 0;
+            }
+        }
+    }
+}

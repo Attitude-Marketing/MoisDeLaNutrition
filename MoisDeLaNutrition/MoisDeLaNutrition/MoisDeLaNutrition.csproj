@@ -280,6 +280,9 @@
     <Content Include="Content\application.css" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\placeholders\Arrow_Whhite.svg" />
+    <Content Include="images\placeholders\Bg_Pattern.svg" />
+    <Content Include="images\placeholders\Logo_NM_EN.svg" />
     <Content Include="images\placeholders\placeholder-vertical.jpg" />
     <Content Include="images\placeholders\pointing_pink.mp4" />
     <Content Include="Scripts\bootstrap.js" />

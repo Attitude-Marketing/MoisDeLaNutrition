@@ -72,7 +72,8 @@ textarea, input {
   margin-top: -54vh; }
 
 .pageHeader {
-  padding: 100px 0 54vh 0;
+  padding-top: 100px;
+  padding-bottom: 54vh;
   background: #31afc6;
   background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%); }
 

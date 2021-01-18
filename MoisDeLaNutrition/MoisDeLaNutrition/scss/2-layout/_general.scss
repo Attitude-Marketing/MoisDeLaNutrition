@@ -58,3 +58,9 @@ table {
     }
 }
 
+textarea, input {
+    outline: none;
+    -webkit-appearance: none;
+}
+
+$basicTransition: all 0.2s ease-out;

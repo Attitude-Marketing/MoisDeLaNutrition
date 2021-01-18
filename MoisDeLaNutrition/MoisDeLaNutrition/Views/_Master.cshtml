@@ -168,11 +168,6 @@
     @customBody
     @*header content*@
     @Html.Partial("~/Views/Partials/HeaderView.cshtml")
-
-    @if (pageNode.DocumentTypeAlias.ToLower() != "landing")
-    {
-        @Html.Partial("~/Views/Partials/bannerPageView.cshtml")
-    }
     @*body content*@
     @RenderBody()
     @*footer content*@

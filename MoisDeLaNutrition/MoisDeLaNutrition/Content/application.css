@@ -46,6 +46,10 @@ table {
   .noBrMobile br {
     display: none; } }
 
+textarea, input {
+  outline: none;
+  -webkit-appearance: none; }
+
 footer {
   margin-top: 100px; }
   footer #footerLeft {
@@ -203,80 +207,244 @@ footer {
   font-size: 16px;
   line-height: 24px; }
 
-#navs #desktop-nav {
-  margin: 20px 30px 0 0; }
-  @media screen and (max-width: 768px) {
-    #navs #desktop-nav {
-      display: none; } }
-  #navs #desktop-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: center;
-    flex-wrap: wrap; }
-    #navs #desktop-nav ul li {
-      margin-right: 20px;
-      text-align: center; }
-      #navs #desktop-nav ul li:last-child {
-        margin-right: 0; }
-      #navs #desktop-nav ul li#langSwitch {
-        position: relative; }
-        #navs #desktop-nav ul li#langSwitch:before {
-          content: "";
-          position: absolute;
-          left: 0px;
-          height: 10px;
-          width: 1px;
-          top: 50%;
-          transform: translateY(-50%);
-          background: red; }
-      #navs #desktop-nav ul li.current a {
-        font-family: "filson-pro", sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        text-decoration: underline; }
-      #navs #desktop-nav ul li:not(.current) a {
-        margin-left: 20px;
-        text-decoration: none;
-        font-family: "filson-pro", sans-serif;
-        font-style: normal;
-        font-weight: 400; }
-      #navs #desktop-nav ul li a {
-        display: inline-block;
-        font-size: 16px;
-        line-height: 22px; }
-        #navs #desktop-nav ul li a:hover {
+#navs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; }
+  #navs #desktop-nav {
+    margin: 20px 30px 0 0; }
+    @media screen and (max-width: 768px) {
+      #navs #desktop-nav {
+        display: none; } }
+    #navs #desktop-nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-content: center;
+      flex-wrap: wrap; }
+      #navs #desktop-nav ul li {
+        margin-right: 20px;
+        text-align: center; }
+        #navs #desktop-nav ul li:last-child {
+          margin-right: 0; }
+        #navs #desktop-nav ul li#langSwitch {
+          position: relative; }
+          #navs #desktop-nav ul li#langSwitch:before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            height: 10px;
+            width: 1px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: red; }
+        #navs #desktop-nav ul li.current a {
+          font-family: "filson-pro", sans-serif;
+          font-style: normal;
+          font-weight: 700;
           text-decoration: underline; }
+        #navs #desktop-nav ul li:not(.current) a {
+          margin-left: 20px;
+          text-decoration: none;
+          font-family: "filson-pro", sans-serif;
+          font-style: normal;
+          font-weight: 400; }
+        #navs #desktop-nav ul li a {
+          display: inline-block;
+          font-size: 16px;
+          line-height: 22px; }
+          #navs #desktop-nav ul li a:hover {
+            text-decoration: underline; }
+  #navs #mobile-nav {
+    display: none; }
+    @media screen and (max-width: 768px) {
+      #navs #mobile-nav {
+        display: block; } }
+    #navs #mobile-nav #topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: red;
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px; }
+    #navs #mobile-nav #panel {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      min-height: 50vh;
+      background: green;
+      z-index: 1;
+      display: none; }
+      #navs #mobile-nav #panel.visible {
+        display: block; }
+        @media screen and (max-width: 768px) {
+          #navs #mobile-nav #panel.visible {
+            display: block; } }
 
-#navs #mobile-nav {
-  display: none; }
-  @media screen and (max-width: 768px) {
-    #navs #mobile-nav {
-      display: block; } }
-  #navs #mobile-nav #topbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background: red;
-    z-index: 2;
+.globalCta, .triggerGlobalArrow {
+  font-family: "filson-pro", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.34px;
+  text-decoration: none !important; }
+  .globalCta .globalCtaArrow, .triggerGlobalArrow .globalCtaArrow {
+    margin-left: 10px; }
+  .globalCta:hover .globalCtaArrow, .triggerGlobalArrow:hover .globalCtaArrow {
+    margin-left: 14px;
+    transition: all 0.2s ease-out; }
+
+#nutritionFactsListing {
+  background: #31BED7;
+  padding: 60px 0 120px 0; }
+
+.cardClickable {
+  /*See below for hover effects*/ }
+  .cardClickable .cardContainer {
+    min-height: 380px;
+    background: #fff;
+    border-radius: 15px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px; }
-  #navs #mobile-nav #panel {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    min-height: 50vh;
-    background: green;
-    z-index: 1;
-    display: none; }
-    #navs #mobile-nav #panel.visible {
-      display: block; }
-      @media screen and (max-width: 768px) {
-        #navs #mobile-nav #panel.visible {
-          display: block; } }
+    margin-bottom: 30px; }
+    @media screen and (max-width: 576px) {
+      .cardClickable .cardContainer {
+        min-height: unset; } }
+    @media screen and (max-width: 576px) {
+      .cardClickable .cardContainer {
+        flex-direction: column-reverse; } }
+    .cardClickable .cardContainer .cardContent {
+      flex: 1 1 57%;
+      padding: 40px 30px; }
+      @media screen and (max-width: 576px) {
+        .cardClickable .cardContainer .cardContent {
+          flex: 1 1 100%; } }
+      .cardClickable .cardContainer .cardContent .cardTitle {
+        font-family: "filson-pro", sans-serif;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 34px;
+        line-height: 41px;
+        color: #31BED7;
+        margin-bottom: 40px; }
+      .cardClickable .cardContainer .cardContent .cardTags {
+        display: none;
+        margin-bottom: 40px; }
+      .cardClickable .cardContainer .cardContent .cardCta {
+        font-family: "filson-pro", sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 20px;
+        color: #31BED7; }
+        .cardClickable .cardContainer .cardContent .cardCta .cardCtaArrow .cardCtaArrowStyle {
+          fill: #31bed7; }
+    .cardClickable .cardContainer .cardImgContainer {
+      flex: 1 1 43%;
+      background: #fff;
+      border-bottom-right-radius: 15px;
+      border-top-right-radius: 15px;
+      overflow: hidden !important; }
+      @media screen and (max-width: 576px) {
+        .cardClickable .cardContainer .cardImgContainer {
+          border-radius: 15px; } }
+      .cardClickable .cardContainer .cardImgContainer .cardImg {
+        width: 100%;
+        height: 100%;
+        transform: scale(1); }
+        @media screen and (max-width: 576px) {
+          .cardClickable .cardContainer .cardImgContainer .cardImg {
+            height: 100%;
+            min-height: 200px; } }
+        .cardClickable .cardContainer .cardImgContainer .cardImg img {
+          max-width: 100%;
+          height: auto; }
+    .cardClickable .cardContainer:hover .cardImgContainer .cardImg {
+      transform: scale(1.05);
+      transition: all 0.2s ease-out; }
+
+.findRSection {
+  padding-top: 100px; }
+  .findRSection .findRecipesContent {
+    padding-right: 12%; }
+    @media screen and (max-width: 1200px) {
+      .findRSection .findRecipesContent {
+        padding-right: 0%; } }
+    @media screen and (max-width: 576px) {
+      .findRSection .findRecipesContent {
+        padding-right: 0; } }
+    .findRSection .findRecipesContent .findRTitle {
+      font-family: "filson-pro", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -1.6px;
+      font-size: 80px;
+      line-height: 82px;
+      margin-bottom: 30px; }
+    .findRSection .findRecipesContent .findRText {
+      margin-bottom: 30px;
+      color: #fff;
+      font-family: "century-gothic", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      padding-right: 15%; }
+      @media screen and (max-width: 1200px) {
+        .findRSection .findRecipesContent .findRText {
+          padding-right: 10%; } }
+      @media screen and (max-width: 576px) {
+        .findRSection .findRecipesContent .findRText {
+          padding-right: 0; } }
+    .findRSection .findRecipesContent .findRCta {
+      color: #fff; }
+      .findRSection .findRecipesContent .findRCta .findRCtaArrow .findRCtaArrowStyle {
+        fill: #fff; }
+  .findRSection .finRImgContainer {
+    height: 380px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative; }
+    @media screen and (max-width: 1200px) {
+      .findRSection .finRImgContainer {
+        margin-top: 60px; } }
+    .findRSection .finRImgContainer .findImgTxt {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding: 40px 30px; }
+      .findRSection .finRImgContainer .findImgTxt .findImgTxtTitle {
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: 0px 0px 9px #00333C79;
+        font-family: "filson-pro", sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 72px; }
+      .findRSection .finRImgContainer .findImgTxt .globalCta {
+        color: #fff; }
+        .findRSection .finRImgContainer .findImgTxt .globalCta .globalCtaArrowStyle {
+          fill: #fff; }
+    .findRSection .finRImgContainer .findRImg {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+      transform: scale(1); }
+    .findRSection .finRImgContainer:hover .findRImg {
+      transform: scale(1.05);
+      transition: all 0.2s ease-out; }

@@ -93,3 +93,9 @@ $basicTransition: all 0.2s ease-out;
         fill: #61aa45;
     }
 }
+.img-responsive {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}

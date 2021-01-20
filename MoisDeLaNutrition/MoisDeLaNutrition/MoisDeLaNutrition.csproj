@@ -281,7 +281,9 @@
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\placeholders\Arrow_Whhite.svg" />
+    <Content Include="images\placeholders\Bg_Pattern - Copie.svg" />
     <Content Include="images\placeholders\Bg_Pattern.svg" />
+    <Content Include="images\placeholders\Bg_Pattern_On_White.svg" />
     <Content Include="images\placeholders\Logo_NM_EN.svg" />
     <Content Include="images\placeholders\placeholder-vertical.jpg" />
     <Content Include="images\placeholders\pointing_pink.mp4" />
@@ -366,6 +368,10 @@
     <Content Include="Views\NutritionFactsListing.cshtml" />
     <Content Include="Views\Profile.cshtml" />
     <Content Include="scss\5-templates\_nutritonFactsListing.scss" />
+    <Content Include="Views\Partials\dfcSvg.cshtml" />
+    <Content Include="Views\Partials\dieticianSvg.cshtml" />
+    <Content Include="scss\5-templates\_nutritonFact.scss" />
+    <Content Include="scss\5-templates\_about.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

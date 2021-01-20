@@ -68,14 +68,29 @@ textarea, input {
 .dietitianLogoSvg .d {
   fill: #61aa45; }
 
+.img-responsive {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: inline-block; }
+
 #nutritionFactsListing {
   margin-top: -54vh; }
 
-.pageHeader {
+#nutritionFact {
+  margin-top: -29vh; }
+
+.pageHeader.full {
   padding-top: 100px;
   padding-bottom: 54vh;
   background: #31afc6;
   background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%); }
+
+.pageHeader.article {
+  padding-top: 100px;
+  padding-bottom: 29vh;
+  background: white;
+  background: url(../../images/placeholders/Bg_Pattern_On_White.svg) repeat, linear-gradient(90deg, white 0%, white 100%); }
 
 #headerLogosContainer {
   display: flex;
@@ -112,6 +127,49 @@ textarea, input {
         #headerLogosContainer .headerLogo .headerLogoTitle {
           text-align: center;
           margin-right: 0; } }
+
+footer .followingContent {
+  background: #31BED7; }
+  footer .followingContent #followingContentImg {
+    width: 100%;
+    height: 100%;
+    min-height: 300px; }
+  footer .followingContent #followingContentxtContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none !important; }
+    @media screen and (max-width: 768px) {
+      footer .followingContent #followingContentxtContainer {
+        padding: 60px 10%; } }
+    footer .followingContent #followingContentxtContainer #followingContentTxt {
+      padding-right: 20px;
+      padding-left: 10%;
+      text-align: right; }
+      @media screen and (max-width: 768px) {
+        footer .followingContent #followingContentxtContainer #followingContentTxt {
+          padding-right: 0;
+          padding-left: 0;
+          text-align: center; } }
+      footer .followingContent #followingContentxtContainer #followingContentTxt #followingContentTagline {
+        font-family: "filson-pro", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 32px;
+        color: #fff; }
+      footer .followingContent #followingContentxtContainer #followingContentTxt #followingContentTitle {
+        font-family: "filson-pro", sans-serif;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 38px;
+        color: #fff; }
+    footer .followingContent #followingContentxtContainer:hover #followingContentArrow {
+      transition: all 0.2s ease-out;
+      transform: scale(1.05); }
 
 footer #footerLeft {
   background: #fff;
@@ -233,6 +291,36 @@ footer #footerLogo {
     margin-left: 10px;
     max-width: 145px; }
 
+.rte {
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "century-gothic", sans-serif;
+  font-style: normal;
+  font-weight: 400; }
+  .rte a {
+    text-decoration: underline;
+    color: #31BED7; }
+  .rte ul {
+    list-style-type: disc;
+    list-style-position: inside; }
+  .rte ol {
+    list-style-type: decimal;
+    list-style-position: inside; }
+  .rte .rteTitle {
+    margin-bottom: 15px;
+    font-size: 32px;
+    line-height: 42px;
+    font-family: "filson-pro", sans-serif;
+    font-style: normal;
+    font-weight: 400; }
+  .rte .rteRessources {
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 42px;
+    font-family: "filson-pro", sans-serif;
+    font-style: normal;
+    font-weight: 800; }
+
 #header-title {
   font-family: "filson-pro", sans-serif;
   font-style: normal;
@@ -275,6 +363,26 @@ footer #footerLogo {
   font-size: 16px;
   line-height: 24px; }
 
+#article-title {
+  font-size: 48px;
+  line-height: 58px;
+  font-family: "filson-pro", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  color: #000;
+  text-align: left; }
+
+#article-tagline {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "century-gothic", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #31BED7; }
+
 #navs {
   position: absolute;
   top: 0;
@@ -315,7 +423,7 @@ footer #footerLogo {
           text-decoration: underline; }
         #navs #desktop-nav ul li:not(.current) a {
           margin-left: 20px;
-          text-decoration: none;
+          text-decoration: none !important;
           font-family: "filson-pro", sans-serif;
           font-style: normal;
           font-weight: 400; }
@@ -325,6 +433,17 @@ footer #footerLogo {
           line-height: 22px; }
           #navs #desktop-nav ul li a:hover {
             text-decoration: underline; }
+        #navs #desktop-nav ul li#backToPrev {
+          flex-grow: 1;
+          text-align: left;
+          display: flex;
+          flex-direction: row; }
+          #navs #desktop-nav ul li#backToPrev a {
+            margin-left: 30px;
+            text-decoration: none !important; }
+          #navs #desktop-nav ul li#backToPrev #backToPrevArrow {
+            margin-right: 4px;
+            align-content: center; }
   #navs #mobile-nav {
     display: none; }
     @media screen and (max-width: 768px) {
@@ -528,3 +647,38 @@ footer #footerLogo {
     .findRSection .finRImgContainer:hover .findRImg {
       transform: scale(1.05);
       transition: all 0.2s ease-out; }
+
+#nutritionFactBg {
+  position: relative; }
+  #nutritionFactBg:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #EAF9FB;
+    z-index: -1;
+    content: ""; }
+
+#nutritionFact {
+  padding: 60px 0 120px 0; }
+  #nutritionFact #embedVideo {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin-bottom: 80px; }
+    #nutritionFact #embedVideo .videoKeepRatio {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+
+#about {
+  background: white;
+  background: url(../../images/placeholders/Bg_Pattern_On_White.svg) repeat, linear-gradient(90deg, white 0%, white 100%);
+  min-height: 50vh; }
+  #about #aboutImg {
+    border-radius: 15px; }

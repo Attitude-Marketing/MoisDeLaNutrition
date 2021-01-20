@@ -43,3 +43,19 @@
         line-height:24px;
     }
 }
+#article-title {
+    font-size: 48px;
+    line-height: 58px;
+    @include filson-900;
+    color: $black;
+    text-align: left;
+}
+#article-tagline {
+    font-size: 24px;
+    line-height: 32px;
+    @include century-italic-700;
+    color: $black;
+    text-align: left;
+    margin-bottom:10px;
+    color:$scooter;
+}

@@ -2,17 +2,27 @@
 // LAYOUT - HEADER
 // ==========================================================================
 $vhVar: 54vh;
+$vhVarArticle: 29vh;
 
 #nutritionFactsListing {
     margin-top: -$vhVar;
 }
-
-.pageHeader {
-    padding-top:100px;
-    padding-bottom:$vhVar;
+#nutritionFact {
+    margin-top: -$vhVarArticle;
+}
+.pageHeader.full {
+    padding-top: 100px;
+    padding-bottom: $vhVar;
     background: rgb(49,175,198);
     background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, rgba(49,175,198,1) 0%, rgba(77,208,229,1) 100%);
 }
+.pageHeader.article {
+    padding-top: 100px;
+    padding-bottom: $vhVarArticle;
+    background: rgb(255,255,255);
+    background: url(../../images/placeholders/Bg_Pattern_On_White.svg) repeat, linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+}
+
 
 #headerLogosContainer {
     display: flex;

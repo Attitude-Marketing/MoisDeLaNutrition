@@ -3,11 +3,12 @@
 // ==========================================================================
 $desktopNavSpacing : 20px;
 #navs {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
     #desktop-nav {
         margin: 20px 30px 0 0;
 
@@ -31,16 +32,17 @@ $desktopNavSpacing : 20px;
                 }
 
                 &#langSwitch {
-                    position:relative;
-                    &:before{
-                        content:"";
-                        position:absolute;
-                        left:0px;
-                        height:10px;
-                        width:1px;
-                        top:50%;
-                        transform:translateY(-50%);
-                        background:red;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0px;
+                        height: 10px;
+                        width: 1px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: red;
                     }
                 }
 
@@ -55,7 +57,7 @@ $desktopNavSpacing : 20px;
                 &:not(.current) {
                     a {
                         margin-left: $desktopNavSpacing;
-                        text-decoration: none;
+                        text-decoration: none !important;
                         @include filson-400;
                     }
                 }
@@ -67,6 +69,22 @@ $desktopNavSpacing : 20px;
 
                     &:hover {
                         text-decoration: underline;
+                    }
+                }
+
+                &#backToPrev {
+                    flex-grow: 1;
+                    text-align: left;
+                    display:flex;
+                    flex-direction:row;
+                    a{
+                        margin-left:30px;
+                        text-decoration:none !important;
+                    }
+
+                    #backToPrevArrow{
+                        margin-right:4px;
+                        align-content:center;
                     }
                 }
             }

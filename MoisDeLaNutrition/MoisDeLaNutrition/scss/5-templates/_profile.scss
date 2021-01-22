@@ -1,0 +1,34 @@
+// ==========================================================================
+// TEMPLATES - PROFILE
+// ==========================================================================
+
+#profile {
+    .banner {
+        height: 1200px;
+        width: 100%;
+
+        #bannerInfo {
+            margin-top: 69px;
+            text-align: left;
+
+            .htitle {
+                font-size: 113px;
+                line-height: 112px;
+                letter-spacing: -2.6px;
+                text-align: left !important;
+            }
+
+            #introText {
+                @include century-400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $white;
+                max-width: 350px;
+            }
+        }
+
+        @media screen and (min-width: 1921px) {
+            background-size: cover!important;
+        }
+    }
+}

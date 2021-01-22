@@ -60,7 +60,7 @@ $century: "century-gothic",sans-serif;
 @mixin filson-900 {
     font-family: $filson;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 900!important;
 }
 
 //CENTURY FONT

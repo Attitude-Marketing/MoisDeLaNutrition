@@ -9,20 +9,36 @@
 
     var brandNode = Umbraco.TypedContent(siteid);
     var langNode = brandNode.Children.FirstOrDefault(x => x.Name.ToLower() == Umbraco.Field("#CurrentLanguage").ToString().ToLower());
+
+    var langto = langNode.Name == "FR" ? "EN" : "FR";
+    var hasAltLang = pageNode.HasValue("alternateLanguageNode");
+    IPublishedContent altLang = null;
+
+    if (hasAltLang && pageNode.GetPropertyValue<IPublishedContent>("alternateLanguageNode") != null)
+    {
+        altLang = pageNode.GetPropertyValue<IPublishedContent>("alternateLanguageNode");
+    }
 }
 <section id="navs">
     <nav id="desktop-nav">
-        <ul>
-            @* AJOUTER LA CLASSE CURRENT AU LI QUI CORRESPOND À LA PAGE ACTUEL *@
-            @* AJOUTER LE ID langSwitch AU LI DU LANGSWITCH *@
+        <ul id="main-menu">
             @if (pageNode.DocumentTypeAlias.ToLower() == "nutritionfact" || pageNode.DocumentTypeAlias.ToLower() == "profile")
             {
                 <li id="backToPrev"><a href=""><span id="backToPrevArrow">←</span>Dynamiser ce champs</a></li>
             }
-            <li class="current"><a href="">Dynamiser ce champs</a></li>
-            <li><a href="">Dynamiser ce champs</a></li>
-            <li><a href="">Dynamiser ce champs</a></li>
-            <li id="langSwitch"><a href="">FR-</a></li>
+            @foreach (var menuItem in langNode.GetPropertyValue<IEnumerable<IPublishedContent>>("mainMenu"))
+            {
+                var activeClass = "";
+                if (menuItem.Id == pageNode.Id)
+                {
+                    activeClass = "class=current";
+                }
+                <li @activeClass><a href="@(menuItem.Url)">@(menuItem.GetPropertyValue<string>("menuTitle"))</a></li>
+            }
+            @if (hasAltLang && altLang != null)
+            {
+                <li id="langSwitch"><a href="@(altLang.Url)">@langto</a></li>
+            }
         </ul>
     </nav>
     <div id="mobile-nav">
@@ -35,7 +51,21 @@
             </div>
         </div>
         <div id="panel" class="">
-
+            <ul id="mobile-menu">
+                @foreach (var menuItem in langNode.GetPropertyValue<IEnumerable<IPublishedContent>>("mainMenu"))
+                {
+                    var activeClass = "";
+                    if (menuItem.Id == pageNode.Id)
+                    {
+                        activeClass = "class=current";
+                    }
+                    <li @activeClass><a href="@(menuItem.Url)">@(menuItem.GetPropertyValue<string>("menuTitle"))</a></li>
+                }
+                @if (hasAltLang && altLang != null)
+                {
+                    <li id="langSwitch"><a href="@(altLang.Url)">@langto</a></li>
+                }
+            </ul>
         </div>
     </div>
 </section>
@@ -47,20 +77,20 @@
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3">
                 <div id="header-title">
-                    <p class="first-line text-center">Dynamiser ce</p>
-                    <p class="second-line text-center">champs</p>
+                    <h1 class="first-line text-center">@(pageNode.GetPropertyValue<string>("pageTitle"))</h1>
+                    <h2 class="second-line text-center">@(pageNode.GetPropertyValue<string>("pageSubtitle"))</h2>
                 </div>
                 <div id="headerLogosContainer">
                     <div class="headerLogo">
-                        <p class="headerLogoTitle">Dynamiser ce champs</p>
+                        <p class="headerLogoTitle">@(Umbraco.Field("#nutritionMonth"))</p>
                         @Html.Partial("~/Views/Partials/dieticianSvg.cshtml")
                     </div>
                     <div class="headerLogo">
-                        <p class="headerLogoTitle">Dynamiser ce champs</p>
+                        <p class="headerLogoTitle">@(Umbraco.Field("#sponsor"))</p>
                         @Html.Partial("~/Views/Partials/dfcSvg.cshtml")
                     </div>
                 </div>
-                <p id="header-intro" class="text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                <div id="header-intro" class="text-center">@(pageNode.GetPropertyValue<HtmlString>("introText"))</div>
             </div>
         </div>
     </div>

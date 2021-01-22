@@ -9,6 +9,9 @@
 
     var brandNode = Umbraco.TypedContent(siteid);
     var langNode = brandNode.Children.FirstOrDefault(x => x.Name.ToLower() == Umbraco.Field("#CurrentLanguage").ToString().ToLower());
+
+    var footerEntrezCourriel = Umbraco.GetDictionaryValue("footerEntrezCourriel");
+    var footerSoumettre = langNode.GetPropertyValue<string>("panelBtnLabel");
 }
 <footer id="footer">
     <div class="container-fluid p-0">
@@ -38,28 +41,37 @@
                         <div id="footerNav">
                             <ul>
                                 @* AJOUTER LA CLASSE CURRENT AU LI QUI CORRESPOND À LA PAGE ACTUEL *@
-                                <li class="current"><a href="">Dynamiser ce champs</a></li>
-                                <li><a href="">Dynamiser ce champs</a></li>
-                                <li><a href="">Dynamiser ce champs</a></li>
+                                @foreach (var menuItem in langNode.GetPropertyValue<IEnumerable<IPublishedContent>>("mainMenu"))
+                                {
+                                    var activeClass = "";
+                                    if (menuItem.Id == pageNode.Id)
+                                    {
+                                        activeClass = "class=current";
+                                    }
+                                    <li @activeClass><a href="@(menuItem.Url)">@(menuItem.GetPropertyValue<string>("menuTitle"))</a></li>
+                                }
                             </ul>
                         </div>
                         <div id="footerLogo">
                             @Html.Partial("~/Views/Partials/dfcSvg.cshtml")
-                            <p id="copyright">Dynamiser ce champs</p>
+                            <p id="copyright">@(Umbraco.Field("#dairyFarmers"))</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-7 order-1 order-md-2">
                 <div id="footerRight">
-                    <div class="footerContent footerNewsletter">
-                        <p id="fnTitle" class="noBrMobile">Dynamiser ce champs</p>
-                        <p id="fnText">Dynamiser ce champs Dynamiser ce champs Dynamiser ce champs Dynamiser ce champs Dynamiser ce champs Dynamiser ce champs Dynamiser ce champs Dynamiser ce champs Dynamiser ce champs</p>
-                        <form id="newsletter-form" class="newsletter-form" data-err="Dynamiser ce champs" method="post">
-                            <input type="text" id="email" name="email" placeholder="Dynamiser ce champs">
-                            <button type="submit" id="submitNewsletter">Dynamiser ce champs <span id="submitArrow">→</span></button>
-                        </form>
-                    </div>
+                    @if (langNode.GetPropertyValue<bool>("panelDisplay") == true)
+                    {
+                        <div class="footerContent footerNewsletter">
+                            <p id="fnTitle" class="noBrMobile">@(langNode.GetPropertyValue<string>("panelTitle"))</p>
+                            <p id="fnText">@(langNode.GetPropertyValue<HtmlString>("panelText"))</p>
+                            <form id="newsletter-form" class="newsletter-form" data-mssg="@(Umbraco.Field("#Empty"))" data-ajfail="@Umbraco.Field("#AjaxFail")" data-thks="@(Umbraco.Field("#NewsletterThanks"))">
+                                <input type="text" id="email" name="email" placeholder="@footerEntrezCourriel" data-invalid="@(Umbraco.Field("#Invalid"))">
+                                <button type="submit" id="submitNewsletter">@footerSoumettre <span id="submitArrow">→</span></button>
+                            </form>
+                        </div>
+                    }
                 </div>
             </div>
         </div>

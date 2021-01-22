@@ -1,5 +1,27 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Profile>
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = "_Master.cshtml";
+    Layout = "_Master.cshtml";
+    var pageNode = Model.Content;
+    var bannerImg = pageNode.GetPropertyValue<IPublishedContent>("bannerImage");
+    var bannerImgUrl = "";
+
+    if (bannerImg != null)
+    {
+        bannerImgUrl = bannerImg.Url;
+    }
 }
+<section id="profile" class="@(pageNode.UrlName)">
+    <div class="fluid">
+        <div class="banner" style="background: url(@bannerImgUrl) top center no-repeat;">
+            <div class="row">
+                <div class="col-sm-10 offset-sm-1">
+                    <div id="bannerInfo">
+                        <h1 id="header-title" class="htitle">@(pageNode.GetPropertyValue<string>("pageTitle"))</h1>
+                        <div id="introText">@(pageNode.GetPropertyValue<HtmlString>("pageText"))</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

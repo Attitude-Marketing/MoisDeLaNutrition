@@ -1,33 +1,58 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.NutritionFactsListing>
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = "_Master.cshtml";
+    Layout = "_Master.cshtml";
 
-	var colSizeFirst = "col-sm-12 col-lg-6 col-xl-5 offset-xl-1";
-	var colSizeSecond = "col-sm-12 col-lg-6 col-xl-5";
+    var pageNode = Model.Content;
+    var siteid = UmbracoHelpers.GetSiteId(Request.Url.Host);
+    var brandNode = Umbraco.TypedContent(siteid);
+    var langNode = brandNode.Children.FirstOrDefault(x => x.Name.ToLower() == Umbraco.Field("#CurrentLanguage").ToString().ToLower());
+
+    var counter = 1;
+    var offset = "";
 }
 @* Insérer le partial de header *@
 	<div id="nutritionFactsListingBg">
 		<section id="nutritionFactsListing">
 			<div class="container-fluid">
-				<div class="row">
-					@* DYNAMISER ET LOOPER CE BLOCK DE CODE *@
-					<div class="@colSizeFirst">
-						<a href="" target="_self" class="cardClickable triggerGlobalArrow">
-							<div class="cardContainer">
-								<div class="cardContent">
-									<p class="cardTitle">Dynamiser ce champs</p>
-									<div class="cardTags"></div>
-									<p class="cardCta globalCta">Dynamiser ce champs <span class="cardCtaArrow globalCtaArrow"><svg xmlns="http://www.w3.org/2000/svg" width="21.715" height="12" viewBox="0 0 21.715 12"><path class="cardCtaArrowStyle globalCtaArrowStyle" d="M504.7,357.685c0-.015-.009-.029-.013-.044a.464.464,0,0,0-.016-.052.488.488,0,0,0-.026-.049c-.007-.013-.013-.027-.021-.04a.529.529,0,0,0-.065-.079l-5.483-5.483a.517.517,0,1,0-.731.731l4.6,4.6H483.51a.517.517,0,0,0,0,1.034h19.434l-4.6,4.6a.517.517,0,1,0,.731.731l5.483-5.483a.53.53,0,0,0,.065-.079c.009-.013.014-.026.021-.04a.491.491,0,0,0,.026-.049.466.466,0,0,0,.016-.052c0-.015.01-.029.013-.044A.514.514,0,0,0,504.7,357.685Z" transform="translate(-482.993 -351.786)" /></svg></span></p>
-								</div>
-								<div class="cardImgContainer">
-									<div class="cardImg" style="background: url(/images/placeholders/placeholder-vertical.jpg); background-size:cover; background-position:center center; background-repeat:no-repeat;"></div>
-								</div>
-							</div>
-						</a>
-					</div>
-					@* FIN DE DYNAMISER ET LOOPER CE BLOCK DE CODE *@
-				</div>
+                <div class="row">
+                    @foreach (var fact in pageNode.Children)
+                    {
+                        var pic = fact.GetPropertyValue<IPublishedContent>("listingImage");
+                        var picUrl = "/images/placeholders/placeholder-vertical.jpg";
+
+                        if(counter % 2 == 1)
+                        {
+                            offset = "offset-xl-1";
+                        }
+                        else
+                        {
+                            offset = "";
+                        }
+
+                        if(pic != null)
+                        {
+                            picUrl = pic.Url;
+                        }
+
+                        <div class="col-sm-12 col-lg-6 col-xl-5 @offset">
+                            <a href="" target="_self" class="cardClickable triggerGlobalArrow">
+                                <div class="cardContainer">
+                                    <div class="cardContent">
+                                        <p class="cardTitle">@(fact.GetPropertyValue<string>("pageTitle"))</p>
+                                        <div class="cardTags"></div>
+                                        <p class="cardCta globalCta">@(Umbraco.Field("#learnMore")) <span class="cardCtaArrow globalCtaArrow"><svg xmlns="http://www.w3.org/2000/svg" width="21.715" height="12" viewBox="0 0 21.715 12"><path class="cardCtaArrowStyle globalCtaArrowStyle" d="M504.7,357.685c0-.015-.009-.029-.013-.044a.464.464,0,0,0-.016-.052.488.488,0,0,0-.026-.049c-.007-.013-.013-.027-.021-.04a.529.529,0,0,0-.065-.079l-5.483-5.483a.517.517,0,1,0-.731.731l4.6,4.6H483.51a.517.517,0,0,0,0,1.034h19.434l-4.6,4.6a.517.517,0,1,0,.731.731l5.483-5.483a.53.53,0,0,0,.065-.079c.009-.013.014-.026.021-.04a.491.491,0,0,0,.026-.049.466.466,0,0,0,.016-.052c0-.015.01-.029.013-.044A.514.514,0,0,0,504.7,357.685Z" transform="translate(-482.993 -351.786)" /></svg></span></p>
+                                    </div>
+                                    <div class="cardImgContainer">
+                                        <div class="cardImg" style="background: url(@picUrl); background-size:cover; background-position:center center; background-repeat:no-repeat;"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        counter++;
+                    }
+                </div>
 				<div class="row findRSection">
 					<div class="col-sm-12 col-lg-6 col-xl-5 offset-xl-1">
 						<div class="findRecipesContent">

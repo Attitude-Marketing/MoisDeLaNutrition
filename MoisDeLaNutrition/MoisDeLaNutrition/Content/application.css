@@ -481,7 +481,7 @@ footer #footerLogo {
           #navs #mobile-nav #panel.visible {
             display: block; } }
 
-.nutritionFact-page #navs #desktop-nav ul li a {
+.nutritionFact-page #navs #desktop-nav ul li a, .about-page #navs #desktop-nav ul li a {
   color: #31BED7; }
 
 .globalCta, .triggerGlobalArrow {
@@ -537,7 +537,10 @@ footer #footerLogo {
       transition: opacity 0.2s ease-out; }
     @media screen and (max-width: 1023px) {
       #landingNode .profileContainer {
-        margin-bottom: 20px; } }
+        margin-bottom: 20px; }
+        #landingNode .profileContainer .imgContainer {
+          background-position: center top !important;
+          max-height: 474px; } }
   @media screen and (min-width: 1024px) {
     #landingNode .grid-container {
       display: grid;
@@ -807,9 +810,64 @@ footer #footerLogo {
 #about {
   background: white;
   background: url(../../images/placeholders/Bg_Pattern_On_White.svg) repeat, linear-gradient(90deg, white 0%, white 100%);
-  min-height: 50vh; }
-  #about #aboutImg {
-    border-radius: 15px; }
+  min-height: 50vh;
+  padding-top: 135px; }
+  #about #infowrap .logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; }
+    #about #infowrap .logos .dietitianLogoSvg {
+      margin-bottom: -5px; }
+    #about #infowrap .logos .aboutLogo {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      margin-right: 12px;
+      margin-bottom: 84px; }
+      #about #infowrap .logos .aboutLogo .aboutLogoTitle {
+        color: #1D1D1D;
+        font-size: 17px;
+        line-height: 22px;
+        font-family: "century-gothic", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        margin-left: 8px;
+        max-width: 186px;
+        text-align: left; }
+        @media screen and (max-width: 576px) {
+          #about #infowrap .logos .aboutLogo .aboutLogoTitle {
+            text-align: center;
+            margin-right: 0; } }
+  #about #infowrap .textContent .subtitle {
+    font-family: "filson-pro", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+    font-size: 25px;
+    margin-bottom: 20px; }
+  #about #infowrap .textContent .title {
+    font-family: "filson-pro", sans-serif;
+    font-style: normal;
+    font-weight: 900 !important;
+    color: #000;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 30px; }
+  #about #infowrap .textContent .rte padding {
+    font-family: "century-gothic", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #1D1D1D;
+    font-size: 18px;
+    line-height: 28px; }
+  #about .imgWrap {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center; }
+    #about .imgWrap #aboutImg {
+      border-radius: 15px;
+      margin-bottom: 100px; }
 
 #profile {
   background: url(/images/placeholders/Bg_Pattern_On_White.svg) 0 0 repeat #fff; }

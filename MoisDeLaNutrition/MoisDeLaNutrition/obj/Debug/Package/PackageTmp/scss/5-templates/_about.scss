@@ -5,7 +5,78 @@
     background: rgb(255,255,255);
     background: url(../../images/placeholders/Bg_Pattern_On_White.svg) repeat, linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
     min-height: 50vh;
-    #aboutImg{
-        border-radius:15px;
+    padding-top: 135px;
+
+    #infowrap {
+        .logos {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            .dietitianLogoSvg {
+                margin-bottom: -5px;
+            }
+
+            .aboutLogo {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                margin-right: 12px;
+                margin-bottom: 84px;
+
+                .aboutLogoTitle {
+                    color: $cod;
+                    font-size: 17px;
+                    line-height: 22px;
+                    @include century-400;
+                    margin-left: 8px;
+                    max-width: 186px;
+                    text-align: left;
+
+                    @media screen and (max-width: 576px) {
+                        text-align: center;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .textContent {
+            .subtitle {
+                @include filson-400;
+                color: #000;
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+
+            .title {
+                @include filson-900;
+                color: #000;
+                font-size: 48px;
+                line-height: 58px;
+                margin-bottom: 30px;
+            }
+
+            .rte {
+                padding {
+                    @include century-400;
+                    color: $cod;
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+
+    .imgWrap {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        #aboutImg {
+            border-radius: 15px;
+            margin-bottom: 100px;
+        }
     }
 }

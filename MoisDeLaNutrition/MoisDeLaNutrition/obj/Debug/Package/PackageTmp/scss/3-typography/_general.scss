@@ -1,0 +1,41 @@
+// ==========================================================================
+// TYPOGRAPHY - GENERAL
+// ==========================================================================
+.rte {
+    font-size: 20px;
+    line-height: 28px;
+    @include century-400;
+
+    a {
+        text-decoration: underline;
+        color: $scooter;
+    }
+
+    ul {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+
+    ol {
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+
+    li {
+    }
+
+    .rteTitle {
+        margin-bottom: 15px;
+        font-size: 32px;
+        line-height: 42px;
+        @include filson-400;
+    }
+
+    .rteRessources {
+        margin-bottom: 15px;
+        font-size: 22px;
+        line-height: 42px;
+        @include filson-800;
+    }
+}
+

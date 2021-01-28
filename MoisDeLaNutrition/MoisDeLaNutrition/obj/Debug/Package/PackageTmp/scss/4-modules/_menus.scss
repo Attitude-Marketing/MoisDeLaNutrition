@@ -1,0 +1,143 @@
+// ==========================================================================
+// MODULES - MENUS
+// ==========================================================================
+$desktopNavSpacing : 20px;
+#navs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    #desktop-nav {
+        margin: 20px 30px 0 0;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-content: center;
+            flex-wrap: wrap;
+
+            li {
+                margin-right: $desktopNavSpacing;
+                text-align: center;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &#langSwitch {
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0px;
+                        height: 10px;
+                        width: 1px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: red;
+                    }
+                }
+
+                &.current {
+
+                    a {
+                        @include filson-700;
+                        text-decoration: underline;
+                    }
+                }
+
+                &:not(.current) {
+                    a {
+                        margin-left: $desktopNavSpacing;
+                        text-decoration: none !important;
+                        @include filson-400;
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #fff;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                &#backToPrev {
+                    flex-grow: 1;
+                    text-align: left;
+                    display:flex;
+                    flex-direction:row;
+                    a{
+                        margin-left:30px;
+                        text-decoration:none !important;
+                    }
+
+                    #backToPrevArrow{
+                        margin-right:4px;
+                        align-content:center;
+                    }
+                }
+            }
+        }
+    }
+
+    #mobile-nav {
+        $topNavHeight: 50px;
+        display: none;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+
+        #topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: $topNavHeight;
+            background: red;
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+
+            #hamburger {
+            }
+
+            #logos {
+            }
+        }
+
+        #panel {
+            position: absolute;
+            top: $topNavHeight;
+            left: 0;
+            width: 100%;
+            min-height: 50vh;
+            background: green;
+            z-index: 1;
+            display: none;
+
+            &.visible {
+                display: block;
+
+                @media screen and (max-width: 768px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

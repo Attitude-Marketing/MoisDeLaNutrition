@@ -1,0 +1,109 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    var currentLang = Umbraco.Field("#CurrentLanguage").ToString();
+    var pageNode = Model.Content;
+    var siteid = UmbracoHelpers.GetSiteId(Request.Url.Host);
+    var lang = Umbraco.Field("#CurrentLanguage").ToString().ToLower();
+    var alt = String.Format("alt{0}", lang);
+
+    var brandNode = Umbraco.TypedContent(siteid);
+    var langNode = brandNode.Children.FirstOrDefault(x => x.Name.ToLower() == Umbraco.Field("#CurrentLanguage").ToString().ToLower());
+
+    var langto = langNode.Name == "FR" ? "EN" : "FR";
+    var hasAltLang = pageNode.HasValue("alternateLanguageNode");
+    IPublishedContent altLang = null;
+
+    if (hasAltLang && pageNode.GetPropertyValue<IPublishedContent>("alternateLanguageNode") != null)
+    {
+        altLang = pageNode.GetPropertyValue<IPublishedContent>("alternateLanguageNode");
+    }
+}
+<section id="navs">
+    <nav id="desktop-nav">
+        <ul id="main-menu">
+            @if (pageNode.DocumentTypeAlias.ToLower() == "nutritionfact" || pageNode.DocumentTypeAlias.ToLower() == "profile")
+            {
+                <li id="backToPrev"><a href=""><span id="backToPrevArrow">←</span>Dynamiser ce champs</a></li>
+            }
+            @foreach (var menuItem in langNode.GetPropertyValue<IEnumerable<IPublishedContent>>("mainMenu"))
+            {
+                var activeClass = "";
+                if (menuItem.Id == pageNode.Id)
+                {
+                    activeClass = "class=current";
+                }
+                <li @activeClass><a href="@(menuItem.Url)">@(menuItem.GetPropertyValue<string>("menuTitle"))</a></li>
+            }
+            @if (hasAltLang && altLang != null)
+            {
+                <li id="langSwitch"><a href="@(altLang.Url)">@langto</a></li>
+            }
+        </ul>
+    </nav>
+    <div id="mobile-nav">
+        <div id="topbar">
+            <div id="hamburger">
+                H
+            </div>
+            <div id="logos">
+                logo
+            </div>
+        </div>
+        <div id="panel" class="">
+            <ul id="mobile-menu">
+                @foreach (var menuItem in langNode.GetPropertyValue<IEnumerable<IPublishedContent>>("mainMenu"))
+                {
+                    var activeClass = "";
+                    if (menuItem.Id == pageNode.Id)
+                    {
+                        activeClass = "class=current";
+                    }
+                    <li @activeClass><a href="@(menuItem.Url)">@(menuItem.GetPropertyValue<string>("menuTitle"))</a></li>
+                }
+                @if (hasAltLang && altLang != null)
+                {
+                    <li id="langSwitch"><a href="@(altLang.Url)">@langto</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+@if (pageNode.DocumentTypeAlias.ToLower() == "landing" || pageNode.DocumentTypeAlias.ToLower() == "nutritionfactslisting")
+{
+    <div class="container-fluid pageHeader full">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <div id="header-title">
+                    <h1 class="first-line text-center">@(pageNode.GetPropertyValue<string>("pageTitle"))</h1>
+                    <h2 class="second-line text-center">@(pageNode.GetPropertyValue<string>("pageSubtitle"))</h2>
+                </div>
+                <div id="headerLogosContainer">
+                    <div class="headerLogo">
+                        <p class="headerLogoTitle">@(Umbraco.Field("#nutritionMonth"))</p>
+                        @Html.Partial("~/Views/Partials/dieticianSvg.cshtml")
+                    </div>
+                    <div class="headerLogo">
+                        <p class="headerLogoTitle">@(Umbraco.Field("#sponsor"))</p>
+                        @Html.Partial("~/Views/Partials/dfcSvg.cshtml")
+                    </div>
+                </div>
+                <div id="header-intro" class="text-center">@(pageNode.GetPropertyValue<HtmlString>("introText"))</div>
+            </div>
+        </div>
+    </div>
+}
+
+@if (pageNode.DocumentTypeAlias.ToLower() == "nutritionfact")
+{
+    <div class="container-fluid pageHeader article">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2">
+                <p id="article-tagline">Dynamiser ce champs</p>
+                <h1 id="article-title">What does it cost to the planet if I eat dairy products everyday? </h1>
+            </div>
+        </div>
+    </div>
+}

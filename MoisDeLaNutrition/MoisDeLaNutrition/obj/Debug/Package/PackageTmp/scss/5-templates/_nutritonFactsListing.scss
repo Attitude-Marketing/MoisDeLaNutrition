@@ -1,0 +1,229 @@
+// ==========================================================================
+// TEMPLATES - NUTRITION FACTS LISTING
+// ==========================================================================
+#nutritionFactsListingBg {
+    position:relative;
+    &:after{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        min-height:100vh;
+        background:$scooter;
+        z-index:-1;
+        content:"";
+    }
+}
+#nutritionFactsListing {
+    padding: 60px 0 120px 0;
+
+    .container-fluid {
+    }
+}
+$cardRadius:15px;
+$cardPadding: 40px 30px;
+
+.cardClickable {
+    /*See below for hover effects*/
+    .cardContainer {
+        min-height: 380px;
+        background: $white;
+        border-radius: $cardRadius;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: 576px) {
+            min-height: unset;
+        }
+
+        @media screen and (max-width: 576px) {
+            flex-direction: column-reverse;
+        }
+
+        .cardContent {
+            flex: 1 1 57%;
+            padding: $cardPadding;
+
+            @media screen and (max-width: 576px) {
+                flex: 1 1 100%;
+            }
+
+            .cardTitle {
+                @include filson-italic-900;
+                font-size: 34px;
+                line-height: 41px;
+                color: $scooter;
+                margin-bottom: 40px;
+            }
+
+            .cardTags {
+                display: none;
+                margin-bottom: 40px;
+            }
+
+            .cardCta {
+                @include filson-italic-700;
+                font-size: 17px;
+                line-height: 20px;
+                color: $scooter;
+
+                .cardCtaArrow {
+                    .cardCtaArrowStyle {
+                        fill: #31bed7;
+                    }
+                }
+            }
+        }
+
+        .cardImgContainer {
+            flex: 1 1 43%;
+            background: $white;
+            border-bottom-right-radius: $cardRadius;
+            border-top-right-radius: $cardRadius;
+            overflow: hidden !important;
+
+            @media screen and (max-width: 576px) {
+                border-radius: $cardRadius;
+            }
+
+            .cardImg {
+                width: 100%;
+                height: 100%;
+                transform: scale(1);
+
+                @media screen and (max-width: 576px) {
+                    height: 100%;
+                    min-height: 200px;
+                }
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        &:hover {
+            .cardImgContainer {
+                .cardImg {
+                    transform: scale(1.05);
+                    transition: $basicTransition;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.findRSection {
+    padding-top: 100px;
+
+    .findRecipesContent {
+        padding-right: 12%;
+
+        @media screen and (max-width: 1200px) {
+            padding-right: 0%;
+        }
+
+        @media screen and (max-width: 576px) {
+            padding-right: 0;
+        }
+
+        .findRTitle {
+            @include filson-700;
+            color: $white;
+            letter-spacing: -1.6px;
+            font-size: 80px;
+            line-height: 82px;
+            margin-bottom: 30px;
+        }
+
+        .findRText {
+            margin-bottom: 30px;
+            color: $white;
+            @include century-400;
+            font-size: 16px;
+            line-height: 24px;
+            padding-right: 15%;
+
+            @media screen and (max-width: 1200px) {
+                padding-right: 10%;
+            }
+
+            @media screen and (max-width: 576px) {
+                padding-right: 0;
+            }
+        }
+
+        .findRCta {
+            color: $white;
+
+            .findRCtaArrow {
+
+                .findRCtaArrowStyle {
+                    fill: $white;
+                }
+            }
+        }
+    }
+
+    .finRImgContainer {
+        height: 380px;
+        border: 2px solid $white;
+        border-radius: $cardRadius;
+        overflow: hidden;
+        position: relative;
+
+        @media screen and (max-width: 1200px) {
+            margin-top: 60px;
+        }
+
+        .findImgTxt {
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            padding: $cardPadding;
+
+            .findImgTxtTitle {
+                text-transform: uppercase;
+                color: $white;
+                text-shadow: 0px 0px 9px #00333C79;
+                @include filson-italic-700;
+                font-size: 40px;
+                line-height: 72px;
+            }
+
+            .globalCta {
+                color: $white;
+
+                .globalCtaArrowStyle {
+                    fill: $white;
+                }
+            }
+        }
+
+        .findRImg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            transform: scale(1);
+        }
+
+        &:hover {
+            .findRImg {
+                transform: scale(1.05);
+                transition: $basicTransition;
+            }
+        }
+    }
+}
+
+
+

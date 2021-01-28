@@ -168,6 +168,9 @@
     <Reference Include="Semver, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\semver.1.1.2\lib\net451\Semver.dll</HintPath>
     </Reference>
+    <Reference Include="SpectrumColourPicker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpectrumColourPicker.1.0.0.0\lib\net45\SpectrumColourPicker.dll</HintPath>
+    </Reference>
     <Reference Include="SQLCE4Umbraco, Version=1.0.7009.26205, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.14.0\lib\net45\SQLCE4Umbraco.dll</HintPath>
     </Reference>
@@ -282,6 +285,28 @@
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.htm" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\da-DK.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\de-DE.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\en-GB.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\en-US.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\es-ES.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\fr-FR.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\he-IL.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\it-IT.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\ja-JP.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\nl-NL.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\pl-PL.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\pt-BR.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\ru-RU.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\sv-SE.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\tr-TR.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\zh-CN.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lang\zh-TW.xml" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lib\prevalue\preferredFormat.html" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lib\spectrum\spectrum.css" />
+    <Content Include="App_Plugins\SpectrumColorPicker\lib\spectrum\spectrum.js" />
+    <Content Include="App_Plugins\SpectrumColorPicker\SpectrumColorPicker.controller.js" />
+    <Content Include="App_Plugins\SpectrumColorPicker\SpectrumColorPicker.html" />
     <Content Include="App_Plugins\Tinifier\BackOffice\Dashboards\TinifierSettings.html" />
     <Content Include="App_Plugins\Tinifier\BackOffice\Dashboards\TinifierStatistic.html" />
     <Content Include="App_Plugins\Tinifier\BackOffice\timages\TinifierEdit.html" />
@@ -325,6 +350,9 @@
     <Content Include="Content\application.css" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\icons\Icon_Recipe.svg" />
+    <Content Include="images\icons\print_Icon.svg" />
+    <Content Include="images\icons\Share_Icon.svg" />
     <Content Include="images\placeholders\Arrow_Whhite.svg" />
     <Content Include="images\placeholders\Bg_Pattern - Copie.svg" />
     <Content Include="images\placeholders\Bg_Pattern.svg" />
@@ -332,9 +360,27 @@
     <Content Include="images\placeholders\Logo_NM_EN.svg" />
     <Content Include="images\placeholders\placeholder-vertical.jpg" />
     <Content Include="images\placeholders\pointing_pink.mp4" />
+    <Content Include="Media\1001\orionthemes-placeholder-image-1.png" />
+    <Content Include="Media\1002\header_profilepage.png" />
+    <Content Include="Media\1003\healthy-wisdom.png" />
+    <Content Include="Media\1004\rectangle-143.png" />
+    <Content Include="Media\1005\shutterstock_1827506429.png" />
+    <Content Include="Media\1006\shutterstock_1612959727.png" />
+    <Content Include="Media\1007\active-lifestyle.png" />
+    <Content Include="Media\1008\budget-crunch.png" />
+    <Content Include="Media\1009\connected.png" />
+    <Content Include="Media\1010\dfc_03_7640.png" />
+    <Content Include="Media\1011\dfc_09_8356.png" />
+    <Content Include="Media\1012\dfc_10_8459.png" />
+    <Content Include="Media\1013\energy-to-fuel.png" />
+    <Content Include="Media\1014\family_1.png" />
+    <Content Include="Media\1015\heritage_main_2.png" />
+    <Content Include="Media\1016\wisdom_1.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Plugins\Tinifier\package.manifest" />
+    <Content Include="App_Plugins\SpectrumColorPicker\package.manifest" />
+    <None Include="Properties\PublishProfiles\PublishDev.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -418,6 +464,7 @@
     <Content Include="Views\Partials\dieticianSvg.cshtml" />
     <Content Include="scss\5-templates\_nutritonFact.scss" />
     <Content Include="scss\5-templates\_about.scss" />
+    <Content Include="scss\5-templates\_profile.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

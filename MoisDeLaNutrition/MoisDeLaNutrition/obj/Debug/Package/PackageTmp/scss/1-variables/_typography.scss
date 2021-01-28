@@ -1,0 +1,89 @@
+//  VARIABLES - TYPOGRAPHY
+$filson: "filson-pro",sans-serif;
+$century: "century-gothic",sans-serif;
+
+//FILSON FONT
+@mixin filson-italic-400 {
+    font-family: $filson;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@mixin filson-italic-500 {
+    font-family: $filson;
+    font-style: italic;
+    font-weight: 500;
+}
+
+@mixin filson-italic-700 {
+    font-family: $filson;
+    font-style: italic;
+    font-weight: 700;
+}
+
+@mixin filson-italic-800 {
+    font-family: $filson;
+    font-style: italic;
+    font-weight: 800;
+}
+
+@mixin filson-italic-900 {
+    font-family: $filson;
+    font-style: italic;
+    font-weight: 900;
+}
+
+@mixin filson-400 {
+    font-family: $filson;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin filson-500 {
+    font-family: $filson;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@mixin filson-700 {
+    font-family: $filson;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin filson-800 {
+    font-family: $filson;
+    font-style: normal;
+    font-weight: 800;
+}
+
+@mixin filson-900 {
+    font-family: $filson;
+    font-style: normal;
+    font-weight: 900!important;
+}
+
+//CENTURY FONT
+@mixin century-italic-400 {
+    font-family: $century;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@mixin century-italic-700 {
+    font-family: $century;
+    font-style: italic;
+    font-weight: 700;
+}
+
+@mixin century-400 {
+    font-family: $century;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin century-700 {
+    font-family: $century;
+    font-style: normal;
+    font-weight: 700;
+}

@@ -1,0 +1,11 @@
+// ==========================================================================
+// TEMPLATES - ABOUT
+// ==========================================================================
+#about {
+    background: rgb(255,255,255);
+    background: url(../../images/placeholders/Bg_Pattern_On_White.svg) repeat, linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    min-height: 50vh;
+    #aboutImg{
+        border-radius:15px;
+    }
+}

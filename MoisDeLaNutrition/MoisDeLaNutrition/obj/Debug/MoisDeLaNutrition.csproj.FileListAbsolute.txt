@@ -393,3 +393,4 @@ H:\Web\actif\Attitude\MoisDeLaNutrition\MoisDeLaNutrition\MoisDeLaNutrition\Mois
 H:\Web\actif\Attitude\MoisDeLaNutrition\MoisDeLaNutrition\MoisDeLaNutrition\MoisDeLaNutrition\obj\Debug\MoisDeLaNutrition.csproj.CopyComplete
 H:\Web\actif\Attitude\MoisDeLaNutrition\MoisDeLaNutrition\MoisDeLaNutrition\MoisDeLaNutrition\obj\Debug\MoisDeLaNutrition.dll
 H:\Web\actif\Attitude\MoisDeLaNutrition\MoisDeLaNutrition\MoisDeLaNutrition\MoisDeLaNutrition\obj\Debug\MoisDeLaNutrition.pdb
+H:\Web\actif\Attitude\MoisDeLaNutrition\MoisDeLaNutrition\MoisDeLaNutrition\MoisDeLaNutrition\bin\SpectrumColourPicker.dll

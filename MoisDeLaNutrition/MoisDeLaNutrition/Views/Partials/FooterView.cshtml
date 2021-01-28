@@ -18,15 +18,6 @@
     <div class="container-fluid p-0">
         @if (pageNode.DocumentTypeAlias.ToLower() == "nutritionfact" || pageNode.DocumentTypeAlias.ToLower() == "profile")
         {
-
-            var imageNext = pageNode.GetPropertyValue<IPublishedContent>("imageNext");
-            var imageNextUrl = "/images/placeholders/placeholder-vertical.jpg";
-
-            if (imageNext != null)
-            {
-                imageNextUrl = imageNext.Url;
-            }
-
             var nextNode = pageNode.Next();
 
             if (nextNode == null)
@@ -36,6 +27,14 @@
 
             if (nextNode != null)
             {
+                var imageNext = nextNode.GetPropertyValue<IPublishedContent>("imageNext");
+                var imageNextUrl = "/images/placeholders/placeholder-vertical.jpg";
+
+                if (imageNext != null)
+                {
+                    imageNextUrl = imageNext.Url;
+                }
+
                 var nextNodeUrl = nextNode.Url;
                 var nextTitle = nextNode.GetPropertyValue<string>("pageTitle");
                 var next = pageNode.DocumentTypeAlias == "profile" ? Umbraco.Field("NextProfile") : Umbraco.Field("#NextFact");

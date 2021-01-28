@@ -18,13 +18,18 @@
     {
         altLang = pageNode.GetPropertyValue<IPublishedContent>("alternateLanguageNode");
     }
+    var back2Prev = "";
+    var backLink = "";
 }
 <section id="navs">
     <nav id="desktop-nav">
         <ul id="main-menu">
             @if (pageNode.DocumentTypeAlias.ToLower() == "nutritionfact" || pageNode.DocumentTypeAlias.ToLower() == "profile")
             {
-                <li id="backToPrev"><a href=""><span id="backToPrevArrow">←</span>Dynamiser ce champs</a></li>
+                back2Prev = pageNode.DocumentTypeAlias.ToLower() == "nutritionfact" ? Umbraco.Field("#BackToAllNutritionFacts").ToString() : Umbraco.Field("#BackToAllFoodProfiles").ToString();
+                backLink = pageNode.DocumentTypeAlias.ToLower() == "nutritionfact" ? pageNode.Parent.Url : langNode.Url;
+
+                <li id="backToPrev"><a href="@backLink"><span id="backToPrevArrow">←</span>@back2Prev</a></li>
             }
             @foreach (var menuItem in langNode.GetPropertyValue<IEnumerable<IPublishedContent>>("mainMenu"))
             {
@@ -91,18 +96,6 @@
                     </div>
                 </div>
                 <div id="header-intro" class="text-center">@(pageNode.GetPropertyValue<HtmlString>("introText"))</div>
-            </div>
-        </div>
-    </div>
-}
-
-@if (pageNode.DocumentTypeAlias.ToLower() == "nutritionfact")
-{
-    <div class="container-fluid pageHeader article">
-        <div class="row">
-            <div class="col-12 col-md-8 offset-md-2">
-                <p id="article-tagline">Dynamiser ce champs</p>
-                <h1 id="article-title">What does it cost to the planet if I eat dairy products everyday? </h1>
             </div>
         </div>
     </div>

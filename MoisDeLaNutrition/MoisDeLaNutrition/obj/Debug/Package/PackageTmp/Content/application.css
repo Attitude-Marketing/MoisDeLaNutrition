@@ -85,9 +85,7 @@ textarea, input {
 
 .pageHeader.full {
   padding-top: 100px;
-  padding-bottom: 54vh;
-  background: #31afc6;
-  background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%); }
+  padding-bottom: 54vh; }
 
 .pageHeader.article {
   padding-top: 100px;
@@ -170,6 +168,8 @@ footer .followingContent {
         font-size: 36px;
         line-height: 38px;
         color: #fff; }
+    footer .followingContent #followingContentxtContainer #followingContentArrow path {
+      fill: #fff; }
     footer .followingContent #followingContentxtContainer:hover #followingContentArrow {
       transition: all 0.2s ease-out;
       transform: scale(1.05); }
@@ -481,6 +481,9 @@ footer #footerLogo {
           #navs #mobile-nav #panel.visible {
             display: block; } }
 
+.nutritionFact-page #navs #desktop-nav ul li a {
+  color: #31BED7; }
+
 .globalCta, .triggerGlobalArrow {
   font-family: "filson-pro", sans-serif;
   font-style: italic;
@@ -495,8 +498,10 @@ footer #footerLogo {
     margin-left: 14px;
     transition: all 0.2s ease-out; }
 
+.landing-page {
+  background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%); }
+
 #landingNode {
-  background-color: #31BED7;
   margin-top: -54vh; }
   #landingNode .profileContainer {
     min-height: 380px;
@@ -530,61 +535,65 @@ footer #footerLogo {
     #landingNode .profileContainer .profileTitle:hover .imgContainer {
       opacity: .7;
       transition: opacity 0.2s ease-out; }
-  #landingNode .grid-container {
-    display: grid;
-    grid-gap: 30px;
-    margin-top: 30px;
-    width: 100%; }
-    #landingNode .grid-container #profile-1 {
-      grid-column-start: 1;
-      grid-column-end: 4;
-      grid-row-start: 1;
-      grid-row-end: 6; }
-    #landingNode .grid-container #profile-2 {
-      grid-column-start: 4;
-      grid-column-end: 7;
-      grid-row-start: 1;
-      grid-row-end: 3; }
-    #landingNode .grid-container #profile-3 {
-      grid-column-start: 7;
-      grid-column-end: 10;
-      grid-row-start: 1;
-      grid-row-end: 3; }
-    #landingNode .grid-container #profile-4 {
-      grid-column-start: 4;
-      grid-column-end: 10;
-      grid-row-start: 3;
-      grid-row-end: 11; }
-    #landingNode .grid-container #profile-5 {
-      grid-column-start: 1;
-      grid-column-end: 4;
-      grid-row-start: 6;
-      grid-row-end: 11; }
-    #landingNode .grid-container #profile-6 {
-      grid-column-start: 1;
-      grid-column-end: 3;
-      grid-row-start: 11;
-      grid-row-end: 14; }
-    #landingNode .grid-container #profile-7 {
-      grid-column-start: 3;
-      grid-column-end: 6;
-      grid-row-start: 11;
-      grid-row-end: 14; }
-    #landingNode .grid-container #profile-8 {
-      grid-column-start: 6;
-      grid-column-end: 10;
-      grid-row-start: 11;
-      grid-row-end: 17; }
-    #landingNode .grid-container #profile-9 {
-      grid-column-start: 1;
-      grid-column-end: 3;
-      grid-row-start: 14;
-      grid-row-end: 17; }
-    #landingNode .grid-container #profile-10 {
-      grid-column-start: 3;
-      grid-column-end: 6;
-      grid-row-start: 14;
-      grid-row-end: 17; }
+    @media screen and (max-width: 1023px) {
+      #landingNode .profileContainer {
+        margin-bottom: 20px; } }
+  @media screen and (min-width: 1024px) {
+    #landingNode .grid-container {
+      display: grid;
+      grid-gap: 30px;
+      margin-top: 30px;
+      width: 100%; }
+      #landingNode .grid-container #profile-1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 6; }
+      #landingNode .grid-container #profile-2 {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 3; }
+      #landingNode .grid-container #profile-3 {
+        grid-column-start: 7;
+        grid-column-end: 10;
+        grid-row-start: 1;
+        grid-row-end: 3; }
+      #landingNode .grid-container #profile-4 {
+        grid-column-start: 4;
+        grid-column-end: 10;
+        grid-row-start: 3;
+        grid-row-end: 11; }
+      #landingNode .grid-container #profile-5 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 6;
+        grid-row-end: 11; }
+      #landingNode .grid-container #profile-6 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 11;
+        grid-row-end: 14; }
+      #landingNode .grid-container #profile-7 {
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 11;
+        grid-row-end: 14; }
+      #landingNode .grid-container #profile-8 {
+        grid-column-start: 6;
+        grid-column-end: 10;
+        grid-row-start: 11;
+        grid-row-end: 17; }
+      #landingNode .grid-container #profile-9 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 14;
+        grid-row-end: 17; }
+      #landingNode .grid-container #profile-10 {
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 14;
+        grid-row-end: 17; } }
 
 #nutritionFactsListingBg {
   position: relative; }
@@ -595,7 +604,6 @@ footer #footerLogo {
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background: #31BED7;
     z-index: -1;
     content: ""; }
 
@@ -668,7 +676,7 @@ footer #footerLogo {
       transition: all 0.2s ease-out; }
 
 .findRSection {
-  padding-top: 100px; }
+  padding: 100px 0; }
   .findRSection .findRecipesContent {
     padding-right: 12%; }
     @media screen and (max-width: 1200px) {
@@ -743,6 +751,9 @@ footer #footerLogo {
       transform: scale(1.05);
       transition: all 0.2s ease-out; }
 
+.nutritionFactsListing-page {
+  background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%); }
+
 #nutritionFactBg {
   position: relative; }
   #nutritionFactBg:after {
@@ -770,6 +781,28 @@ footer #footerLogo {
       left: 0;
       width: 100%;
       height: 100%; }
+  #nutritionFact #factImage {
+    width: 100%;
+    display: block;
+    margin-bottom: 80px; }
+  #nutritionFact .rte {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 75px; }
+    #nutritionFact .rte p {
+      font-family: "century-gothic", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      color: #1D1D1D;
+      font-size: 18px;
+      line-height: 28px; }
+    #nutritionFact .rte strong {
+      font-family: "filson-pro", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      color: #1D1D1D;
+      font-size: 30px;
+      line-height: 42px; }
 
 #about {
   background: white;

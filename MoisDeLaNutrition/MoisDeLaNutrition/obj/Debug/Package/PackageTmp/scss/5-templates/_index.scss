@@ -1,8 +1,12 @@
 // ==========================================================================
 // TEMPLATES - HOME
 // ==========================================================================
+
+.landing-page {
+    background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, rgba(49,175,198,1) 0%, rgba(77,208,229,1) 100%);
+}
 #landingNode {
-    background-color: $scooter;
+    //background-color: $scooter;
     margin-top: -54vh;
 
     .profileContainer {
@@ -53,82 +57,88 @@
                 }
             }
         }
+
+        @media screen and (max-width: 1023px) {
+            margin-bottom: 20px;
+        }
     }
 
-    .grid-container {
-        display: grid;
-        grid-gap: 30px;
-        margin-top: 30px;
-        width: 100%;
+    @media screen and (min-width: 1024px) {
+        .grid-container {
+            display: grid;
+            grid-gap: 30px;
+            margin-top: 30px;
+            width: 100%;
 
-        #profile-1 {
-            grid-column-start: 1;
-            grid-column-end: 4;
-            grid-row-start: 1;
-            grid-row-end: 6;
-        }
+            #profile-1 {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 6;
+            }
 
-        #profile-2 {
-            grid-column-start: 4;
-            grid-column-end: 7;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
+            #profile-2 {
+                grid-column-start: 4;
+                grid-column-end: 7;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
 
-        #profile-3 {
-            grid-column-start: 7;
-            grid-column-end: 10;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
+            #profile-3 {
+                grid-column-start: 7;
+                grid-column-end: 10;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
 
-        #profile-4 {
-            grid-column-start: 4;
-            grid-column-end: 10;
-            grid-row-start: 3;
-            grid-row-end: 11;
-        }
+            #profile-4 {
+                grid-column-start: 4;
+                grid-column-end: 10;
+                grid-row-start: 3;
+                grid-row-end: 11;
+            }
 
-        #profile-5 {
-            grid-column-start: 1;
-            grid-column-end: 4;
-            grid-row-start: 6;
-            grid-row-end: 11;
-        }
+            #profile-5 {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 6;
+                grid-row-end: 11;
+            }
 
-        #profile-6 {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 11;
-            grid-row-end: 14;
-        }
+            #profile-6 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 11;
+                grid-row-end: 14;
+            }
 
-        #profile-7 {
-            grid-column-start: 3;
-            grid-column-end: 6;
-            grid-row-start: 11;
-            grid-row-end: 14;
-        }
+            #profile-7 {
+                grid-column-start: 3;
+                grid-column-end: 6;
+                grid-row-start: 11;
+                grid-row-end: 14;
+            }
 
-        #profile-8 {
-            grid-column-start: 6;
-            grid-column-end: 10;
-            grid-row-start: 11;
-            grid-row-end: 17;
-        }
+            #profile-8 {
+                grid-column-start: 6;
+                grid-column-end: 10;
+                grid-row-start: 11;
+                grid-row-end: 17;
+            }
 
-        #profile-9 {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 14;
-            grid-row-end: 17;
-        }
+            #profile-9 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 14;
+                grid-row-end: 17;
+            }
 
-        #profile-10 {
-            grid-column-start: 3;
-            grid-column-end: 6;
-            grid-row-start: 14;
-            grid-row-end: 17;
+            #profile-10 {
+                grid-column-start: 3;
+                grid-column-end: 6;
+                grid-row-start: 14;
+                grid-row-end: 17;
+            }
         }
     }
 }

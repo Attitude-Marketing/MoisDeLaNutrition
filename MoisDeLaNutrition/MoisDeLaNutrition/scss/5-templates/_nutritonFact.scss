@@ -1,6 +1,9 @@
 // ==========================================================================
 // TEMPLATES - NUTRITION FACT
 // ==========================================================================
+.nutritionFactsListing-page {
+    background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, rgba(49,175,198,1) 0%, rgba(77,208,229,1) 100%);
+}
 #nutritionFactBg {
     position: relative;
 
@@ -25,7 +28,7 @@
         width: 100%;
         height: 0;
         padding-bottom: 56.25%;
-        margin-bottom:80px;
+        margin-bottom: 80px;
 
         .videoKeepRatio {
             position: absolute;
@@ -33,6 +36,32 @@
             left: 0;
             width: 100%;
             height: 100%;
+        }
+    }
+
+    #factImage {
+        width: 100%;
+        display: block;
+        margin-bottom: 80px;
+    }
+
+    .rte {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 75px;
+
+        p {
+            @include century-400;
+            color: $cod;
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        strong {
+            @include filson-700;
+            color: $cod;
+            font-size: 30px;
+            line-height: 42px;
         }
     }
 }

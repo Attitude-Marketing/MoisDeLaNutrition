@@ -91,7 +91,8 @@ textarea, input {
   padding-top: 100px;
   padding-bottom: 29vh;
   background: white;
-  background: url(../../images/placeholders/Bg_Pattern_On_White.svg) repeat, linear-gradient(90deg, white 0%, white 100%); }
+  background: url(../../images/placeholders/Bg_Pattern_On_White.svg) repeat, linear-gradient(90deg, white 0%, white 100%);
+  background-attachment: fixed; }
 
 #headerLogosContainer {
   display: flex;
@@ -325,31 +326,60 @@ footer #footerLogo {
     font-weight: 800; }
 
 #header-title {
-  font-family: "filson-pro", sans-serif;
-  font-style: normal;
-  font-weight: 900 !important;
-  text-shadow: 0px 0px 6px #FFFFFF;
   text-align: center;
   margin-bottom: 40px;
-  color: #fff;
-  stroke: 2px #31BED7;
-  -webkit-text-stroke: 2px #31BED7; }
-  #header-title .first-line {
-    font-size: 6.5vw;
-    line-height: 6.5vw;
-    letter-spacing: -2.6px; }
-  #header-title .second-line {
-    font-size: 5.6vw;
-    line-height: 6.5w;
-    letter-spacing: -2.26px; }
-
-#header-intro {
-  font-family: "century-gothic", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
   color: #fff; }
+  #header-title .first-line {
+    font-family: "filson-pro", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.6px;
+    margin-bottom: 20px; }
+    #header-title .first-line sup {
+      font-size: .5em; }
+  #header-title .second-line {
+    font-family: "filson-pro", sans-serif;
+    font-style: normal;
+    font-weight: 900 !important;
+    text-shadow: 0px 0px 6px #FFFFFF;
+    font-size: 80px;
+    line-height: 82px;
+    letter-spacing: -1.6px;
+    stroke: 2px #31BED7;
+    -webkit-text-stroke: 2px #31BED7; }
+  #header-title.htitle {
+    font-family: "filson-pro", sans-serif;
+    font-style: normal;
+    font-weight: 900 !important;
+    font-size: 93px;
+    line-height: 100px;
+    text-shadow: 0px 0px 6px #FFFFFF;
+    stroke: 2px #31BED7;
+    -webkit-text-stroke: 2px #31BED7; }
+
+#headerIntroWrapper {
+  padding: 34px;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px #FFFFFF;
+  border: #31BED7 2px solid;
+  border-radius: 20px;
+  margin: 50px 0 80px 0;
+  text-align: center; }
+  #headerIntroWrapper #motto {
+    font-family: "filson-pro", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    color: #31BED7;
+    font-size: 45px;
+    margin-bottom: 20px; }
+  #headerIntroWrapper #header-intro {
+    font-family: "century-gothic", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #31BED7; }
 
 .footerNewsletter #fnTitle {
   font-family: "filson-pro", sans-serif;
@@ -499,7 +529,8 @@ footer #footerLogo {
     transition: all 0.2s ease-out; }
 
 .landing-page {
-  background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%); }
+  background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%);
+  background-attachment: fixed; }
 
 #landingNode {
   margin-top: -54vh; }
@@ -546,7 +577,13 @@ footer #footerLogo {
       display: grid;
       grid-gap: 30px;
       margin-top: 30px;
-      width: 100%; }
+      width: 100%;
+      /*#profile-7 {
+                grid-column-start: 3;
+                grid-column-end: 6;
+                grid-row-start: 11;
+                grid-row-end: 14;
+            }*/ }
       #landingNode .grid-container #profile-1 {
         grid-column-start: 1;
         grid-column-end: 4;
@@ -574,29 +611,28 @@ footer #footerLogo {
         grid-row-end: 11; }
       #landingNode .grid-container #profile-6 {
         grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 11;
-        grid-row-end: 14; }
-      #landingNode .grid-container #profile-7 {
-        grid-column-start: 3;
         grid-column-end: 6;
         grid-row-start: 11;
         grid-row-end: 14; }
-      #landingNode .grid-container #profile-8 {
+      #landingNode .grid-container #profile-7 {
         grid-column-start: 6;
         grid-column-end: 10;
         grid-row-start: 11;
         grid-row-end: 17; }
-      #landingNode .grid-container #profile-9 {
+      #landingNode .grid-container #profile-8 {
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 14;
         grid-row-end: 17; }
-      #landingNode .grid-container #profile-10 {
+      #landingNode .grid-container #profile-9 {
         grid-column-start: 3;
         grid-column-end: 6;
         grid-row-start: 14;
         grid-row-end: 17; } }
+
+.nutritionFactsListing-page {
+  background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%);
+  background-attachment: fixed; }
 
 #nutritionFactsListingBg {
   position: relative; }
@@ -754,9 +790,6 @@ footer #footerLogo {
       transform: scale(1.05);
       transition: all 0.2s ease-out; }
 
-.nutritionFactsListing-page {
-  background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%); }
-
 #nutritionFactBg {
   position: relative; }
   #nutritionFactBg:after {
@@ -810,6 +843,7 @@ footer #footerLogo {
 #about {
   background: white;
   background: url(../../images/placeholders/Bg_Pattern_On_White.svg) repeat, linear-gradient(90deg, white 0%, white 100%);
+  background-attachment: fixed;
   min-height: 50vh;
   padding-top: 135px; }
   #about #infowrap .logos {
@@ -870,7 +904,8 @@ footer #footerLogo {
       margin-bottom: 100px; }
 
 #profile {
-  background: url(/images/placeholders/Bg_Pattern_On_White.svg) 0 0 repeat #fff; }
+  background: url(/images/placeholders/Bg_Pattern_On_White.svg) 0 0 repeat #fff;
+  background-attachment: fixed; }
   #profile .banner {
     height: 1200px;
     width: 100%; }
@@ -890,9 +925,79 @@ footer #footerLogo {
         line-height: 24px;
         color: #fff;
         max-width: 350px; }
+    #profile .banner .bannerBtn {
+      height: 56px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 35px;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      padding-right: 20px; }
+      #profile .banner .bannerBtn .bannerBtnIcon {
+        margin-right: 12px; }
+      #profile .banner .bannerBtn .bannerBtnStatement {
+        font-family: "century-gothic", sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        color: #31BED7;
+        font-size: 18px;
+        line-height: 20px; }
     @media screen and (min-width: 1921px) {
       #profile .banner {
         background-size: cover !important; } }
+  #profile .factPanel {
+    display: none;
+    width: 600px;
+    height: 100VH;
+    position: fixed;
+    top: 0;
+    right: -600px;
+    background-color: #fff;
+    padding: 0 45px;
+    z-index: 111; }
+    #profile .factPanel .btnClose {
+      position: absolute;
+      top: 19px;
+      left: 18px;
+      border: none;
+      outline: none;
+      background: none; }
+    #profile .factPanel .panelImageWrap {
+      width: 100%;
+      margin-top: 72px;
+      margin-bottom: 32px;
+      text-align: center; }
+    #profile .factPanel .info {
+      text-align: left; }
+      #profile .factPanel .info .factStatement {
+        font-family: "filson-pro", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        color: #000;
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 20px; }
+      #profile .factPanel .info .factTitle {
+        font-family: "filson-pro", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        color: #31BED7;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 18px; }
+      #profile .factPanel .info .factText {
+        font-family: "century-gothic", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        color: #000;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 34px; }
+      #profile .factPanel .info .globalCta {
+        color: #31BED7; }
+        #profile .factPanel .info .globalCta .globalCtaArrowStyle {
+          stroke: #31BED7; }
   #profile #recipes {
     margin-top: 160px; }
     #profile #recipes .recipe {
@@ -963,6 +1068,41 @@ footer #footerLogo {
               font-size: 20px;
               line-height: 28px;
               padding-left: 25px; }
+        #profile #recipes .recipe .recipeContentLeft .tipsBox {
+          width: 100%;
+          padding: 26px 36px 26px 70px;
+          background-color: #31BED7;
+          position: relative;
+          border-radius: 20px;
+          margin-top: 50px; }
+          #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsIcon {
+            width: 72px;
+            height: 72px;
+            background-color: #fff;
+            border: 2px solid #31BED7;
+            background: url(/images/icons/Light_Icon.svg) center center no-repeat #fff;
+            position: absolute;
+            top: 50%;
+            left: -36px;
+            transform: translateY(-50%);
+            border-radius: 50%; }
+          #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsContent {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            min-height: 140px;
+            align-items: center;
+            justify-content: center; }
+            #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsContent .tipsText {
+              font-family: "century-gothic", sans-serif;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              color: #fff; }
+            #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsContent .tipsPic {
+              max-width: 241px;
+              margin-left: 22px; }
       #profile #recipes .recipe .recipeContentRight {
         position: relative;
         padding-left: 59px; }

@@ -2,32 +2,64 @@
 // TYPOGRAPHY - TITLES
 // ==========================================================================
 #header-title {
-    @include filson-900;
-    text-shadow: 0px 0px 6px #FFFFFF;
     text-align: center;
-    margin-bottom:40px;
-    color:$white;
-    stroke:2px $scooter;
-    -webkit-text-stroke: 2px $scooter;
+    margin-bottom: 40px;
+    color: $white;
 
     .first-line {
-        font-size: 6.5vw;
-        line-height: 6.5vw;
-        letter-spacing: -2.6px;
+        @include filson-700;
+        font-size: 30px;
+        letter-spacing: -0.6px;
+        margin-bottom: 20px;
+
+        sup {
+            font-size: .5em;
+        }
     }
 
     .second-line {
-        font-size: 5.6vw;
-        line-height: 6.5w;
-        letter-spacing: -2.26px;
+        @include filson-900;
+        text-shadow: 0px 0px 6px #FFFFFF;
+        font-size: 80px;
+        line-height: 82px;
+        letter-spacing: -1.6px;
+        stroke: 2px $scooter;
+        -webkit-text-stroke: 2px $scooter;
+    }
+
+    &.htitle {
+        @include filson-900;
+        font-size: 93px;
+        line-height: 100px;
+        text-shadow: 0px 0px 6px #FFFFFF;
+        stroke: 2px $scooter;
+        -webkit-text-stroke: 2px $scooter;
     }
 }
-#header-intro {
-    @include century-400;
-    font-size: 16px;
-    line-height: 24px;
-    color:$white;
+#headerIntroWrapper {
+    padding: 34px;
+    background-color: #fff;
+    box-shadow: 0px 0px 6px #FFFFFF;
+    border: $scooter 2px solid;
+    border-radius: 20px;
+    margin: 50px 0 80px 0;
+    text-align: center;
+
+    #motto {
+        @include filson-800;
+        color: $scooter;
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    #header-intro {
+        @include century-700;
+        font-size: 18px;
+        line-height: 25px;
+        color: $scooter;
+    }
 }
+
 
 .footerNewsletter {
     #fnTitle {

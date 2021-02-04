@@ -350,11 +350,13 @@
     <Content Include="Content\application.css" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\icons\close_panel_icon.svg" />
+    <Content Include="images\icons\Icon_Article.svg" />
     <Content Include="images\icons\Icon_Articles_txt.svg" />
     <Content Include="images\icons\Icon_Articles_Vid.svg" />
     <Content Include="images\icons\Icon_Recipe.svg" />
-    <Content Include="images\icons\Icon_Recipe_1.svg" />
     <Content Include="images\icons\Icon_Tips.svg" />
+    <Content Include="images\icons\Light_Icon.svg" />
     <Content Include="images\icons\print_Icon.svg" />
     <Content Include="images\icons\Share_Icon.svg" />
     <Content Include="images\placeholders\Arrow_Whhite.svg" />
@@ -393,6 +395,8 @@
     <Content Include="Media\1027\placeholder_lips.jpg" />
     <Content Include="Media\1028\articleimg.png" />
     <Content Include="Media\1029\affiche.png" />
+    <Content Include="Media\1030\family_1.png" />
+    <Content Include="Media\1031\screen-shot-2021-01-29-at-40946-pm.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Plugins\Tinifier\package.manifest" />

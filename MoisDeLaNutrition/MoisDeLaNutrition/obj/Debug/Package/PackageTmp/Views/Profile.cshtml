@@ -7,6 +7,8 @@
     var bannerImgUrl = "";
     var recipes = pageNode.GetPropertyValue<IEnumerable<IPublishedContent>>("recipes");
     var recipeCounter = 1;
+    var factCounter = 1;
+    var factPanels = pageNode.GetPropertyValue<IEnumerable<IPublishedContent>>("factPanels");
 
     if (bannerImg != null)
     {
@@ -24,6 +26,47 @@
                     </div>
                 </div>
             </div>
+            @if (factPanels != null)
+            {
+
+                foreach (var fact in factPanels)
+                {
+                    var img = fact.GetPropertyValue<IPublishedContent>("factImage");
+                    var imgUrl = "";
+
+                    if (img != null)
+                    {
+                        imgUrl = img.Url;
+                    }
+
+                    var factPage = fact.GetPropertyValue<IPublishedContent>("factPage");
+                    var factPageUrl = "";
+
+                    if (factPage != null)
+                    {
+                        factPageUrl = factPage.Url;
+                    }
+
+                    <a class="bannerBtn quickFacts" href="#" data-fact="fact-@factCounter"><img src="~/images/icons/Icon_Tips.svg" class="bannerBtnIcon"><span class="bannerBtnStatement">@Html.Raw(fact.GetPropertyValue<string>("factStatement"))</span></a>
+                    <div id="fact-@factCounter" class="factPanel">
+                        <button class="btnClose"><img src="~/images/icons/close_panel_icon.svg" /></button>
+                        <div class="panelImageWrap">
+                            <img class="panelImage" src="@imgUrl" />
+                        </div>
+                        <div class="info">
+                            <p class="factStatement">@(fact.GetPropertyValue<string>("factStatement"))</p>
+                            <p class="factTitle">@(fact.GetPropertyValue<string>("factTitle"))</p>
+                            <div class="factText">@(fact.GetPropertyValue<HtmlString>("factText"))</div>
+                            @if (factPage != null)
+                            {
+                                <a href="@factPageUrl" class="globalCta">@(Umbraco.Field("#LearnMore"))<span class="globalCtaArrow"><svg xmlns="http://www.w3.org/2000/svg" width="21.715" height="12" viewBox="0 0 21.715 12"><path class="globalCtaArrowStyle" d="M504.7,357.685c0-.015-.009-.029-.013-.044a.464.464,0,0,0-.016-.052.488.488,0,0,0-.026-.049c-.007-.013-.013-.027-.021-.04a.529.529,0,0,0-.065-.079l-5.483-5.483a.517.517,0,1,0-.731.731l4.6,4.6H483.51a.517.517,0,0,0,0,1.034h19.434l-4.6,4.6a.517.517,0,1,0,.731.731l5.483-5.483a.53.53,0,0,0,.065-.079c.009-.013.014-.026.021-.04a.491.491,0,0,0,.026-.049.466.466,0,0,0,.016-.052c0-.015.01-.029.013-.044A.514.514,0,0,0,504.7,357.685Z" transform="translate(-482.993 -351.786)" /></svg></span></a>
+                            }
+                        </div>
+                    </div>
+
+                    factCounter++;
+                }
+            }
         </div>
         <div id="recipes">
             <div class="row no-gutters">
@@ -49,7 +92,7 @@
                                             <p class="info">@(Umbraco.Field("#Preparation")) @(recipe.GetPropertyValue<string>("preparation")) / @(Umbraco.Field("#Cooking")) @(recipe.GetPropertyValue<string>("cooking"))</p>
                                             <p class="info">@(Umbraco.Field("#Serving")) @(recipe.GetPropertyValue<string>("serving")) </p>
                                             <ul class="preparationSteps">
-                                                @foreach(var step in recipe.GetPropertyValue<IEnumerable<IPublishedContent>>("preparationSteps"))
+                                                @foreach (var step in recipe.GetPropertyValue<IEnumerable<IPublishedContent>>("preparationSteps"))
                                                 {
                                                     <li>
                                                         <span class="ellipse">@stepCounter</span>
@@ -59,6 +102,26 @@
                                                     stepCounter++;
                                                 }
                                             </ul>
+                                            @if (!recipe.GetPropertyValue<string>("tipsText").IsNullOrWhiteSpace())
+                                            {
+                                                var tipsPic = recipe.GetPropertyValue<IPublishedContent>("tipsPic");
+                                                var tipsPicUrl = "";
+
+                                                if(tipsPic != null)
+                                                {
+                                                    tipsPicUrl = tipsPic.Url;
+                                                }
+                                                <div class="tipsBox">
+                                                    <div class="tipsIcon"></div>
+                                                    <div class="tipsContent">
+                                                        <div class="tipsText">@(recipe.GetPropertyValue<HtmlString>("tipsText"))</div>
+                                                        @if (tipsPic != null)
+                                                        {
+                                                            <img class="tipsPic" src="@tipsPicUrl" />
+                                                        }
+                                                    </div>
+                                                </div>
+                                             }
                                         </div>
                                     </div>
                                     <div class="col-sm-6">

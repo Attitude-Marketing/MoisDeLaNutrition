@@ -4,6 +4,7 @@
 
 #profile {
     background: url(/images/placeholders/Bg_Pattern_On_White.svg) 0 0 repeat #fff;
+    background-attachment: fixed;
 
     .banner {
         height: 1200px;
@@ -29,8 +30,94 @@
             }
         }
 
+        .bannerBtn {
+            height: 56px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 35px;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            padding-right: 20px;
+
+            .bannerBtnIcon {
+                margin-right: 12px;
+            }
+
+            .bannerBtnStatement {
+                @include century-italic-400;
+                color: $scooter;
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+
         @media screen and (min-width: 1921px) {
             background-size: cover !important;
+        }
+    }
+
+    .factPanel {
+        display: none;
+        width: 600px;
+        height: 100VH;
+        position: fixed;
+        top: 0;
+        right: -600px;
+        background-color: #fff;
+        padding: 0 45px;
+        z-index: 111;
+
+        .btnClose {
+            position: absolute;
+            top: 19px;
+            left: 18px;
+            border: none;
+            outline: none;
+            background: none;
+        }
+
+        .panelImageWrap {
+            width: 100%;
+            margin-top: 72px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .info {
+            text-align: left;
+
+            .factStatement {
+                @include filson-700;
+                color: #000;
+                font-size: 22px;
+                line-height: 24px;
+                margin-bottom: 20px;
+            }
+
+            .factTitle {
+                @include filson-700;
+                color: $scooter;
+                font-size: 24px;
+                line-height: 32px;
+                margin-bottom: 18px;
+            }
+
+            .factText {
+                @include century-400;
+                color: #000;
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 34px;
+            }
+
+            .globalCta {
+                color: $scooter;
+
+                .globalCtaArrowStyle {
+                    stroke: $scooter;
+                }
+            }
         }
     }
 
@@ -109,6 +196,49 @@
                             font-size: 20px;
                             line-height: 28px;
                             padding-left: 25px;
+                        }
+                    }
+                }
+
+                .tipsBox {
+                    width: 100%;
+                    padding: 26px 36px 26px 70px;
+                    background-color: $scooter;
+                    position: relative;
+                    border-radius: 20px;
+                    margin-top: 50px;
+
+                    .tipsIcon {
+                        width: 72px;
+                        height: 72px;
+                        background-color: #fff;
+                        border: 2px solid $scooter;
+                        background: url(/images/icons/Light_Icon.svg) center center no-repeat #fff;
+                        position: absolute;
+                        top: 50%;
+                        left: -36px;
+                        transform: translateY(-50%);
+                        border-radius: 50%;
+                    }
+
+                    .tipsContent {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        min-height: 140px;
+                        align-items: center;
+                        justify-content: center;
+
+                        .tipsText {
+                            @include century-700;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #fff;
+                        }
+
+                        .tipsPic {
+                            max-width: 241px;
+                            margin-left: 22px;
                         }
                     }
                 }

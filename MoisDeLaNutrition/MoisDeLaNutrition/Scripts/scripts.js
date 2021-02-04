@@ -43,4 +43,30 @@ $(document).ready(function () {
         $("#panel").toggle();
         $("#panel").toggleClass("visible");
     });
+
+    $(".quickFacts").click(function (e) {
+        e.preventDefault();
+        var tgtId = $(this).data("fact"),
+            $panel = $("#" + tgtId);
+
+        if ($panel.css("display") == "none") {
+
+            $(".factPanel").each(function () {
+                if ($(this).css("display") !== "none") {
+                    $(this).find(".btnClose").trigger("click");
+                }
+            });
+            $panel.css("display","block").animate({"right": 0}, 300);
+        }
+
+    });
+
+    $(".factPanel").find(".btnClose").click(function () {
+
+        var $panel = $(this).parent(".factPanel");
+
+        $panel.animate({ "right": -600 }, 300, function () {
+            $panel.css("display","none");
+        });
+    });
 }); // end doc ready

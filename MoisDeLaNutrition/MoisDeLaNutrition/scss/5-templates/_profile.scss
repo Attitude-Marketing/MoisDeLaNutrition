@@ -50,6 +50,15 @@
                 font-size: 18px;
                 line-height: 20px;
             }
+
+            &.factPage {
+                svg {
+                    margin-left: 10px;
+                    .arrowPath {
+                        fill: #31bed7;
+                    }
+                }
+            }
         }
 
         @media screen and (min-width: 1921px) {

@@ -69,4 +69,118 @@ $(document).ready(function () {
             $panel.css("display","none");
         });
     });
+
+    $("#newsletter-form").on("submit", function (e) {
+
+        e.preventDefault();
+
+        var $email = $('#email'),
+            $form = $(this),
+            errEmpty = $form.data("mssg"),
+            errInvalid = $email.data("invalid"),
+            err = errEmpty;
+
+        if ($email.val() == "") {
+            $email.css("border-color", "#F75A58").on("change", function () {
+                $(this).css("border-color", "#113961");
+                $form.parent('div').find(".errMss").html("&nbsp;");
+            });
+            $form.parent('div').find(".errMss").html(err);
+        } else if (!echeck($email.val())) {
+            $email.css("border-color", "#F75A58").on("change", function () {
+                $(this).css("border-color", "#113961");
+                $form.parent('div').find(".errMss").html("&nbsp;");
+            });
+            err = errInvalid;
+            $form.parent('div').find(".errMss").html(err);
+        } else {
+            getToken($email, $form);
+        }
+    });
 }); // end doc ready
+
+/* == FUNCTIONS == */
+
+function getToken($email, $form) {
+
+    var url = "/umbraco/surface/api/gettoken";
+
+    $.ajax({
+        dataType: "json",
+        url: url,
+        success: function (response) {
+            if (response.IsSuccess) {
+
+                submitNewsletterOptIn($email, $form, response.Result)
+            } else {
+                $form.parent('div').find(".errMss").html($form.data("ajfail"));
+            }
+
+
+        },
+        error: function (xhr, status, error) {
+            console.log(xhr);
+            console.log(status);
+            console.log(error);
+            $form.parent('div').find(".errMss").html($form.data("ajfail"));
+        }
+    });
+}
+
+function submitNewsletterOptIn($email, $form, tokenObj) {
+
+    var url,
+        data = new FormData(),
+        parsedTokenJson = "",
+        url = "/umbraco/surface/api/newsletteroptin";
+
+    if (tokenObj != "undefined") {
+        parsedTokenJson = JSON.parse(JSON.parse(tokenObj));
+
+        token = parsedTokenJson.access_token;
+
+        data.append("Email", $email.val());
+        data.append("Captcha", $form.find(".captcha").val());
+        data.append("Token", token);
+        data.append("Userlang", $("#userlang").val());
+
+        $.ajax({
+            method: "POST",
+            processData: false,  // tell jQuery not to process the data
+            contentType: false,   // tell jQuery not to set contentType
+            dataType: "json",
+            url: url,
+            data: data,
+            success: function (response) {
+
+                if (response.IsSuccess) {
+
+                    var $container = $form.parent('div'),
+                        thks = $form.data('thks');
+
+                    $container.html('<p class="thks">' + thks + '</p>');
+                } else {
+                    $container.find(".errMss").html($form.data("ajfail"));
+                }
+
+            },
+            error: function (xhr, status, error) {
+                console.log(xhr);
+                console.log(status);
+                console.log(error);
+                $form.parent('div').find(".errMss").html($form.data("ajfail"));
+            }
+        });
+    } else {
+        console.log("error in getting token : " + tokenObj.response);
+    }
+}
+
+function echeck(str) {
+    var emailRegEx = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-\.])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (str.match(emailRegEx)) {
+        return true;
+    } else {
+        return false;
+    }
+}

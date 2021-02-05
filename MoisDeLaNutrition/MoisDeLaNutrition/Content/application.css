@@ -528,6 +528,30 @@ footer #footerLogo {
     margin-left: 14px;
     transition: all 0.2s ease-out; }
 
+#captcha, .captcha {
+  display: none; }
+
+#errMss, .errMss {
+  font-family: "century-gothic", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  min-height: 16px;
+  margin-left: 31px;
+  margin-top: 5px;
+  color: #F75A58;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.28px; }
+
+.thks {
+  font-family: "century-gothic", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #31BED7;
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 10px; }
+
 .landing-page {
   background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%);
   background-attachment: fixed; }

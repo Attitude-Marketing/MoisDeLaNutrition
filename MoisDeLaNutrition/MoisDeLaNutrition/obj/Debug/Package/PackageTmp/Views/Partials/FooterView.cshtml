@@ -89,10 +89,15 @@
                         <div class="footerContent footerNewsletter">
                             <p id="fnTitle" class="noBrMobile">@(langNode.GetPropertyValue<string>("panelTitle"))</p>
                             <p id="fnText">@(langNode.GetPropertyValue<HtmlString>("panelText"))</p>
-                            <form id="newsletter-form" class="newsletter-form" data-mssg="@(Umbraco.Field("#Empty"))" data-ajfail="@Umbraco.Field("#AjaxFail")" data-thks="@(Umbraco.Field("#NewsletterThanks"))">
-                                <input type="text" id="email" name="email" placeholder="@footerEntrezCourriel" data-invalid="@(Umbraco.Field("#Invalid"))">
-                                <button type="submit" id="submitNewsletter">@footerSoumettre <span id="submitArrow">→</span></button>
-                            </form>
+                            <div>
+                                <form id="newsletter-form" class="newsletter-form" data-mssg="@(Umbraco.Field("#Empty"))" data-ajfail="@Umbraco.Field("#AjaxFail")" data-thks="@(Umbraco.Field("#NewsletterThanks"))">
+                                    <input type="text" id="email" name="email" placeholder="@footerEntrezCourriel" data-invalid="@(Umbraco.Field("#Invalid"))">
+                                    <button type="submit" id="submitNewsletter">@footerSoumettre <span id="submitArrow">→</span></button>
+                                    <input type="text" class="captcha" name="footerOptInCaptcha" />
+                                    <input id="userlang" type="hidden" value="@lang" />
+                                </form>
+                                <div class="errMss">&nbsp;</div>
+                            </div>
                         </div>
                     }
                 </div>

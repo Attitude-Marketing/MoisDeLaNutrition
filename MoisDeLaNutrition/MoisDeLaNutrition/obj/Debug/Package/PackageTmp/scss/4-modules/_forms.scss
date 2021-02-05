@@ -1,3 +1,26 @@
 // ==========================================================================
 // MODULES - FORMS
 // ==========================================================================
+
+#captcha, .captcha {
+    display: none;
+}
+
+#errMss, .errMss {
+    @include century-700;
+    min-height: 16px;
+    margin-left: 31px;
+    margin-top: 5px;
+    color: #F75A58;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.28px;
+}
+
+.thks {
+    @include century-700;
+    color: $scooter;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 10px;
+}

@@ -36,18 +36,34 @@ $cardPadding: 40px 30px;
         display: flex;
         flex-direction: row;
         margin-bottom: 30px;
+        border:2px solid $white;
 
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 1400px) {
             min-height: unset;
+            flex-direction: column-reverse;
+        }
+
+        @media screen and (max-width: 991px) {
+            min-height: 380px;
+            flex-direction: row;
         }
 
         @media screen and (max-width: 576px) {
+            min-height: unset;
             flex-direction: column-reverse;
         }
 
         .cardContent {
             flex: 1 1 57%;
             padding: $cardPadding;
+
+            @media screen and (max-width: 1400px) {
+                flex: 1 1 100%;
+            }
+
+            @media screen and (max-width: 991px) {
+                flex: 1 1 57%;
+            }
 
             @media screen and (max-width: 576px) {
                 flex: 1 1 100%;
@@ -87,6 +103,17 @@ $cardPadding: 40px 30px;
             border-top-right-radius: $cardRadius;
             overflow: hidden !important;
 
+            @media screen and (max-width: 1400px) {
+                border-radius: $cardRadius;
+            }
+
+            @media screen and (max-width: 991px) {
+                border-bottom-right-radius: $cardRadius;
+                border-top-right-radius: $cardRadius;
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+            }
+
             @media screen and (max-width: 576px) {
                 border-radius: $cardRadius;
             }
@@ -96,9 +123,19 @@ $cardPadding: 40px 30px;
                 height: 100%;
                 transform: scale(1);
 
+                @media screen and (max-width: 1400px) {
+                    height: 100%;
+                    min-height: 275px;
+                }
+
+                @media screen and (max-width: 991px) {
+                    height: 100%;
+                    min-height: 100%;
+                }
+
                 @media screen and (max-width: 576px) {
                     height: 100%;
-                    min-height: 200px;
+                    min-height: 275px;
                 }
 
                 img {
@@ -127,10 +164,14 @@ $cardPadding: 40px 30px;
     padding: 100px 0;
 
     .findRecipesContent {
-        padding-right: 12%;
+        padding-right: 30px;
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1400px) {
             padding-right: 0%;
+        }
+
+        @media screen and (max-width: 991px) {
+            margin-bottom: 40px;
         }
 
         @media screen and (max-width: 576px) {
@@ -144,6 +185,26 @@ $cardPadding: 40px 30px;
             font-size: 80px;
             line-height: 82px;
             margin-bottom: 30px;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 54px;
+                line-height: 56px;
+            }
+
+            @media screen and (max-width: 991px) {
+                font-size: 70px;
+                line-height: 72px;
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 64px;
+                line-height: 66px;
+            }
+
+            @media screen and (max-width: 576px) {
+                font-size: 44px;
+                line-height: 46px;
+            }
         }
 
         .findRText {
@@ -154,8 +215,12 @@ $cardPadding: 40px 30px;
             line-height: 24px;
             padding-right: 15%;
 
-            @media screen and (max-width: 1200px) {
+            @media screen and (max-width: 1400px) {
                 padding-right: 10%;
+            }
+
+            @media screen and (max-width: 1200px) {
+                padding-right: 0;
             }
 
             @media screen and (max-width: 576px) {
@@ -182,10 +247,6 @@ $cardPadding: 40px 30px;
         overflow: hidden;
         position: relative;
 
-        @media screen and (max-width: 1200px) {
-            margin-top: 60px;
-        }
-
         .findImgTxt {
             position: absolute;
             z-index: 2;
@@ -198,8 +259,9 @@ $cardPadding: 40px 30px;
                 color: $white;
                 text-shadow: 0px 0px 9px #00333C79;
                 @include filson-italic-700;
-                font-size: 40px;
-                line-height: 72px;
+                font-size: 35px;
+                line-height: 38px;
+                margin-bottom:10px;
             }
 
             .globalCta {

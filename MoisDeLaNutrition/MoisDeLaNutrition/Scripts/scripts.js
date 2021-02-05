@@ -38,7 +38,14 @@ history.navigationMode = 'compatible';
 END GLOBAL PROPERTIES
 **********************************************************************************************/
 $(document).ready(function () {
-    console.log("doc ready");
+    const clickx = document.getElementById('pencet');
+
+    clickx.addEventListener('click', function () {
+        clickx.classList.toggle('Diam');
+    });
+
+
+
     $("#hamburger").click(function () {
         $("#panel").toggle();
         $("#panel").toggleClass("visible");

@@ -88,7 +88,7 @@
                     {
                         <div class="footerContent footerNewsletter">
                             <p id="fnTitle" class="noBrMobile">@(langNode.GetPropertyValue<string>("panelTitle"))</p>
-                            <p id="fnText">@(langNode.GetPropertyValue<HtmlString>("panelText"))</p>
+                            <div id="fnText">@(langNode.GetPropertyValue<HtmlString>("panelText"))</div>
                             <div>
                                 <form id="newsletter-form" class="newsletter-form" data-mssg="@(Umbraco.Field("#Empty"))" data-ajfail="@Umbraco.Field("#AjaxFail")" data-thks="@(Umbraco.Field("#NewsletterThanks"))">
                                     <input type="text" id="email" name="email" placeholder="@footerEntrezCourriel" data-invalid="@(Umbraco.Field("#Invalid"))">

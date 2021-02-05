@@ -413,6 +413,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Plugins\Tinifier\package.manifest" />
     <Content Include="App_Plugins\SpectrumColorPicker\package.manifest" />
+    <None Include="Properties\PublishProfiles\DEV - SAM.pubxml" />
     <None Include="Properties\PublishProfiles\PublishDev.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

@@ -47,18 +47,27 @@
         border-radius: 20px;
         padding: 75px;
 
-        p {
-            @include century-400;
-            color: $cod;
-            font-size: 18px;
-            line-height: 28px;
+        @media screen and (max-width: 1400px) {
+            padding: 45px;
         }
+
+        @media screen and (max-width: 576px) {
+            padding: 25px;
+        }
+
+
+        @include century-400;
+        color: $cod;
+        font-size: 18px;
+        line-height: 28px;
 
         strong {
             @include filson-700;
             color: $cod;
+            margin-top: 20px;
             font-size: 30px;
-            line-height: 42px;
+            line-height: 32px;
+            display: inline-block;
         }
     }
 }

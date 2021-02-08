@@ -409,6 +409,16 @@
     <Content Include="Media\1038\healthy_wisdom.png" />
     <Content Include="Media\1039\music_lover.png" />
     <Content Include="Media\1040\wellness_poursuit.png" />
+    <Content Include="Media\1041\family_togetherness.png" />
+    <Content Include="Media\1042\active_lifestyle.png" />
+    <Content Include="Media\1043\breakfast_for_hectic_days.png" />
+    <Content Include="Media\1044\budget_crunch.png" />
+    <Content Include="Media\1045\energy_to_fuel.png" />
+    <Content Include="Media\1046\family_1.png" />
+    <Content Include="Media\1047\food_intolerance_cheddar_newbgcolor.png" />
+    <Content Include="Media\1048\music_lover.png" />
+    <Content Include="Media\1049\wellness_poursuit.png" />
+    <Content Include="Media\1050\wisdom_1.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Plugins\Tinifier\package.manifest" />

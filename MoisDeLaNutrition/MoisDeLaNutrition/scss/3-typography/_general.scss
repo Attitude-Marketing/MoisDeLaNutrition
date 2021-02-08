@@ -13,15 +13,29 @@
 
     ul {
         list-style-type: disc;
-        list-style-position: inside;
+        list-style-position: outside;
+        padding-left: 20px;
     }
 
     ol {
         list-style-type: decimal;
-        list-style-position: inside;
+        list-style-position: outside;
+        padding-left: 20px;
     }
 
     li {
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+    strong{
+        font-weight:800;
     }
 
     .rteTitle {

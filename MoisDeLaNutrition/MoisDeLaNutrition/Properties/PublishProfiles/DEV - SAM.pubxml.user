@@ -403,10 +403,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/03/2013 22:46:22</publishTime>
     </File>
     <File Include="bin/MoisDeLaNutrition.dll">
-      <publishTime>02/08/2021 12:08:00</publishTime>
+      <publishTime>02/08/2021 16:29:57</publishTime>
     </File>
     <File Include="bin/MoisDeLaNutrition.pdb">
-      <publishTime>02/08/2021 12:08:00</publishTime>
+      <publishTime>02/08/2021 16:29:57</publishTime>
     </File>
     <File Include="bin/MySql.Data.dll">
       <publishTime>04/26/2018 23:48:14</publishTime>
@@ -847,7 +847,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 10:01:45</publishTime>
     </File>
     <File Include="Content/application.css">
-      <publishTime>02/08/2021 15:23:18</publishTime>
+      <publishTime>02/08/2021 16:26:46</publishTime>
     </File>
     <File Include="default.aspx">
       <publishTime>12/01/2020 10:01:45</publishTime>
@@ -1096,7 +1096,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 12:19:36</publishTime>
     </File>
     <File Include="scss/2-layout/_footer.scss">
-      <publishTime>02/08/2021 10:20:55</publishTime>
+      <publishTime>02/08/2021 15:29:20</publishTime>
     </File>
     <File Include="scss/2-layout/_general.scss">
       <publishTime>02/05/2021 12:19:36</publishTime>
@@ -1123,7 +1123,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 12:19:36</publishTime>
     </File>
     <File Include="scss/4-modules/_menus.scss">
-      <publishTime>02/08/2021 14:00:10</publishTime>
+      <publishTime>02/08/2021 16:12:32</publishTime>
     </File>
     <File Include="scss/5-templates/_about.scss">
       <publishTime>02/08/2021 14:07:51</publishTime>
@@ -1141,10 +1141,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/04/2020 11:29:49</publishTime>
     </File>
     <File Include="scss/5-templates/_profile.scss">
-      <publishTime>02/05/2021 12:19:36</publishTime>
+      <publishTime>02/08/2021 15:29:20</publishTime>
+    </File>
+    <File Include="scss/5-templates/_resources.scss">
+      <publishTime>02/08/2021 16:26:46</publishTime>
     </File>
     <File Include="scss/application.scss">
-      <publishTime>02/05/2021 12:19:36</publishTime>
+      <publishTime>02/08/2021 16:05:20</publishTime>
     </File>
     <File Include="umbraco/Actions/delete.aspx">
       <publishTime>03/11/2019 14:48:32</publishTime>
@@ -5824,7 +5827,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2021 12:06:48</publishTime>
     </File>
     <File Include="Views/Partials/FooterView.cshtml">
-      <publishTime>02/05/2021 14:21:22</publishTime>
+      <publishTime>02/08/2021 16:10:59</publishTime>
     </File>
     <File Include="Views/Partials/Grid/Bootstrap2-Fluid.cshtml">
       <publishTime>12/01/2020 10:01:42</publishTime>
@@ -5860,7 +5863,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/08/2021 14:02:37</publishTime>
     </File>
     <File Include="Views/Profile.cshtml">
-      <publishTime>02/05/2021 12:19:33</publishTime>
+      <publishTime>02/08/2021 15:29:20</publishTime>
+    </File>
+    <File Include="Views/Resources.cshtml">
+      <publishTime>02/08/2021 16:27:31</publishTime>
     </File>
     <File Include="Views/web.config">
       <publishTime>12/01/2020 15:22:54</publishTime>
@@ -5872,7 +5878,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 12:19:33</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/08/2021 12:08:02</publishTime>
+      <publishTime>02/08/2021 15:40:04</publishTime>
     </File>
   </ItemGroup>
 </Project>

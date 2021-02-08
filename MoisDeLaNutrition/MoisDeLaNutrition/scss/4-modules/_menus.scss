@@ -121,7 +121,7 @@ $desktopNavSpacing : 20px;
         }
 
         #panel {
-            position: absolute;
+            position: fixed;
             top: 55px;
             left: 0;
             width: 100%;
@@ -163,7 +163,7 @@ $desktopNavSpacing : 20px;
         }
     }
 }
-.nutritionFact-page, .about-page {
+.nutritionFact-page, .about-page, .resources-page {
     #navs #desktop-nav ul li a {
         color: $scooter;
     }

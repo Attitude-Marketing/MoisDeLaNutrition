@@ -513,6 +513,8 @@
     <Content Include="scss\5-templates\_nutritonFact.scss" />
     <Content Include="scss\5-templates\_about.scss" />
     <Content Include="scss\5-templates\_profile.scss" />
+    <Content Include="Views\Resources.cshtml" />
+    <Content Include="scss\5-templates\_resources.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

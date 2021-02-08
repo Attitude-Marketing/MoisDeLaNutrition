@@ -547,7 +547,7 @@ footer #footerLogo {
       padding: 10px 15px;
       box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.05); }
     #navs #mobile-nav #panel {
-      position: absolute;
+      position: fixed;
       top: 55px;
       left: 0;
       width: 100%;
@@ -576,7 +576,7 @@ footer #footerLogo {
           #navs #mobile-nav #panel #mobile-menu li.current a {
             text-decoration: none; }
 
-.nutritionFact-page #navs #desktop-nav ul li a, .about-page #navs #desktop-nav ul li a {
+.nutritionFact-page #navs #desktop-nav ul li a, .about-page #navs #desktop-nav ul li a, .resources-page #navs #desktop-nav ul li a {
   color: #31BED7; }
 
 #pencet {
@@ -1444,3 +1444,37 @@ footer #footerLogo {
               border-bottom: rgba(49, 190, 215, 0.5) 1px solid; }
               #profile #recipes .recipe .recipeContentRight .ingredientsWrap .ingredients li:last-child {
                 border: none; }
+
+#resources {
+  background: white;
+  background: url(../../images/placeholders/Bg_Pattern_On_White.svg) repeat, linear-gradient(90deg, white 0%, white 100%);
+  background-attachment: fixed;
+  min-height: 50vh;
+  padding-top: 135px; }
+  @media screen and (max-width: 576px) {
+    #resources {
+      padding-top: 100px; } }
+  #resources .title {
+    font-family: "filson-pro", sans-serif;
+    font-style: normal;
+    font-weight: 900 !important;
+    color: #000;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 30px; }
+    @media screen and (max-width: 768px) {
+      #resources .title {
+        font-size: 38px;
+        line-height: 48px; } }
+  #resources .resourcesListingBg {
+    background: #EAF9FB;
+    padding-top: 10%;
+    margin-top: 10%;
+    padding-bottom: 70px; }
+    #resources .resourcesListingBg .resourcesListingContent {
+      margin-top: -20%; }
+      #resources .resourcesListingBg .resourcesListingContent .resourceContainer {
+        padding: 30px;
+        background: yellow;
+        height: 395px;
+        margin-bottom: 30px; }

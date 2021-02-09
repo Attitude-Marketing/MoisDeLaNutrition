@@ -26,3 +26,26 @@
     }
 }
 
+
+.globalDownloadCta {
+    background: $white;
+    color: $scooter;
+    font-size: 17px;
+    line-height: 20px;
+    @include filson-italic-700;
+    border-radius: 40px;
+    display: inline-block;
+    padding: 8px 20px;
+
+    svg {
+        .a {
+            fill: #31bed7;
+        }
+
+        .b {
+            fill: none;
+            stroke: #31bed7;
+            stroke-linecap: round;
+        }
+    }
+}

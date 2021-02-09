@@ -12,24 +12,25 @@ if (typeof console !== "object") {
     console.info = function (text) { };
 }
 
-var format = "",
+var format = "desktop",
     isMobile = false,
     countpage = 0,
     interval,
     countInterval = 0,
     totems = 0,
+    mobileThreshold = 768,
     listcount = 0;
 
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     isMobile = true;
 }
-if (window.innerWidth < 769) {
+if (window.innerWidth < mobileThreshold) {
     format = "mobile";
 }
-if(window.matchMedia('(min-width: 1024px) and (orientation: portrait)').matches) {
-    format = "ipadpro";
-}
+//if(window.matchMedia('(min-width: 1024px) and (orientation: portrait)').matches) {
+//    format = "ipadpro";
+//}
 
 
 history.navigationMode = 'compatible';
@@ -54,7 +55,8 @@ $(document).ready(function () {
     $(".quickFacts").click(function (e) {
         e.preventDefault();
         var tgtId = $(this).data("fact"),
-            $panel = $("#" + tgtId);
+            $panel = $("#" + tgtId),
+            $overlay = $("#overlay");
 
         if ($panel.css("display") == "none") {
 
@@ -63,17 +65,24 @@ $(document).ready(function () {
                     $(this).find(".btnClose").trigger("click");
                 }
             });
-            $panel.css("display","block").animate({"right": 0}, 300);
+            $panel.css("display", "block").animate({ "right": 0 }, 300);
+            $overlay.animate({ 'opacity': '0.25'}, 400, function () {
+                $(this).css('pointer-events', 'all');
+            });
         }
 
     });
 
     $(".factPanel").find(".btnClose").click(function () {
 
-        var $panel = $(this).parent(".factPanel");
+        var $panel = $(this).parent(".factPanel"),
+            $overlay = $("#overlay");
 
         $panel.animate({ "right": -600 }, 300, function () {
             $panel.css("display","none");
+        });
+        $overlay.animate({ 'opacity': 0 }, 300, function () {
+            $(this).css('pointer-events', 'none');
         });
     });
 
@@ -107,6 +116,27 @@ $(document).ready(function () {
 
     $("#print").click(function () {
         window.print();
+    });
+
+    /* mobile switch */
+    if (window.innerWidth <= mobileThreshold) {
+        console.log(format);
+        mobileSwitch($(".mobile-switch"), format);
+    }
+    $(window).resize(function () {
+        if ($(document).width() <= mobileThreshold) {
+            console.log(format);
+            if (format == "desktop") {
+                format = "mobile";
+                mobileSwitch($(".mobile-switch"), format);
+            }
+        } else if ($(document).width() > mobileThreshold) {
+            console.log(format);
+            if (format == "mobile") {
+                format = "desktop";
+                mobileSwitch($(".mobile-switched"), format);
+            }
+        }
     });
 }); // end doc ready
 
@@ -194,4 +224,44 @@ function echeck(str) {
     } else {
         return false;
     }
+}
+
+function mobileSwitch($target, platform) {
+
+    console.log("in function");
+
+    $target.each(function () {
+        var $self = $(this),
+            elt = $self.prop('nodeName'),
+            $ostyle;
+
+        if (elt != "IMG") {
+            $ostyle = $self.attr("style");
+        } else {
+            $ostyle = $self.attr("src");
+        }
+
+
+        if ($self.data("mobile") != "" && $self.data("mobile") != undefined) {
+
+            console.log("data-mobile exists " + $self.data("mobile"));
+
+            if (elt == "IMG") {
+                $self.attr("src", $self.data("mobile"));
+            } else {
+                $self.attr("style", $self.data("mobile"));
+            }
+
+            $self.data("mobile", $ostyle);
+
+            console.log("platform : " + platform);
+
+            if (platform == "mobile") {
+                $self.addClass("mobile-switched").removeClass("mobile-switch");
+            } else if (platform == "desktop") {
+                $self.addClass("mobile-switch").removeClass("mobile-switched");
+            }
+        }
+
+    });
 }

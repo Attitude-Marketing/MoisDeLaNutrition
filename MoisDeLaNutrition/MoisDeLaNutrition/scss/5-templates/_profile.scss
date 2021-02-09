@@ -20,6 +20,12 @@
                 line-height: 112px;
                 letter-spacing: -2.6px;
                 text-align: left !important;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 44px;
+                    line-height: 46px;
+                    text-align: center !important;
+                }
             }
 
             #introText {
@@ -28,6 +34,12 @@
                 line-height: 24px;
                 color: $white;
                 max-width: 350px;
+            }
+
+            @media screen and (max-width: 768px) {
+                padding: 0 15px;
+                margin-top: 513px;
+                text-align: center;
             }
         }
 
@@ -62,9 +74,25 @@
                     }
                 }
             }
+
+            @media screen and (max-width: 768px) {
+                padding: 8px;
+                height: 45px;
+                width: 45px;
+
+                .bannerBtnIcon {
+                    margin-right: 0;
+                    height: 29px;
+                    width: 29px;
+                }
+
+                .bannerBtnStatement {
+                    display: none;
+                }
+            }
         }
 
-        #recipeMaker {
+        #recipeMarker {
             display: block;
             width: 76px;
             background-color: #fff;
@@ -98,6 +126,10 @@
                 text-align: center;
                 transform: rotate(90deg);
             }
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
 
         @media screen and (min-width: 1921px) {
@@ -108,26 +140,51 @@
             #factPanelBtn-1 {
                 top: 52%;
                 left: 51%;
+
+                @media screen and (max-width: 768px) {
+                    top: 34%;
+                    left: 48%;
+                }
             }
 
             #factPanelBtn-2 {
                 top: 61%;
                 left: 25%;
+
+                @media screen and (max-width: 768px) {
+                    top: 43%;
+                    left: 22%;
+                }
             }
 
             #factPanelBtn-3 {
                 top: 81%;
                 left: 33%;
+
+                @media screen and (max-width: 768px) {
+                    top: 63%;
+                    left: 30%;
+                }
             }
 
             #factPanelBtn-4 {
                 top: 82%;
                 left: 61%;
+
+                @media screen and (max-width: 768px) {
+                    top: 64%;
+                    left: 58%;
+                }
             }
 
             #factPage {
                 top: 61%;
                 left: 67%;
+
+                @media screen and (max-width: 768px) {
+                    top: 43%;
+                    left: 55%;
+                }
             }
         }
 
@@ -346,6 +403,22 @@
                 left: 46%;
             }
         }
+
+        @media screen and (max-width: 768px) {
+            height: 751px;
+        }
+    }
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 110;
+        width: 100%;
+        height: 100vh;
+        background-color: #020202;
+        opacity: 0;
+        pointer-events: none;
     }
 
     .factPanel {
@@ -358,6 +431,7 @@
         background-color: #fff;
         padding: 0 45px;
         z-index: 111;
+        overflow-y: auto;
 
         .btnClose {
             position: absolute;
@@ -450,6 +524,11 @@
                     font-size: 46px;
                     line-height: 50px;
                     margin-bottom: 15px;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 40px;
+                        line-height: 42px;
+                    }
                 }
 
                 .info {
@@ -457,6 +536,11 @@
                     color: #000;
                     font-size: 22px;
                     line-height: 26px;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
                 }
 
                 .author {
@@ -464,6 +548,10 @@
                     color: #000;
                     font-size: 17px;
                     margin-top: 14px;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 16px;
+                    }
                 }
 
                 .preparationSteps {
@@ -498,6 +586,11 @@
                             font-size: 20px;
                             line-height: 28px;
                             padding-left: 25px;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
                         }
                     }
                 }
@@ -544,6 +637,10 @@
                         }
                     }
                 }
+
+                @media screen and (max-width: 768px) {
+                    margin-top: 50px;
+                }
             }
 
             .recipeContentRight {
@@ -588,6 +685,17 @@
                             }
                         }
                     }
+
+                    @media screen and (max-width: 768px) {
+                        top: unset;
+                        right: unset;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
 
                 .recipeImage {
@@ -595,6 +703,10 @@
                     width: 100%;
                     position: relative;
                     z-index: 0;
+
+                    @media screen and (max-width: 768px) {
+                        margin-top: 0;
+                    }
                 }
 
                 .ingredientsWrap {
@@ -623,14 +735,39 @@
                             display: block;
                             padding: 10px 0;
                             border-bottom: rgba($scooter,0.5) 1px solid;
+                            font-size: 18px;
+                            line-height: 31px;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: 15px;
+                                line-height: 20px;
+                            }
 
                             &:last-child {
                                 border: none;
                             }
                         }
                     }
+
+                    @media screen and (max-width: 768px) {
+                        width: auto;
+                        max-width: 88%;
+                        margin: 0;
+                        margin-left: 7px;
+                        margin-top: -16px;
+                        margin-bottom: 30px;
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    padding-left: 0;
+                    padding-bottom: 56px;
                 }
             }
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-top: 0;
         }
     }
 }

@@ -1191,6 +1191,11 @@ footer #footerLogo {
         line-height: 112px;
         letter-spacing: -2.6px;
         text-align: left !important; }
+        @media screen and (max-width: 768px) {
+          #profile .banner #bannerInfo .htitle {
+            font-size: 44px;
+            line-height: 46px;
+            text-align: center !important; } }
       #profile .banner #bannerInfo #introText {
         font-family: "century-gothic", sans-serif;
         font-style: normal;
@@ -1199,6 +1204,11 @@ footer #footerLogo {
         line-height: 24px;
         color: #fff;
         max-width: 350px; }
+      @media screen and (max-width: 768px) {
+        #profile .banner #bannerInfo {
+          padding: 0 15px;
+          margin-top: 513px;
+          text-align: center; } }
     #profile .banner .bannerBtn {
       height: 56px;
       background-color: #fff;
@@ -1222,7 +1232,18 @@ footer #footerLogo {
         margin-left: 10px; }
         #profile .banner .bannerBtn.factPage svg .arrowPath {
           fill: #31bed7; }
-    #profile .banner #recipeMaker {
+      @media screen and (max-width: 768px) {
+        #profile .banner .bannerBtn {
+          padding: 8px;
+          height: 45px;
+          width: 45px; }
+          #profile .banner .bannerBtn .bannerBtnIcon {
+            margin-right: 0;
+            height: 29px;
+            width: 29px; }
+          #profile .banner .bannerBtn .bannerBtnStatement {
+            display: none; } }
+    #profile .banner #recipeMarker {
       display: block;
       width: 76px;
       background-color: #fff;
@@ -1237,9 +1258,9 @@ footer #footerLogo {
       bottom: 0;
       left: 50%;
       transform: translateX(-50%); }
-      #profile .banner #recipeMaker img {
+      #profile .banner #recipeMarker img {
         margin-bottom: 6px; }
-      #profile .banner #recipeMaker .markerLabel {
+      #profile .banner #recipeMarker .markerLabel {
         font-family: "century-gothic", sans-serif;
         font-style: italic;
         font-weight: 400;
@@ -1247,29 +1268,52 @@ footer #footerLogo {
         font-size: 14px;
         text-align: center;
         margin-bottom: 6px; }
-      #profile .banner #recipeMaker .downArrow {
+      #profile .banner #recipeMarker .downArrow {
         color: #31BED7;
         font-size: 14px;
         text-align: center;
         transform: rotate(90deg); }
+      @media screen and (max-width: 768px) {
+        #profile .banner #recipeMarker {
+          display: none; } }
     @media screen and (min-width: 1921px) {
       #profile .banner {
         background-size: cover !important; } }
     #profile .banner.taste-for-music #factPanelBtn-1 {
       top: 52%;
       left: 51%; }
+      @media screen and (max-width: 768px) {
+        #profile .banner.taste-for-music #factPanelBtn-1 {
+          top: 34%;
+          left: 48%; } }
     #profile .banner.taste-for-music #factPanelBtn-2 {
       top: 61%;
       left: 25%; }
+      @media screen and (max-width: 768px) {
+        #profile .banner.taste-for-music #factPanelBtn-2 {
+          top: 43%;
+          left: 22%; } }
     #profile .banner.taste-for-music #factPanelBtn-3 {
       top: 81%;
       left: 33%; }
+      @media screen and (max-width: 768px) {
+        #profile .banner.taste-for-music #factPanelBtn-3 {
+          top: 63%;
+          left: 30%; } }
     #profile .banner.taste-for-music #factPanelBtn-4 {
       top: 82%;
       left: 61%; }
+      @media screen and (max-width: 768px) {
+        #profile .banner.taste-for-music #factPanelBtn-4 {
+          top: 64%;
+          left: 58%; } }
     #profile .banner.taste-for-music #factPage {
       top: 61%;
       left: 67%; }
+      @media screen and (max-width: 768px) {
+        #profile .banner.taste-for-music #factPage {
+          top: 43%;
+          left: 55%; } }
     #profile .banner.yoga-lover #factPanelBtn-1 {
       top: 45%;
       left: 49%; }
@@ -1390,6 +1434,19 @@ footer #footerLogo {
     #profile .banner.healthy-wisdom #factPage {
       top: 49%;
       left: 46%; }
+    @media screen and (max-width: 768px) {
+      #profile .banner {
+        height: 751px; } }
+  #profile #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    width: 100%;
+    height: 100vh;
+    background-color: #020202;
+    opacity: 0;
+    pointer-events: none; }
   #profile .factPanel {
     display: none;
     width: 600px;
@@ -1399,7 +1456,8 @@ footer #footerLogo {
     right: -600px;
     background-color: #fff;
     padding: 0 45px;
-    z-index: 111; }
+    z-index: 111;
+    overflow-y: auto; }
     #profile .factPanel .btnClose {
       position: absolute;
       top: 19px;
@@ -1475,6 +1533,10 @@ footer #footerLogo {
           font-size: 46px;
           line-height: 50px;
           margin-bottom: 15px; }
+          @media screen and (max-width: 768px) {
+            #profile #recipes .recipe .recipeContentLeft .recipeName {
+              font-size: 40px;
+              line-height: 42px; } }
         #profile #recipes .recipe .recipeContentLeft .info {
           font-family: "filson-pro", sans-serif;
           font-style: normal;
@@ -1482,6 +1544,10 @@ footer #footerLogo {
           color: #000;
           font-size: 22px;
           line-height: 26px; }
+          @media screen and (max-width: 768px) {
+            #profile #recipes .recipe .recipeContentLeft .info {
+              font-size: 18px;
+              line-height: 22px; } }
         #profile #recipes .recipe .recipeContentLeft .author {
           font-family: "filson-pro", sans-serif;
           font-style: italic;
@@ -1489,6 +1555,9 @@ footer #footerLogo {
           color: #000;
           font-size: 17px;
           margin-top: 14px; }
+          @media screen and (max-width: 768px) {
+            #profile #recipes .recipe .recipeContentLeft .author {
+              font-size: 16px; } }
         #profile #recipes .recipe .recipeContentLeft .preparationSteps {
           list-style: none;
           margin-top: 43px; }
@@ -1521,6 +1590,10 @@ footer #footerLogo {
               font-size: 20px;
               line-height: 28px;
               padding-left: 25px; }
+              @media screen and (max-width: 768px) {
+                #profile #recipes .recipe .recipeContentLeft .preparationSteps li .step {
+                  font-size: 16px;
+                  line-height: 24px; } }
         #profile #recipes .recipe .recipeContentLeft .tipsBox {
           width: 100%;
           padding: 26px 36px 26px 70px;
@@ -1556,6 +1629,9 @@ footer #footerLogo {
             #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsContent .tipsPic {
               max-width: 241px;
               margin-left: 22px; }
+        @media screen and (max-width: 768px) {
+          #profile #recipes .recipe .recipeContentLeft {
+            margin-top: 50px; } }
       #profile #recipes .recipe .recipeContentRight {
         position: relative;
         padding-left: 59px; }
@@ -1563,7 +1639,7 @@ footer #footerLogo {
           position: absolute;
           top: 0;
           right: 0; }
-          #profile #recipes .recipe .recipeContentRight #printAndShare button {
+          #profile #recipes .recipe .recipeContentRight #printAndShare button, #profile #recipes .recipe .recipeContentRight #printAndShare a {
             padding: 10px 15px;
             background-color: #31BED7;
             border: #31BED7 2px solid;
@@ -1577,23 +1653,36 @@ footer #footerLogo {
             border-radius: 23px;
             outline: none;
             transition: all 0.2s ease-out; }
-            #profile #recipes .recipe .recipeContentRight #printAndShare button span {
+            #profile #recipes .recipe .recipeContentRight #printAndShare button span, #profile #recipes .recipe .recipeContentRight #printAndShare a span {
               display: inline-block;
               margin-right: 10px; }
-            #profile #recipes .recipe .recipeContentRight #printAndShare button .a {
+            #profile #recipes .recipe .recipeContentRight #printAndShare button .a, #profile #recipes .recipe .recipeContentRight #printAndShare a .a {
               fill: #fff;
               display: inline-block; }
-            #profile #recipes .recipe .recipeContentRight #printAndShare button:hover {
+            #profile #recipes .recipe .recipeContentRight #printAndShare button:hover, #profile #recipes .recipe .recipeContentRight #printAndShare a:hover {
               background-color: #fff;
               color: #31BED7;
               transition: all 0.2s ease-out; }
-              #profile #recipes .recipe .recipeContentRight #printAndShare button:hover .a {
+              #profile #recipes .recipe .recipeContentRight #printAndShare button:hover .a, #profile #recipes .recipe .recipeContentRight #printAndShare a:hover .a {
                 fill: #31BED7; }
+          @media screen and (max-width: 768px) {
+            #profile #recipes .recipe .recipeContentRight #printAndShare {
+              top: unset;
+              right: unset;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center; } }
         #profile #recipes .recipe .recipeContentRight .recipeImage {
           margin-top: 58px;
           width: 100%;
           position: relative;
           z-index: 0; }
+          @media screen and (max-width: 768px) {
+            #profile #recipes .recipe .recipeContentRight .recipeImage {
+              margin-top: 0; } }
         #profile #recipes .recipe .recipeContentRight .ingredientsWrap {
           width: 526px;
           border-radius: 20px;
@@ -1617,9 +1706,30 @@ footer #footerLogo {
             #profile #recipes .recipe .recipeContentRight .ingredientsWrap .ingredients li {
               display: block;
               padding: 10px 0;
-              border-bottom: rgba(49, 190, 215, 0.5) 1px solid; }
+              border-bottom: rgba(49, 190, 215, 0.5) 1px solid;
+              font-size: 18px;
+              line-height: 31px; }
+              @media screen and (max-width: 768px) {
+                #profile #recipes .recipe .recipeContentRight .ingredientsWrap .ingredients li {
+                  font-size: 15px;
+                  line-height: 20px; } }
               #profile #recipes .recipe .recipeContentRight .ingredientsWrap .ingredients li:last-child {
                 border: none; }
+          @media screen and (max-width: 768px) {
+            #profile #recipes .recipe .recipeContentRight .ingredientsWrap {
+              width: auto;
+              max-width: 88%;
+              margin: 0;
+              margin-left: 7px;
+              margin-top: -16px;
+              margin-bottom: 30px; } }
+        @media screen and (max-width: 768px) {
+          #profile #recipes .recipe .recipeContentRight {
+            padding-left: 0;
+            padding-bottom: 56px; } }
+    @media screen and (max-width: 768px) {
+      #profile #recipes {
+        margin-top: 0; } }
 
 #resources {
   background: white;

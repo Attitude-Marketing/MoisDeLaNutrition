@@ -30,7 +30,7 @@ $cardPadding: 40px 30px;
 .cardClickable {
     /*See below for hover effects*/
     .cardContainer {
-        min-height: 380px;
+        min-height: 325px;
         background: $white;
         border-radius: $cardRadius;
         display: flex;
@@ -182,8 +182,8 @@ $cardPadding: 40px 30px;
             @include filson-700;
             color: $white;
             letter-spacing: -1.6px;
-            font-size: 80px;
-            line-height: 82px;
+            font-size: 60px;
+            line-height: 62px;
             margin-bottom: 30px;
 
             @media screen and (max-width: 1200px) {
@@ -255,7 +255,6 @@ $cardPadding: 40px 30px;
             padding: $cardPadding;
 
             .findImgTxtTitle {
-                text-transform: uppercase;
                 color: $white;
                 text-shadow: 0px 0px 9px #00333C79;
                 @include filson-italic-700;

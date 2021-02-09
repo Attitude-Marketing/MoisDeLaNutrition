@@ -33,6 +33,7 @@ $desktopNavSpacing : 20px;
 
                 &#langSwitch {
                     position: relative;
+                    padding-left:20px;
 
                     &:before {
                         content: "";
@@ -42,22 +43,26 @@ $desktopNavSpacing : 20px;
                         width: 1px;
                         top: 50%;
                         transform: translateY(-50%);
-                        background: red;
+                        background: $white;
                     }
                 }
 
                 &.current {
 
                     a {
-                        @include filson-700;
-                        text-decoration: underline;
+                        @include filson-800;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: none;
+                            @include filson-800;
+                        }
                     }
                 }
 
                 &:not(.current) {
                     a {
-                        margin-left: $desktopNavSpacing;
-                        text-decoration: none !important;
+                        text-decoration: underline !important;
                         @include filson-400;
                     }
                 }
@@ -112,17 +117,12 @@ $desktopNavSpacing : 20px;
             align-items: center;
             justify-content: space-between;
             padding: 10px 15px;
-
-            #hamburger {
-            }
-
-            #logos {
-            }
+            box-shadow: 0 4px 2px -2px rgba(0,0,0, 0.05);
         }
 
         #panel {
-            position: absolute;
-            top:55px;
+            position: fixed;
+            top: 55px;
             left: 0;
             width: 100%;
             background: $white;
@@ -139,7 +139,7 @@ $desktopNavSpacing : 20px;
 
             #mobile-menu {
                 padding: 10px 15px 25px 15px;
-                border-bottom:1px solid $scooter;
+                border-bottom: 1px solid $scooter;
 
                 li {
                     padding: 10px 0;
@@ -152,9 +152,10 @@ $desktopNavSpacing : 20px;
                         font-size: 18px;
                         line-height: 22px;
                     }
-                    &.current{
-                        a{
-                            text-decoration:none;
+
+                    &.current {
+                        a {
+                            text-decoration: none;
                         }
                     }
                 }
@@ -162,7 +163,7 @@ $desktopNavSpacing : 20px;
         }
     }
 }
-.nutritionFact-page, .about-page {
+.nutritionFact-page, .about-page, .resources-page {
     #navs #desktop-nav ul li a {
         color: $scooter;
     }

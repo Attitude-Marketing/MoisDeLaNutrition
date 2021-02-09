@@ -12,58 +12,77 @@
 
     var footerEntrezCourriel = Umbraco.GetDictionaryValue("footerEntrezCourriel");
     var footerSoumettre = langNode.GetPropertyValue<string>("panelBtnLabel");
-    
+
+    var nextNode = pageNode.Next();
+    var next = "";
+    if (pageNode.DocumentTypeAlias.ToLower() == "nutritionfact" || pageNode.DocumentTypeAlias.ToLower() == "profile")
+    {
+        nextNode = pageNode.Next();
+        if (pageNode.DocumentTypeAlias.ToLower() == "nutritionfact") {
+            next = Umbraco.GetDictionaryValue("NextFact");
+        }
+        if (pageNode.DocumentTypeAlias.ToLower() == "profile") {
+            next = "Next";
+        }
+
+        if (nextNode == null)
+        {
+            nextNode = pageNode.Parent.Children.FirstOrDefault();
+        }
+    }
+    else if (pageNode.GetPropertyValue<IPublishedContent>("footerPagePicker") != null)
+    {
+        nextNode = pageNode.GetPropertyValue<IPublishedContent>("footerPagePicker");
+        next = Umbraco.GetDictionaryValue("ReadTheArticle");
+
+        if (nextNode.DocumentTypeAlias.ToLower() == "nutritionfact") {
+            next = "Read the article";
+        }
+        if (nextNode.DocumentTypeAlias.ToLower() == "profile") {
+            next = Umbraco.GetDictionaryValue("ReadThisProfile");
+        }
+    }
+
 }
 <footer id="footer">
     <div class="container-fluid p-0">
-        @if (pageNode.DocumentTypeAlias.ToLower() == "nutritionfact" || pageNode.DocumentTypeAlias.ToLower() == "profile")
+        @if (nextNode != null && pageNode.DocumentTypeAlias.ToLower() == "nutritionfact" || pageNode.DocumentTypeAlias.ToLower() == "profile" && pageNode.DocumentTypeAlias.ToLower() == "about" || pageNode.DocumentTypeAlias.ToLower() == "resources")
         {
-            var nextNode = pageNode.Next();
+            var imageNext = nextNode.GetPropertyValue<IPublishedContent>("imageNext");
+            var imageNextUrl = "/images/placeholders/placeholder-vertical.jpg";
 
-            if (nextNode == null)
+            if (imageNext != null)
             {
-                nextNode = pageNode.Parent.Children.FirstOrDefault();
+                imageNextUrl = imageNext.Url;
             }
 
-            if (nextNode != null)
-            {
-                var imageNext = nextNode.GetPropertyValue<IPublishedContent>("imageNext");
-                var imageNextUrl = "/images/placeholders/placeholder-vertical.jpg";
+            var nextNodeUrl = nextNode.Url;
+            var nextTitle = Html.Raw(nextNode.GetPropertyValue<string>("pageTitle"));
 
-                if (imageNext != null)
-                {
-                    imageNextUrl = imageNext.Url;
-                }
-
-                var nextNodeUrl = nextNode.Url;
-                var nextTitle = Html.Raw(nextNode.GetPropertyValue<string>("pageTitle"));
-                var next = pageNode.DocumentTypeAlias == "profile" ? Umbraco.Field("NextProfile") : Umbraco.Field("#NextFact");
-
-                <div class="row no-gutters row-eq-height followingContent" style="background-color: @(nextNode.GetPropertyValue<string>("profileColor"))">
-                    <div class="col-12 col-md-8">
-                        <div id="followingContentImg" style="background: url('@imageNextUrl'); background-repeat:no-repeat; background-position:center center; background-size:cover;"></div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <a href="@nextNodeUrl" target="_self" id="followingContentxtContainer">
-                            <div id="followingContentTxt">
-                                <p id="followingContentTagline">@next</p>
-                                <p id="followingContentTitle">@Html.Raw(nextTitle)</p>
-                            </div>
-                            <div id="followingContentArrow">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path class="arrow" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" /></svg>
-                            </div>
-                        </a>
-                    </div>
+            <div class="row no-gutters row-eq-height followingContent" style="background-color: @(nextNode.GetPropertyValue<string>("profileColor"))">
+                <div class="col-12 col-md-8">
+                    <div id="followingContentImg" style="background: url('@imageNextUrl'); background-repeat:no-repeat; background-position:center center; background-size:cover;"></div>
                 </div>
-            }
+                <div class="col-12 col-md-4">
+                    <a href="@nextNodeUrl" target="_self" id="followingContentxtContainer">
+                        <div id="followingContentTxt">
+                            <p id="followingContentTagline">@next</p>
+                            <p id="followingContentTitle">@Html.Raw(nextTitle)</p>
+                        </div>
+                        <div id="followingContentArrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path class="arrow" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" /></svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
         }
+
         <div class="row no-gutters row-eq-height">
             <div class="col-12 col-md-5 order-2 order-md-1">
                 <div id="footerLeft">
                     <div class="footerContent">
                         <div id="footerNav">
                             <ul>
-                                @* AJOUTER LA CLASSE CURRENT AU LI QUI CORRESPOND À LA PAGE ACTUEL *@
                                 @foreach (var menuItem in langNode.GetPropertyValue<IEnumerable<IPublishedContent>>("mainMenu"))
                                 {
                                     var activeClass = "";

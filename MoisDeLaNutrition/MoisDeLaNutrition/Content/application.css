@@ -622,6 +622,24 @@ footer #footerLogo {
     margin-left: 14px;
     transition: all 0.2s ease-out; }
 
+.globalDownloadCta {
+  background: #fff;
+  color: #31BED7;
+  font-size: 17px;
+  line-height: 20px;
+  font-family: "filson-pro", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  border-radius: 40px;
+  display: inline-block;
+  padding: 8px 20px; }
+  .globalDownloadCta svg .a {
+    fill: #31bed7; }
+  .globalDownloadCta svg .b {
+    fill: none;
+    stroke: #31bed7;
+    stroke-linecap: round; }
+
 #captcha, .captcha {
   display: none; }
 
@@ -1563,7 +1581,7 @@ footer #footerLogo {
           position: absolute;
           top: 0;
           right: 0; }
-          #profile #recipes .recipe .recipeContentRight #printAndShare button {
+          #profile #recipes .recipe .recipeContentRight #printAndShare button, #profile #recipes .recipe .recipeContentRight #printAndShare a {
             padding: 10px 15px;
             background-color: #31BED7;
             border: #31BED7 2px solid;
@@ -1577,17 +1595,17 @@ footer #footerLogo {
             border-radius: 23px;
             outline: none;
             transition: all 0.2s ease-out; }
-            #profile #recipes .recipe .recipeContentRight #printAndShare button span {
+            #profile #recipes .recipe .recipeContentRight #printAndShare button span, #profile #recipes .recipe .recipeContentRight #printAndShare a span {
               display: inline-block;
               margin-right: 10px; }
-            #profile #recipes .recipe .recipeContentRight #printAndShare button .a {
+            #profile #recipes .recipe .recipeContentRight #printAndShare button .a, #profile #recipes .recipe .recipeContentRight #printAndShare a .a {
               fill: #fff;
               display: inline-block; }
-            #profile #recipes .recipe .recipeContentRight #printAndShare button:hover {
+            #profile #recipes .recipe .recipeContentRight #printAndShare button:hover, #profile #recipes .recipe .recipeContentRight #printAndShare a:hover {
               background-color: #fff;
               color: #31BED7;
               transition: all 0.2s ease-out; }
-              #profile #recipes .recipe .recipeContentRight #printAndShare button:hover .a {
+              #profile #recipes .recipe .recipeContentRight #printAndShare button:hover .a, #profile #recipes .recipe .recipeContentRight #printAndShare a:hover .a {
                 fill: #31BED7; }
         #profile #recipes .recipe .recipeContentRight .recipeImage {
           margin-top: 58px;
@@ -1645,12 +1663,58 @@ footer #footerLogo {
   #resources .resourcesListingBg {
     background: #EAF9FB;
     padding-top: 10%;
-    margin-top: 10%;
+    margin-top: calc(18% + 60px);
     padding-bottom: 70px; }
-    #resources .resourcesListingBg .resourcesListingContent {
-      margin-top: -20%; }
-      #resources .resourcesListingBg .resourcesListingContent .resourceContainer {
-        padding: 30px;
-        background: yellow;
-        height: 395px;
-        margin-bottom: 30px; }
+    #resources .resourcesListingBg .resourcesListingRow {
+      margin-top: -30%; }
+      #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer {
+          border: 2px solid #fff;
+          border-radius: 15px;
+          overflow: hidden;
+          position: relative;
+          height: 395px;
+          margin-bottom: 35px;
+          width: calc(25% - 25px); }
+          @media screen and (max-width: 1500px) {
+            #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer {
+              width: calc(33% - 15px); } }
+          @media screen and (max-width: 992px) {
+            #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer {
+              width: calc(50% - 15px);
+              margin-bottom: 25px; } }
+          @media screen and (max-width: 576px) {
+            #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer {
+              width: calc(100% - 0px); } }
+          #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer .findImgTxt {
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            padding: 20px; }
+            #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer .findImgTxt .findImgTxtTitle {
+              color: #fff;
+              text-shadow: 0px 0px 9px #00333C79;
+              font-family: "filson-pro", sans-serif;
+              font-style: italic;
+              font-weight: 700;
+              font-size: 32px;
+              line-height: 34px;
+              margin-bottom: 30px; }
+            #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer .findImgTxt .globalCta {
+              color: #fff; }
+              #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer .findImgTxt .globalCta .globalCtaArrowStyle {
+                fill: #fff; }
+          #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer .findRImg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            transform: scale(1); }
+          #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer:hover .findRImg {
+            transform: scale(1.05);
+            transition: all 0.2s ease-out; }

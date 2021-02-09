@@ -33,6 +33,7 @@
                     color: #fff;
                     text-decoration: none;
                     margin-bottom: 13px;
+                    text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
                 }
 
                 .globalCtaArrowStyle {
@@ -53,14 +54,16 @@
 
             &:hover {
                 .imgContainer {
-                    opacity: .7;
-                    transition: opacity 0.2s ease-out;
+                    opacity: .8;
+                    filter: blur(4px);
+                    transition: opacity 0.2s ease-out, filter 0.1s ease-in;
+                    transition-delay: 0, 0.1s;
                 }
             }
         }
 
         @media screen and (max-width: 1023px) {
-            margin-bottom: 20px; 
+            margin-bottom: 20px;
 
             .imgContainer {
                 background-position: center top !important;
@@ -117,14 +120,12 @@
                 grid-row-start: 11;
                 grid-row-end: 14;
             }
-
             /*#profile-7 {
                 grid-column-start: 3;
                 grid-column-end: 6;
                 grid-row-start: 11;
                 grid-row-end: 14;
             }*/
-
             #profile-7 {
                 grid-column-start: 6;
                 grid-column-end: 10;

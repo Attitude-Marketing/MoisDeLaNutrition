@@ -40,7 +40,7 @@
                 var next = pageNode.DocumentTypeAlias == "profile" ? Umbraco.Field("NextProfile") : Umbraco.Field("#NextFact");
 
                 <div class="row no-gutters row-eq-height followingContent" style="background-color: @(nextNode.GetPropertyValue<string>("profileColor"))">
-                    <div class="col-12 col-md-7">
+                    <div class="col-12 col-md-8">
                         <div id="followingContentImg" style="background: url('@imageNextUrl'); background-repeat:no-repeat; background-position:center center; background-size:cover;"></div>
                     </div>
                     <div class="col-12 col-md-4">
@@ -88,7 +88,7 @@
                     {
                         <div class="footerContent footerNewsletter">
                             <p id="fnTitle" class="noBrMobile">@(langNode.GetPropertyValue<string>("panelTitle"))</p>
-                            <p id="fnText">@(langNode.GetPropertyValue<HtmlString>("panelText"))</p>
+                            <div id="fnText">@(langNode.GetPropertyValue<HtmlString>("panelText"))</div>
                             <div>
                                 <form id="newsletter-form" class="newsletter-form" data-mssg="@(Umbraco.Field("#Empty"))" data-ajfail="@Umbraco.Field("#AjaxFail")" data-thks="@(Umbraco.Field("#NewsletterThanks"))">
                                     <input type="text" id="email" name="email" placeholder="@footerEntrezCourriel" data-invalid="@(Umbraco.Field("#Invalid"))">

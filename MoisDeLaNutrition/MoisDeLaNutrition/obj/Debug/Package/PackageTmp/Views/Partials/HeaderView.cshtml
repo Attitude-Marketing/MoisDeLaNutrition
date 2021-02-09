@@ -49,10 +49,16 @@
     <div id="mobile-nav">
         <div id="topbar">
             <div id="hamburger">
-                H
+                <div id="menu">
+                    <div id="pencet">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </div>
             <div id="logos">
-                logo
+                
             </div>
         </div>
         <div id="panel" class="">
@@ -80,7 +86,7 @@
 {
     <div class="container-fluid pageHeader full">
         <div class="row">
-            <div class="col-12 col-md-6 offset-md-3">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 offset-xl-1 col-xl-6 offset-xl-3">
                 <div id="header-title">
                     <h1 class="first-line text-center">@Html.Raw(pageNode.GetPropertyValue<string>("pageTitle"))</h1>
                     <h2 class="second-line text-center">@(pageNode.GetPropertyValue<string>("pageSubtitle"))</h2>

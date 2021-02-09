@@ -104,6 +104,10 @@ $(document).ready(function () {
             getToken($email, $form);
         }
     });
+
+    $("#print").click(function () {
+        window.print();
+    });
 }); // end doc ready
 
 /* == FUNCTIONS == */

@@ -9,9 +9,10 @@
     .banner {
         height: 1200px;
         width: 100%;
+        position: relative;
 
         #bannerInfo {
-            margin-top: 69px;
+            margin-top: 130px;
             text-align: left;
 
             .htitle {
@@ -39,6 +40,7 @@
             align-items: center;
             text-decoration: none;
             padding-right: 20px;
+            position: absolute;
 
             .bannerBtnIcon {
                 margin-right: 12px;
@@ -54,6 +56,7 @@
             &.factPage {
                 svg {
                     margin-left: 10px;
+
                     .arrowPath {
                         fill: #31bed7;
                     }
@@ -61,8 +64,287 @@
             }
         }
 
+        #recipeMaker {
+            display: block;
+            width: 76px;
+            background-color: #fff;
+            padding: 10px;
+            border-top-left-radius: 35px;
+            border-top-right-radius: 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            img {
+                margin-bottom: 6px;
+            }
+
+            .markerLabel {
+                @include century-italic-400;
+                color: $scooter;
+                font-size: 14px;
+                text-align: center;
+                margin-bottom: 6px;
+            }
+
+            .downArrow {
+                color: $scooter;
+                font-size: 14px;
+                text-align: center;
+                transform: rotate(90deg);
+            }
+        }
+
         @media screen and (min-width: 1921px) {
             background-size: cover !important;
+        }
+
+        &.taste-for-music {
+            #factPanelBtn-1 {
+                top: 52%;
+                left: 51%;
+            }
+
+            #factPanelBtn-2 {
+                top: 61%;
+                left: 25%;
+            }
+
+            #factPanelBtn-3 {
+                top: 81%;
+                left: 33%;
+            }
+
+            #factPanelBtn-4 {
+                top: 82%;
+                left: 61%;
+            }
+
+            #factPage {
+                top: 61%;
+                left: 67%;
+            }
+        }
+
+        &.yoga-lover {
+            #factPanelBtn-1 {
+                top: 45%;
+                left: 49%;
+            }
+
+            #factPanelBtn-2 {
+                top: 54%;
+                left: 33%;
+            }
+
+            #factPanelBtn-3 {
+                top: 67%;
+                left: 45%;
+            }
+
+            #factPanelBtn-4 {
+                top: 76%;
+                left: 68%;
+            }
+
+            #factPage {
+                top: 60%;
+                left: 66%;
+            }
+        }
+
+        &.food-intolerance {
+            #factPanelBtn-1 {
+                top: 40%;
+                left: 46%;
+            }
+
+            #factPanelBtn-2 {
+                top: 67%;
+                left: 42%;
+            }
+
+            #factPanelBtn-3 {
+                top: 75%;
+                left: 28%;
+            }
+
+            #factPanelBtn-4 {
+                top: 76%;
+                left: 65%;
+            }
+
+            #factPage {
+                top: 52%;
+                left: 53%;
+            }
+        }
+
+        &.capsule-time {
+            #factPanelBtn-1 {
+                top: 59%;
+                left: 65%;
+            }
+
+            #factPanelBtn-2 {
+                top: 70%;
+                left: 23%;
+            }
+
+            #factPanelBtn-3 {
+                top: 76%;
+                left: 45%;
+            }
+
+            #factPanelBtn-4 {
+                top: 78%;
+                left: 67%;
+            }
+
+            #factPage {
+                top: 48%;
+                left: 45%;
+            }
+        }
+
+        &.family-togetherness {
+            #factPanelBtn-1 {
+                top: 36%;
+                left: 22%;
+            }
+
+            #factPanelBtn-2 {
+                top: 43%;
+                left: 44%;
+            }
+
+            #factPanelBtn-3 {
+                top: 62%;
+                left: 33%;
+            }
+
+            #factPanelBtn-4 {
+                top: 71%;
+                left: 59%;
+            }
+
+            #factPage {
+                top: 52%;
+                left: 64%;
+            }
+        }
+
+        &.active-lifestyle {
+            #factPanelBtn-1 {
+                top: 48%;
+                left: 46%;
+            }
+
+            #factPanelBtn-2 {
+                top: 61%;
+                left: 60%;
+            }
+
+            #factPanelBtn-3 {
+                top: 73%;
+                left: 68%;
+            }
+
+            #factPanelBtn-4 {
+                top: 77%;
+                left: 38%;
+            }
+
+            #factPage {
+                top: 58%;
+                left: 19%;
+            }
+        }
+
+        &.budget-crunch {
+            #factPanelBtn-1 {
+                top: 39%;
+                left: 45%;
+            }
+
+            #factPanelBtn-2 {
+                top: 58%;
+                left: 68%;
+            }
+
+            #factPanelBtn-3 {
+                top: 80%;
+                left: 35%;
+            }
+
+            #factPanelBtn-4 {
+                top: 82%;
+                left: 68%;
+            }
+
+            #factPage {
+                top: 62%;
+                left: 29%;
+            }
+        }
+
+        &.breakfast {
+            #factPanelBtn-1 {
+                top: 48%;
+                left: 38%;
+            }
+
+            #factPanelBtn-2 {
+                top: 72%;
+                left: 46%;
+            }
+
+            #factPanelBtn-3 {
+                top: 75%;
+                left: 20%;
+            }
+
+            #factPanelBtn-4 {
+                top: 79%;
+                left: 62%;
+            }
+
+            #factPage {
+                top: 60%;
+                left: 63%;
+            }
+        }
+
+        &.healthy-wisdom {
+            #factPanelBtn-1 {
+                top: 40%;
+                left: 24%;
+            }
+
+            #factPanelBtn-2 {
+                top: 63%;
+                left: 68%;
+            }
+
+            #factPanelBtn-3 {
+                top: 64%;
+                left: 31%;
+            }
+
+            #factPanelBtn-4 {
+                top: 86%;
+                left: 26%;
+            }
+
+            #factPage {
+                top: 49%;
+                left: 46%;
+            }
         }
     }
 
@@ -91,6 +373,10 @@
             margin-top: 72px;
             margin-bottom: 32px;
             text-align: center;
+
+            .panelImage {
+                max-width: 100%;
+            }
         }
 
         .info {
@@ -171,6 +457,13 @@
                     color: #000;
                     font-size: 22px;
                     line-height: 26px;
+                }
+
+                .author {
+                    @include filson-italic-400;
+                    color: #000;
+                    font-size: 17px;
+                    margin-top: 14px;
                 }
 
                 .preparationSteps {

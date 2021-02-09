@@ -31,7 +31,7 @@ $vhVarArticle: 29vh;
     justify-content: center;
     margin-bottom: 40px;
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 374px) {
         flex-direction: column;
     }
 
@@ -41,16 +41,17 @@ $vhVarArticle: 29vh;
         align-items: center;
         margin-right: 12px;
 
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 374px) {
             margin-right: 0;
         }
 
-        @media screen and (max-width: 576px) {
-            flex-direction: column;
+        @media screen and (max-width: 374px) {
+            flex-direction: column-reverse;
+            margin-bottom: 20px;
         }
 
         &:last-child {
-            margin-right: 0;
+            margin: 0 !important;
         }
 
         .headerLogoTitle {
@@ -62,7 +63,7 @@ $vhVarArticle: 29vh;
             max-width: 115px;
             text-align: right;
 
-            @media screen and (max-width: 576px) {
+            @media screen and (max-width: 374px) {
                 text-align: center;
                 margin-right: 0;
             }

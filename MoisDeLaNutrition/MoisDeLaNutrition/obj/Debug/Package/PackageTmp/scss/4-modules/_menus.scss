@@ -94,7 +94,6 @@ $desktopNavSpacing : 20px;
     }
 
     #mobile-nav {
-        $topNavHeight: 50px;
         display: none;
 
         @media screen and (max-width: 768px) {
@@ -106,14 +105,13 @@ $desktopNavSpacing : 20px;
             top: 0;
             left: 0;
             width: 100%;
-            height: $topNavHeight;
-            background: red;
+            background: $white;
             z-index: 2;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            padding: 15px;
+            padding: 10px 15px;
 
             #hamburger {
             }
@@ -124,11 +122,10 @@ $desktopNavSpacing : 20px;
 
         #panel {
             position: absolute;
-            top: $topNavHeight;
+            top:55px;
             left: 0;
             width: 100%;
-            min-height: 50vh;
-            background: green;
+            background: $white;
             z-index: 1;
             display: none;
 
@@ -139,6 +136,29 @@ $desktopNavSpacing : 20px;
                     display: block;
                 }
             }
+
+            #mobile-menu {
+                padding: 10px 15px 25px 15px;
+                border-bottom:1px solid $scooter;
+
+                li {
+                    padding: 10px 0;
+                    text-align: left;
+
+                    a {
+                        @include filson-700;
+                        color: $scooter;
+                        text-decoration: underline;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    &.current{
+                        a{
+                            text-decoration:none;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -146,4 +166,39 @@ $desktopNavSpacing : 20px;
     #navs #desktop-nav ul li a {
         color: $scooter;
     }
+}
+
+#pencet {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#pencet span {
+    background-color: $scooter;
+    width: 40px;
+    height: 4px;
+    margin: 4px 0;
+    display: block;
+    transition: all .4s ease;
+    transform-origin: 0 0;
+}
+
+#pencet span:nth-child(2) {
+    position: relative;
+    left: -10px;
+    width: 20px;
+}
+
+.Diam span:nth-child(1) {
+    transform: rotate(45deg) translate(1px, -5px);
+}
+
+.Diam span:nth-child(2) {
+    Transform: scaleX(0);  
+}
+
+.Diam span:nth-child(3) {
+    transform: rotate(-45deg) translate(-1px, 0);
 }

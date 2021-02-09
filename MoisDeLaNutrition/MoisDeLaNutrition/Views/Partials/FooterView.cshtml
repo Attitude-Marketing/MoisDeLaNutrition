@@ -36,7 +36,7 @@
                 }
 
                 var nextNodeUrl = nextNode.Url;
-                var nextTitle = nextNode.GetPropertyValue<string>("pageTitle");
+                var nextTitle = Html.Raw(nextNode.GetPropertyValue<string>("pageTitle"));
                 var next = pageNode.DocumentTypeAlias == "profile" ? Umbraco.Field("NextProfile") : Umbraco.Field("#NextFact");
 
                 <div class="row no-gutters row-eq-height followingContent" style="background-color: @(nextNode.GetPropertyValue<string>("profileColor"))">

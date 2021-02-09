@@ -1065,9 +1065,10 @@ footer #footerLogo {
   background-attachment: fixed; }
   #profile .banner {
     height: 1200px;
-    width: 100%; }
+    width: 100%;
+    position: relative; }
     #profile .banner #bannerInfo {
-      margin-top: 69px;
+      margin-top: 130px;
       text-align: left; }
       #profile .banner #bannerInfo .htitle {
         font-size: 113px;
@@ -1090,7 +1091,8 @@ footer #footerLogo {
       display: inline-flex;
       align-items: center;
       text-decoration: none;
-      padding-right: 20px; }
+      padding-right: 20px;
+      position: absolute; }
       #profile .banner .bannerBtn .bannerBtnIcon {
         margin-right: 12px; }
       #profile .banner .bannerBtn .bannerBtnStatement {
@@ -1104,9 +1106,174 @@ footer #footerLogo {
         margin-left: 10px; }
         #profile .banner .bannerBtn.factPage svg .arrowPath {
           fill: #31bed7; }
+    #profile .banner #recipeMaker {
+      display: block;
+      width: 76px;
+      background-color: #fff;
+      padding: 10px;
+      border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+      #profile .banner #recipeMaker img {
+        margin-bottom: 6px; }
+      #profile .banner #recipeMaker .markerLabel {
+        font-family: "century-gothic", sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        color: #31BED7;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 6px; }
+      #profile .banner #recipeMaker .downArrow {
+        color: #31BED7;
+        font-size: 14px;
+        text-align: center;
+        transform: rotate(90deg); }
     @media screen and (min-width: 1921px) {
       #profile .banner {
         background-size: cover !important; } }
+    #profile .banner.taste-for-music #factPanelBtn-1 {
+      top: 52%;
+      left: 51%; }
+    #profile .banner.taste-for-music #factPanelBtn-2 {
+      top: 61%;
+      left: 25%; }
+    #profile .banner.taste-for-music #factPanelBtn-3 {
+      top: 81%;
+      left: 33%; }
+    #profile .banner.taste-for-music #factPanelBtn-4 {
+      top: 82%;
+      left: 61%; }
+    #profile .banner.taste-for-music #factPage {
+      top: 61%;
+      left: 67%; }
+    #profile .banner.yoga-lover #factPanelBtn-1 {
+      top: 45%;
+      left: 49%; }
+    #profile .banner.yoga-lover #factPanelBtn-2 {
+      top: 54%;
+      left: 33%; }
+    #profile .banner.yoga-lover #factPanelBtn-3 {
+      top: 67%;
+      left: 45%; }
+    #profile .banner.yoga-lover #factPanelBtn-4 {
+      top: 76%;
+      left: 68%; }
+    #profile .banner.yoga-lover #factPage {
+      top: 60%;
+      left: 66%; }
+    #profile .banner.food-intolerance #factPanelBtn-1 {
+      top: 40%;
+      left: 46%; }
+    #profile .banner.food-intolerance #factPanelBtn-2 {
+      top: 67%;
+      left: 42%; }
+    #profile .banner.food-intolerance #factPanelBtn-3 {
+      top: 75%;
+      left: 28%; }
+    #profile .banner.food-intolerance #factPanelBtn-4 {
+      top: 76%;
+      left: 65%; }
+    #profile .banner.food-intolerance #factPage {
+      top: 52%;
+      left: 53%; }
+    #profile .banner.capsule-time #factPanelBtn-1 {
+      top: 59%;
+      left: 65%; }
+    #profile .banner.capsule-time #factPanelBtn-2 {
+      top: 70%;
+      left: 23%; }
+    #profile .banner.capsule-time #factPanelBtn-3 {
+      top: 76%;
+      left: 45%; }
+    #profile .banner.capsule-time #factPanelBtn-4 {
+      top: 78%;
+      left: 67%; }
+    #profile .banner.capsule-time #factPage {
+      top: 48%;
+      left: 45%; }
+    #profile .banner.family-togetherness #factPanelBtn-1 {
+      top: 36%;
+      left: 22%; }
+    #profile .banner.family-togetherness #factPanelBtn-2 {
+      top: 43%;
+      left: 44%; }
+    #profile .banner.family-togetherness #factPanelBtn-3 {
+      top: 62%;
+      left: 33%; }
+    #profile .banner.family-togetherness #factPanelBtn-4 {
+      top: 71%;
+      left: 59%; }
+    #profile .banner.family-togetherness #factPage {
+      top: 52%;
+      left: 64%; }
+    #profile .banner.active-lifestyle #factPanelBtn-1 {
+      top: 48%;
+      left: 46%; }
+    #profile .banner.active-lifestyle #factPanelBtn-2 {
+      top: 61%;
+      left: 60%; }
+    #profile .banner.active-lifestyle #factPanelBtn-3 {
+      top: 73%;
+      left: 68%; }
+    #profile .banner.active-lifestyle #factPanelBtn-4 {
+      top: 77%;
+      left: 38%; }
+    #profile .banner.active-lifestyle #factPage {
+      top: 58%;
+      left: 19%; }
+    #profile .banner.budget-crunch #factPanelBtn-1 {
+      top: 39%;
+      left: 45%; }
+    #profile .banner.budget-crunch #factPanelBtn-2 {
+      top: 58%;
+      left: 68%; }
+    #profile .banner.budget-crunch #factPanelBtn-3 {
+      top: 80%;
+      left: 35%; }
+    #profile .banner.budget-crunch #factPanelBtn-4 {
+      top: 82%;
+      left: 68%; }
+    #profile .banner.budget-crunch #factPage {
+      top: 62%;
+      left: 29%; }
+    #profile .banner.breakfast #factPanelBtn-1 {
+      top: 48%;
+      left: 38%; }
+    #profile .banner.breakfast #factPanelBtn-2 {
+      top: 72%;
+      left: 46%; }
+    #profile .banner.breakfast #factPanelBtn-3 {
+      top: 75%;
+      left: 20%; }
+    #profile .banner.breakfast #factPanelBtn-4 {
+      top: 79%;
+      left: 62%; }
+    #profile .banner.breakfast #factPage {
+      top: 60%;
+      left: 63%; }
+    #profile .banner.healthy-wisdom #factPanelBtn-1 {
+      top: 40%;
+      left: 24%; }
+    #profile .banner.healthy-wisdom #factPanelBtn-2 {
+      top: 63%;
+      left: 68%; }
+    #profile .banner.healthy-wisdom #factPanelBtn-3 {
+      top: 64%;
+      left: 31%; }
+    #profile .banner.healthy-wisdom #factPanelBtn-4 {
+      top: 86%;
+      left: 26%; }
+    #profile .banner.healthy-wisdom #factPage {
+      top: 49%;
+      left: 46%; }
   #profile .factPanel {
     display: none;
     width: 600px;
@@ -1129,6 +1296,8 @@ footer #footerLogo {
       margin-top: 72px;
       margin-bottom: 32px;
       text-align: center; }
+      #profile .factPanel .panelImageWrap .panelImage {
+        max-width: 100%; }
     #profile .factPanel .info {
       text-align: left; }
       #profile .factPanel .info .factStatement {
@@ -1197,6 +1366,13 @@ footer #footerLogo {
           color: #000;
           font-size: 22px;
           line-height: 26px; }
+        #profile #recipes .recipe .recipeContentLeft .author {
+          font-family: "filson-pro", sans-serif;
+          font-style: italic;
+          font-weight: 400;
+          color: #000;
+          font-size: 17px;
+          margin-top: 14px; }
         #profile #recipes .recipe .recipeContentLeft .preparationSteps {
           list-style: none;
           margin-top: 43px; }

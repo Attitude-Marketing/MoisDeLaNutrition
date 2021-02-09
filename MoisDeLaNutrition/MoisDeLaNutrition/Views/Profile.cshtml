@@ -166,16 +166,24 @@
                                         <div class="recipeContentRight">
                                             @if(recipeCounter == 1)
                                             {
-                                                <div id="printAndShare">
-                                                    <button id="print">
-                                                        <span>@(Umbraco.Field("#Print"))</span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20.291" viewBox="0 0 22 20.291"><g transform="translate(0 -9.633)"><path class="a" d="M20.448,14.322H17.984V10.3a.665.665,0,0,0-.665-.665H4.681a.665.665,0,0,0-.665.665v4.023H1.552A1.554,1.554,0,0,0,0,15.874v8.534A1.554,1.554,0,0,0,1.552,25.96H4.016v3.3a.665.665,0,0,0,.665.665H17.319a.665.665,0,0,0,.665-.665v-3.3h2.464A1.554,1.554,0,0,0,22,24.408V15.874A1.554,1.554,0,0,0,20.448,14.322Zm-15.1-3.358H16.653v3.358H5.347ZM16.653,28.594H5.347V22H16.653Zm4.016-4.186a.225.225,0,0,1-.222.222H17.984v-3.3a.665.665,0,0,0-.665-.665H4.681a.665.665,0,0,0-.665.665v3.3H1.552a.225.225,0,0,1-.222-.222V15.874a.225.225,0,0,1,.222-.222h18.9a.225.225,0,0,1,.222.222v8.534Z" transform="translate(0 0)" /><circle class="a" cx="0.967" cy="0.967" r="0.967" transform="translate(16.339 17.195)" /><path class="a" d="M89.27,163.822H83.087a.68.68,0,0,0,0,1.359H89.27a.68.68,0,0,0,0-1.359Z" transform="translate(-75.178 -140.535)" /><path class="a" d="M89.27,193.623H83.087a.68.68,0,0,0,0,1.359H89.27a.68.68,0,0,0,0-1.359Z" transform="translate(-75.178 -167.758)" /></g></svg>
-                                                    </button>
-                                                    <button id="share">
-                                                        <span>@(Umbraco.Field("#Share"))</span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="19.827" height="20" viewBox="0 0 19.827 20"><path class="a" d="M88.316,1612.711a3.609,3.609,0,0,0-2.844,1.4l-6.192-3.165a3.617,3.617,0,0,0,.138-.942,3.511,3.511,0,0,0-.164-1.022l6.16-3.152a3.846,3.846,0,1,0-.6-1.24l-6.187,3.165a3.645,3.645,0,1,0,.053,4.426l6.16,3.152a3.57,3.57,0,0,0-.168,1.026,3.644,3.644,0,1,0,3.644-3.644Z" transform="translate(-72.134 -1600)" /></svg>
-                                                    </button>
-                                                </div>
+                                            <div id="printAndShare">
+                                                <button id="print">
+                                                    <span>@(Umbraco.Field("#Print"))</span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20.291" viewBox="0 0 22 20.291"><g transform="translate(0 -9.633)"><path class="a" d="M20.448,14.322H17.984V10.3a.665.665,0,0,0-.665-.665H4.681a.665.665,0,0,0-.665.665v4.023H1.552A1.554,1.554,0,0,0,0,15.874v8.534A1.554,1.554,0,0,0,1.552,25.96H4.016v3.3a.665.665,0,0,0,.665.665H17.319a.665.665,0,0,0,.665-.665v-3.3h2.464A1.554,1.554,0,0,0,22,24.408V15.874A1.554,1.554,0,0,0,20.448,14.322Zm-15.1-3.358H16.653v3.358H5.347ZM16.653,28.594H5.347V22H16.653Zm4.016-4.186a.225.225,0,0,1-.222.222H17.984v-3.3a.665.665,0,0,0-.665-.665H4.681a.665.665,0,0,0-.665.665v3.3H1.552a.225.225,0,0,1-.222-.222V15.874a.225.225,0,0,1,.222-.222h18.9a.225.225,0,0,1,.222.222v8.534Z" transform="translate(0 0)" /><circle class="a" cx="0.967" cy="0.967" r="0.967" transform="translate(16.339 17.195)" /><path class="a" d="M89.27,163.822H83.087a.68.68,0,0,0,0,1.359H89.27a.68.68,0,0,0,0-1.359Z" transform="translate(-75.178 -140.535)" /><path class="a" d="M89.27,193.623H83.087a.68.68,0,0,0,0,1.359H89.27a.68.68,0,0,0,0-1.359Z" transform="translate(-75.178 -167.758)" /></g></svg>
+                                                </button>
+                                                <!-- AddToAny BEGIN -->
+                                                <a class="a2a_dd" id="share" href="https://www.addtoany.com/share">
+                                                    <span>@(Umbraco.Field("#Share"))</span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="19.827" height="20" viewBox="0 0 19.827 20"><path class="a" d="M88.316,1612.711a3.609,3.609,0,0,0-2.844,1.4l-6.192-3.165a3.617,3.617,0,0,0,.138-.942,3.511,3.511,0,0,0-.164-1.022l6.16-3.152a3.846,3.846,0,1,0-.6-1.24l-6.187,3.165a3.645,3.645,0,1,0,.053,4.426l6.16,3.152a3.57,3.57,0,0,0-.168,1.026,3.644,3.644,0,1,0,3.644-3.644Z" transform="translate(-72.134 -1600)" /></svg>
+                                                </a>
+                                                <script>
+                                                    var a2a_config = a2a_config || {};
+                                                    a2a_config.onclick = 1;
+                                                </script>
+                                                <script async src="https://static.addtoany.com/menu/page.js"></script>
+                                                <!-- AddToAny END -->
+
+                                            </div>
                                             }
                                             <img class="recipeImage" src="@recipicUrl" alt="@(recipe.GetPropertyValue<string>("recipeName"))" />
                                             <div class="ingredientsWrap">

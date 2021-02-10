@@ -783,6 +783,9 @@ footer #footerLogo {
         grid-row-start: 14;
         grid-row-end: 17; } }
 
+.grid-container {
+  grid-template-columns: repeat(1, 18%); }
+
 .nutritionFactsListing-page {
   background: url(../../images/placeholders/Bg_Pattern.svg) repeat, linear-gradient(90deg, #31afc6 0%, #4dd0e5 100%);
   background-attachment: fixed; }

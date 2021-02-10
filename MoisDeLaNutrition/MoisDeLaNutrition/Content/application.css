@@ -259,7 +259,7 @@ footer .footerNewsletter #newsletter-form {
       opacity: 0.7; }
 
 footer #footerNav {
-  height: 85%; }
+  height: 70%; }
   footer #footerNav ul {
     display: flex;
     flex-direction: column;
@@ -285,15 +285,7 @@ footer #footerNav {
         line-height: 22px; }
 
 footer #footerLogo {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end; }
-  footer #footerLogo #copyright {
-    display: inline-block;
-    font-size: 12px;
-    line-height: 14px;
-    margin-left: 10px;
-    max-width: 145px; }
+  margin-bottom: 30px; }
 
 .rte {
   font-size: 20px;
@@ -1405,39 +1397,39 @@ footer #footerLogo {
         #profile .banner.food-intolerance #factPage {
           top: 39%;
           left: 54%; } }
-    #profile .banner.capsule-time #factPanelBtn-1 {
+    #profile .banner.on-the-go #factPanelBtn-1 {
       top: 59%;
       left: 65%; }
       @media screen and (max-width: 768px) {
-        #profile .banner.capsule-time #factPanelBtn-1 {
+        #profile .banner.on-the-go #factPanelBtn-1 {
           top: 41%;
           left: 78%; } }
-    #profile .banner.capsule-time #factPanelBtn-2 {
+    #profile .banner.on-the-go #factPanelBtn-2 {
       top: 70%;
       left: 23%; }
       @media screen and (max-width: 768px) {
-        #profile .banner.capsule-time #factPanelBtn-2 {
+        #profile .banner.on-the-go #factPanelBtn-2 {
           top: 48%;
           left: 6%; } }
-    #profile .banner.capsule-time #factPanelBtn-3 {
+    #profile .banner.on-the-go #factPanelBtn-3 {
       top: 76%;
       left: 45%; }
       @media screen and (max-width: 768px) {
-        #profile .banner.capsule-time #factPanelBtn-3 {
+        #profile .banner.on-the-go #factPanelBtn-3 {
           top: 50%;
           left: 39%; } }
-    #profile .banner.capsule-time #factPanelBtn-4 {
+    #profile .banner.on-the-go #factPanelBtn-4 {
       top: 78%;
       left: 67%; }
       @media screen and (max-width: 768px) {
-        #profile .banner.capsule-time #factPanelBtn-4 {
+        #profile .banner.on-the-go #factPanelBtn-4 {
           top: 53%;
           left: 84%; } }
-    #profile .banner.capsule-time #factPage {
+    #profile .banner.on-the-go #factPage {
       top: 48%;
       left: 45%; }
       @media screen and (max-width: 768px) {
-        #profile .banner.capsule-time #factPage {
+        #profile .banner.on-the-go #factPage {
           top: 30%;
           left: 40%; } }
     #profile .banner.family-togetherness #factPanelBtn-1 {
@@ -1683,6 +1675,9 @@ footer #footerLogo {
         color: #31BED7; }
         #profile .factPanel .info .globalCta .globalCtaArrowStyle {
           stroke: #31BED7; }
+    @media screen and (max-width: 768px) {
+      #profile .factPanel {
+        width: 100%; } }
   #profile #recipes {
     margin-top: 160px; }
     #profile #recipes .recipe {
@@ -1817,6 +1812,13 @@ footer #footerLogo {
             #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsContent .tipsPic {
               max-width: 241px;
               margin-left: 22px; }
+            @media screen and (max-width: 768px) {
+              #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsContent {
+                flex-direction: column-reverse; }
+                #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsContent .tipsPic {
+                  max-width: 100%;
+                  margin-left: 0;
+                  margin-bottom: 10px; } }
         @media screen and (max-width: 768px) {
           #profile #recipes .recipe .recipeContentLeft {
             margin-top: 50px;

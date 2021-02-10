@@ -46,7 +46,7 @@
 }
 <footer id="footer">
     <div class="container-fluid p-0">
-        @if (nextNode != null && pageNode.DocumentTypeAlias.ToLower() == "nutritionfact" || pageNode.DocumentTypeAlias.ToLower() == "profile" && pageNode.DocumentTypeAlias.ToLower() == "about" || pageNode.DocumentTypeAlias.ToLower() == "resources")
+        @if (nextNode != null && (pageNode.DocumentTypeAlias.ToLower() == "nutritionfact" || pageNode.DocumentTypeAlias.ToLower() == "profile" || pageNode.DocumentTypeAlias.ToLower() == "about" || pageNode.DocumentTypeAlias.ToLower() == "resources"))
         {
             var imageNext = nextNode.GetPropertyValue<IPublishedContent>("imageNext");
             var imageNextUrl = "/images/placeholders/placeholder-vertical.jpg";

@@ -174,7 +174,7 @@ footer {
     }
 
     #footerNav {
-        height: 85%;
+        height: 70%;
 
         ul {
             display: flex;
@@ -213,16 +213,6 @@ footer {
     }
 
     #footerLogo {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-
-        #copyright {
-            display: inline-block;
-            font-size: 12px;
-            line-height: 14px;
-            margin-left: 10px;
-            max-width: 145px;
-        }
+        margin-bottom: 30px;
     }
 }

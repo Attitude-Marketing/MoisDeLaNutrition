@@ -292,7 +292,7 @@
             }
         }
 
-        &.capsule-time {
+        &.on-the-go {
             #factPanelBtn-1 {
                 top: 59%;
                 left: 65%;
@@ -688,6 +688,10 @@
                 }
             }
         }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     #recipes {
@@ -843,6 +847,16 @@
                         .tipsPic {
                             max-width: 241px;
                             margin-left: 22px;
+                        }
+
+                        @media screen and (max-width: 768px) {
+                            flex-direction: column-reverse;
+
+                            .tipsPic {
+                                max-width: 100%;
+                                margin-left: 0;
+                                margin-bottom: 10px;
+                            }
                         }
                     }
                 }

@@ -122,7 +122,7 @@ $desktopNavSpacing : 20px;
 
         #panel {
             position: fixed;
-            top: 55px;
+            top: 53px;
             left: 0;
             width: 100%;
             background: $white;
@@ -174,32 +174,40 @@ $desktopNavSpacing : 20px;
     align-items: center;
     flex-direction: column;
     cursor: pointer;
-}
 
-#pencet span {
-    background-color: $scooter;
-    width: 40px;
-    height: 4px;
-    margin: 4px 0;
-    display: block;
-    transition: all .4s ease;
-    transform-origin: 0 0;
-}
+    span {
+        background-color: $scooter;
+        width: 40px;
+        height: 5px;
+        margin: 3px 0;
+        display: block;
+        transition: all .4s ease;
+        transform-origin: 0 0;
+        border-radius: 5px;
 
-#pencet span:nth-child(2) {
-    position: relative;
-    left: -10px;
-    width: 20px;
-}
+        &:nth-child(2) {
+            position: relative;
+            left: -6px;
+            width: 28px;
+        }
+    }
 
-.Diam span:nth-child(1) {
-    transform: rotate(45deg) translate(1px, -5px);
-}
+    &.Diam {
 
-.Diam span:nth-child(2) {
-    Transform: scaleX(0);  
-}
+        span {
+            margin: 4px 0;
 
-.Diam span:nth-child(3) {
-    transform: rotate(-45deg) translate(-1px, 0);
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(1px, -5px);
+            }
+
+            &:nth-child(2) {
+                Transform: scaleX(0);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(-1px, 0);
+            }
+        }
+    }
 }

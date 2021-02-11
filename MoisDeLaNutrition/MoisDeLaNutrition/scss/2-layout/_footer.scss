@@ -5,12 +5,19 @@ footer {
 
     .followingContent {
         background: $scooter;
+        text-decoration: none;
 
-        #followingContentImg {
+        .imgWrap {
             width: 100%;
-            height: 100%;
-            min-height: 235px;
+            overflow: hidden;
+
+            #followingContentImg {
+                min-height: 235px;
+                transform: scale(1);
+                transition: transform ease-out .3s;
+            }
         }
+
 
         #followingContentxtContainer {
             display: flex;
@@ -21,7 +28,7 @@ footer {
             text-decoration: none !important;
 
             @media screen and (max-width: 768px) {
-                padding:60px 10%;
+                padding: 60px 10%;
             }
 
             #followingContentTxt {
@@ -63,6 +70,13 @@ footer {
                     transition: $basicTransition;
                     transform: scale(1.05);
                 }
+            }
+        }
+
+        &:hover {
+            #followingContentImg {
+                transform: scale(1.1);
+                transition: transform ease-in .3s;
             }
         }
     }
@@ -199,6 +213,10 @@ footer {
                     a {
                         text-decoration: underline;
                         @include filson-700;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
                     }
                 }
 

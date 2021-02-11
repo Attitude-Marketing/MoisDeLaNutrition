@@ -59,12 +59,14 @@
             var nextNodeUrl = nextNode.Url;
             var nextTitle = Html.Raw(nextNode.GetPropertyValue<string>("pageTitle"));
 
-            <div class="row no-gutters row-eq-height followingContent" style="background-color: @(nextNode.GetPropertyValue<string>("profileColor"))">
+            <a href="@nextNodeUrl" class="row no-gutters row-eq-height followingContent" style="background-color: @(nextNode.GetPropertyValue<string>("profileColor"))">
                 <div class="col-12 col-md-8">
-                    <div id="followingContentImg" style="background: url('@imageNextUrl'); background-repeat:no-repeat; background-position:center center; background-size:cover;"></div>
+                    <div class="imgWrap">
+                        <div id="followingContentImg" style="background: url('@imageNextUrl'); background-repeat:no-repeat; background-position:center center; background-size:cover;"></div>
+                    </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <a href="@nextNodeUrl" target="_self" id="followingContentxtContainer">
+                    <span id="followingContentxtContainer">
                         <div id="followingContentTxt">
                             <p id="followingContentTagline">@next</p>
                             <p id="followingContentTitle">@Html.Raw(nextTitle)</p>
@@ -72,9 +74,9 @@
                         <div id="followingContentArrow">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path class="arrow" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" /></svg>
                         </div>
-                    </a>
+                    </span>
                 </div>
-            </div>
+            </a>
         }
 
         <div class="row no-gutters row-eq-height">

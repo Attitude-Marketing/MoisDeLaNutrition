@@ -923,7 +923,6 @@
                 }
 
                 .recipeImage {
-                    margin-top: 58px;
                     width: 100%;
                     position: relative;
                     z-index: 0;
@@ -985,6 +984,12 @@
                 @media screen and (max-width: 768px) {
                     padding-left: 0;
                     padding-bottom: 56px;
+                }
+            }
+
+            &:first-child {
+                .recipeImage {
+                    margin-top: 58px;
                 }
             }
         }

@@ -1874,7 +1874,6 @@ footer #footerLogo {
               align-items: center;
               justify-content: center; } }
         #profile #recipes .recipe .recipeContentRight .recipeImage {
-          margin-top: 58px;
           width: 100%;
           position: relative;
           z-index: 0; }
@@ -1924,6 +1923,8 @@ footer #footerLogo {
           #profile #recipes .recipe .recipeContentRight {
             padding-left: 0;
             padding-bottom: 56px; } }
+      #profile #recipes .recipe:first-child .recipeImage {
+        margin-top: 58px; }
     @media screen and (max-width: 768px) {
       #profile #recipes {
         margin-top: 0; } }

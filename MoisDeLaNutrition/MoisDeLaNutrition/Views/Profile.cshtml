@@ -121,10 +121,7 @@
                                 <div class="row no-gutters">
                                     <div class="col-sm-6 order-2 order-sm-1">
                                         <div class="recipeContentLeft">
-                                            @if (recipeCounter > 1)
-                                            {
-                                                <p class="recipeStatement">@Html.Raw(Umbraco.Field("#Recipe"))</p>
-                                            }
+                                            
                                             <h3 class="recipeName">@(recipe.GetPropertyValue<string>("recipeName"))</h3>
                                             <p class="info">@(Umbraco.Field("#Preparation")) @(recipe.GetPropertyValue<string>("preparation")) / @(Umbraco.Field("#Cooking")) @(recipe.GetPropertyValue<string>("cooking"))</p>
                                             @if (!recipe.GetPropertyValue<string>("serving").IsNullOrWhiteSpace())

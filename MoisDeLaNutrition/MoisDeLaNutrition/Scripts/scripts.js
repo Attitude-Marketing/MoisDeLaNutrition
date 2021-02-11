@@ -70,7 +70,7 @@ $(document).ready(function () {
                 $(this).css('pointer-events', 'all');
             });
         }
-
+        $("body").css("overflow","hidden");
     });
 
     $(".factPanel").find(".btnClose").click(function () {
@@ -84,6 +84,7 @@ $(document).ready(function () {
         $overlay.animate({ 'opacity': 0 }, 300, function () {
             $(this).css('pointer-events', 'none');
         });
+        $("body").css("overflow", "auto");
     });
 
     $("#newsletter-form").on("submit", function (e) {

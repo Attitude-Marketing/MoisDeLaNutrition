@@ -130,11 +130,15 @@ textarea, input {
           margin-right: 0; } }
 
 footer .followingContent {
-  background: #31BED7; }
-  footer .followingContent #followingContentImg {
+  background: #31BED7;
+  text-decoration: none; }
+  footer .followingContent .imgWrap {
     width: 100%;
-    height: 100%;
-    min-height: 235px; }
+    overflow: hidden; }
+    footer .followingContent .imgWrap #followingContentImg {
+      min-height: 235px;
+      transform: scale(1);
+      transition: transform ease-out .3s; }
   footer .followingContent #followingContentxtContainer {
     display: flex;
     flex-direction: row;
@@ -174,6 +178,9 @@ footer .followingContent {
     footer .followingContent #followingContentxtContainer:hover #followingContentArrow {
       transition: all 0.2s ease-out;
       transform: scale(1.05); }
+  footer .followingContent:hover #followingContentImg {
+    transform: scale(1.1);
+    transition: transform ease-in .3s; }
 
 footer #footerLeft {
   background: #fff;
@@ -278,6 +285,8 @@ footer #footerNav {
         font-family: "filson-pro", sans-serif;
         font-style: normal;
         font-weight: 700; }
+        footer #footerNav ul li:not(.current) a:hover {
+          text-decoration: none; }
       footer #footerNav ul li a {
         display: inline-block;
         color: #000;
@@ -540,7 +549,7 @@ footer #footerLogo {
       box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.05); }
     #navs #mobile-nav #panel {
       position: fixed;
-      top: 55px;
+      top: 53px;
       left: 0;
       width: 100%;
       background: #fff;
@@ -576,29 +585,27 @@ footer #footerLogo {
   align-items: center;
   flex-direction: column;
   cursor: pointer; }
-
-#pencet span {
-  background-color: #31BED7;
-  width: 40px;
-  height: 4px;
-  margin: 4px 0;
-  display: block;
-  transition: all .4s ease;
-  transform-origin: 0 0; }
-
-#pencet span:nth-child(2) {
-  position: relative;
-  left: -10px;
-  width: 20px; }
-
-.Diam span:nth-child(1) {
-  transform: rotate(45deg) translate(1px, -5px); }
-
-.Diam span:nth-child(2) {
-  Transform: scaleX(0); }
-
-.Diam span:nth-child(3) {
-  transform: rotate(-45deg) translate(-1px, 0); }
+  #pencet span {
+    background-color: #31BED7;
+    width: 40px;
+    height: 5px;
+    margin: 3px 0;
+    display: block;
+    transition: all .4s ease;
+    transform-origin: 0 0;
+    border-radius: 5px; }
+    #pencet span:nth-child(2) {
+      position: relative;
+      left: -6px;
+      width: 28px; }
+  #pencet.Diam span {
+    margin: 4px 0; }
+    #pencet.Diam span:nth-child(1) {
+      transform: rotate(45deg) translate(1px, -5px); }
+    #pencet.Diam span:nth-child(2) {
+      Transform: scaleX(0); }
+    #pencet.Diam span:nth-child(3) {
+      transform: rotate(-45deg) translate(-1px, 0); }
 
 .globalCta, .triggerGlobalArrow {
   font-family: "filson-pro", sans-serif;

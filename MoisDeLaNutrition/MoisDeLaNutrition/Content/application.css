@@ -1141,12 +1141,8 @@ footer #footerLogo {
     justify-content: flex-start; }
     @media screen and (max-width: 992px) {
       #about #headerLogosContainer {
-        justify-content: flex-end;
-        align-items: flex-end; } }
-    @media screen and (max-width: 992px) {
-      #about #headerLogosContainer {
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-content: center;
         align-items: center; } }
     @media screen and (max-width: 374px) {
@@ -1289,10 +1285,12 @@ footer #footerLogo {
         text-align: center;
         margin-bottom: 6px; }
       #profile .banner #recipeMarker .downArrow {
-        color: #31BED7;
-        font-size: 14px;
-        text-align: center;
-        transform: rotate(90deg); }
+        text-align: center; }
+        #profile .banner #recipeMarker .downArrow svg .a {
+          fill: none;
+          stroke: #31BED7;
+          stroke-linecap: round;
+          stroke-width: 2px; }
       @media screen and (max-width: 768px) {
         #profile .banner #recipeMarker {
           display: none; } }

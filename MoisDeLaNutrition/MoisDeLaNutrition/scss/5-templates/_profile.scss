@@ -21,7 +21,13 @@
                 letter-spacing: -2.6px;
                 text-align: left !important;
 
-                @media screen and (max-width: 768px) {
+                @media screen and (min-width: 415px) and (max-width: 768px) {
+                    font-size: 44px;
+                    line-height: 46px;
+                    text-align: center !important;
+                }
+
+                @media screen and (max-width: 414px) {
                     font-size: 44px;
                     line-height: 46px;
                     text-align: center !important;
@@ -34,6 +40,10 @@
                 line-height: 24px;
                 color: $white;
                 max-width: 350px;
+            }
+
+            @media screen and (min-width: 415px) and (max-width: 768px) {
+                margin-top: 200px;
             }
 
             @media screen and (max-width: 414px) {
@@ -943,6 +953,7 @@
 
                 .ingredientsWrap {
                     width: 526px;
+                    max-width: 100%;
                     border-radius: 20px;
                     margin: auto;
                     margin-top: -140px;
@@ -1006,5 +1017,24 @@
         @media screen and (max-width: 768px) {
             margin-top: 0;
         }
+    }
+}
+@media print {
+    /* All your print styles go here */
+    #footer, #nav, .banner, #printAndShare, .tipsBox {
+        display: none !important;
+    }
+    .recipe {
+        height: 100vh;
+
+        &:first-child {
+            .recipeImage {
+                margin-top: 0!important;
+            }
+        }
+    }
+    .ingredientsWrap {
+        max-width: 100%;
+        margin-top: 0!important; 
     }
 }

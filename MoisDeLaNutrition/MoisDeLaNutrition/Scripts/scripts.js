@@ -18,7 +18,7 @@ var format = "desktop",
     interval,
     countInterval = 0,
     totems = 0,
-    mobileThreshold = 768,
+    mobileThreshold = 414,
     listcount = 0;
 
 

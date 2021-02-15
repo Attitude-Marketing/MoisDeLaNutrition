@@ -107,12 +107,18 @@
                     font-size: 18px;
                     line-height: 28px;
                 }
+
+                @media screen and (max-width: 768px) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
             }
         }
     }
 
     #headerLogosContainer {
-        justify-content:flex-start;
+        justify-content: flex-start;
+
         @media screen and (max-width: 992px) {
             flex-direction: row;
             justify-content: flex-start;
@@ -135,9 +141,9 @@
                 margin-right: 0;
             }
 
-            .dietitianLogoSvg{
-                width:85px;
-                height:85px;
+            .dietitianLogoSvg {
+                width: 85px;
+                height: 85px;
             }
 
             .headerLogoTitle {

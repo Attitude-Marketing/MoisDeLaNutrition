@@ -66,6 +66,8 @@
 
             .bannerBtnIcon {
                 margin-right: 12px;
+                transform: scale(1);
+                transition: transform ease-out .3s;
             }
 
             .bannerBtnStatement {
@@ -82,6 +84,13 @@
                     .arrowPath {
                         fill: #31bed7;
                     }
+                }
+            }
+
+            &:hover {
+                .bannerBtnIcon {
+                    transform: scale(1.1);
+                    transition: transform ease-in .3s;
                 }
             }
 
@@ -216,6 +225,16 @@
             }
 
             #factPanelBtn-2 {
+                top: 55%;
+                left: 32%;
+
+                @media screen and (max-width: 414px) {
+                    top: 39%;
+                    left: 7%;
+                }
+            }
+
+            #factPanelBtn-3 {
                 top: 61%;
                 left: 67%;
 
@@ -225,7 +244,7 @@
                 }
             }
 
-            #factPanelBtn-3 {
+            #factPanelBtn-4 {
                 top: 67%;
                 left: 45%;
 
@@ -235,7 +254,7 @@
                 }
             }
 
-            #factPanelBtn-4 {
+            #factPanelBtn-5 {
                 top: 76%;
                 left: 68%;
 
@@ -245,7 +264,7 @@
                 }
             }
 
-            #factPage {
+            /*#factPage {
                 top: 55%;
                 left: 32%;
 
@@ -253,7 +272,7 @@
                     top: 39%;
                     left: 7%;
                 }
-            }
+            }*/
         }
 
         &.food-intolerance {

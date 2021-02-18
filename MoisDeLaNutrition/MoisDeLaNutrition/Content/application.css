@@ -369,8 +369,8 @@ footer #footerLogo {
     font-style: normal;
     font-weight: 900 !important;
     text-shadow: 0px 0px 6px #FFFFFF;
-    font-size: 80px;
-    line-height: 82px;
+    font-size: 70px;
+    line-height: 72px;
     letter-spacing: -1.6px;
     stroke: 2px #31BED7;
     -webkit-text-stroke: 2px #31BED7; }
@@ -679,73 +679,74 @@ footer #footerLogo {
 /*.grid-container {
     grid-template-columns: repeat(1, 18%);
 }*/
-#test * {
+#wrapper * {
   box-sizing: border-box; }
 
-#test .grid {
+#wrapper .grid {
   display: grid;
   grid-gap: 30px;
   margin-top: 30px;
-  width: 100%; }
+  width: 100%;
+  grid-template-rows: 1fr; }
 
-#test .grid__item {
+#wrapper .grid__item {
   position: relative;
   width: 100%; }
-  #test .grid__item:nth-child(1) {
+  #wrapper .grid__item:nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
-    grid-row-end: 6; }
-    #test .grid__item:nth-child(1)::before {
+    grid-row-end: 4; }
+    #wrapper .grid__item:nth-child(1)::before {
       padding-top: 50%; }
-  #test .grid__item:nth-child(2) {
+  #wrapper .grid__item:nth-child(2) {
     grid-column-start: 4;
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 3; }
-  #test .grid__item:nth-child(3) {
+  #wrapper .grid__item:nth-child(3) {
     grid-column-start: 7;
     grid-column-end: 10;
     grid-row-start: 1;
     grid-row-end: 3; }
-  #test .grid__item:nth-child(4) {
+  #wrapper .grid__item:nth-child(4) {
     grid-column-start: 4;
     grid-column-end: 10;
     grid-row-start: 3;
-    grid-row-end: 11; }
-  #test .grid__item:nth-child(5) {
+    grid-row-end: 9; }
+  #wrapper .grid__item:nth-child(5) {
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 11; }
-  #test .grid__item:nth-child(6) {
+    grid-row-start: 4;
+    grid-row-end: 9; }
+  #wrapper .grid__item:nth-child(6) {
     grid-column-start: 1;
     grid-column-end: 6;
-    grid-row-start: 11;
-    grid-row-end: 14; }
-  #test .grid__item:nth-child(7) {
+    grid-row-start: 9;
+    grid-row-end: 10; }
+  #wrapper .grid__item:nth-child(7) {
     grid-column-start: 6;
     grid-column-end: 10;
-    grid-row-start: 11;
+    grid-row-start: 9;
     grid-row-end: 17; }
-  #test .grid__item:nth-child(8) {
+  #wrapper .grid__item:nth-child(8) {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 14;
+    grid-row-start: 10;
     grid-row-end: 17; }
-  #test .grid__item:nth-child(9) {
+  #wrapper .grid__item:nth-child(9) {
     grid-column-start: 3;
     grid-column-end: 6;
-    grid-row-start: 14;
+    grid-row-start: 10;
     grid-row-end: 17; }
-  #test .grid__item:before {
+  #wrapper .grid__item:before {
     content: "";
     height: 0;
     display: inline-block;
     padding-top: 100%;
     width: 1px;
     position: relative; }
-  #test .grid__item .content {
+  #wrapper .grid__item .content {
     position: absolute;
     top: 0;
     left: 0;
@@ -754,8 +755,9 @@ footer #footerLogo {
     width: 100%;
     border-radius: 20px;
     width: 100%;
-    height: 100%; }
-    #test .grid__item .content:after {
+    height: 100%;
+    border: #fff 2px solid; }
+    #wrapper .grid__item .content:after {
       position: absolute;
       top: 0;
       left: 0;
@@ -766,23 +768,24 @@ footer #footerLogo {
       opacity: 0;
       pointer-events: none;
       border-radius: 20px; }
-    #test .grid__item .content:hover {
+    #wrapper .grid__item .content:hover {
       border-color: rgba(255, 255, 255, 0);
-      transition: opacity 0.2s ease-out; }
-      #test .grid__item .content:hover:after {
+      transition: opacity 0.2s ease-out;
+      border: none; }
+      #wrapper .grid__item .content:hover:after {
         opacity: 0.6;
         transition: opacity 0.2s ease-out; }
-      #test .grid__item .content:hover .imgContainer {
+      #wrapper .grid__item .content:hover .imgContainer {
         filter: grayscale(100%);
         transition: opacity 0.2s ease-out; }
-    #test .grid__item .content .info {
+    #wrapper .grid__item .content .info {
       position: absolute;
       top: 0;
       left: 0;
       color: #fff;
       z-index: 2;
       padding: 20px; }
-      #test .grid__item .content .info .findImgTxtTitle {
+      #wrapper .grid__item .content .info .findImgTxtTitle {
         font-family: "filson-pro", sans-serif;
         font-style: italic;
         font-weight: 900;
@@ -793,31 +796,31 @@ footer #footerLogo {
         margin-bottom: 13px;
         text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); }
         @media screen and (max-width: 1200px) {
-          #test .grid__item .content .info .findImgTxtTitle {
+          #wrapper .grid__item .content .info .findImgTxtTitle {
             font-size: 27px;
             line-height: 30px; } }
-      #test .grid__item .content .info .globalCtaArrowStyle {
+      #wrapper .grid__item .content .info .globalCtaArrowStyle {
         stroke: #fff; }
-    #test .grid__item .content .posterImg {
+    #wrapper .grid__item .content .posterImg {
       max-width: 100%; }
-      #test .grid__item .content .posterImg .imgContainer {
+      #wrapper .grid__item .content .posterImg .imgContainer {
         height: 100%; }
 
 @media screen and (max-width: 1024px) {
-  #test .grid {
+  #wrapper .grid {
     display: block; }
-    #test .grid .grid__item {
+    #wrapper .grid .grid__item {
       width: 100%;
       height: 400px;
       margin-bottom: 30px; } }
     @media screen and (max-width: 1024px) and (max-width: 576px) {
-      #test .grid .grid__item {
+      #wrapper .grid .grid__item {
         height: 370px; } }
 
 @media screen and (max-width: 1024px) {
-      #test .grid .grid__item:last-child {
+      #wrapper .grid .grid__item:last-child {
         margin-bottom: 0; }
-      #test .grid .grid__item .content {
+      #wrapper .grid .grid__item .content {
         background-size: 101% auto !important; } }
 
 /*.profileContainer {
@@ -1229,7 +1232,8 @@ footer #footerLogo {
   #nutritionFact #factImage {
     width: 100%;
     display: block;
-    margin-bottom: 80px; }
+    margin-bottom: 80px;
+    border-radius: 20px; }
   #nutritionFact .rte {
     background-color: #fff;
     border-radius: 20px;
@@ -1239,22 +1243,21 @@ footer #footerLogo {
     font-weight: 400;
     color: #1D1D1D;
     font-size: 18px;
-    line-height: 28px; }
+    line-height: 28px;
+    /*strong {
+            @include filson-700;
+            color: $cod;
+            margin-top: 20px;
+            font-size: 30px;
+            line-height: 32px;
+            display: inline-block;
+        }*/ }
     @media screen and (max-width: 1400px) {
       #nutritionFact .rte {
         padding: 45px; } }
     @media screen and (max-width: 576px) {
       #nutritionFact .rte {
         padding: 25px; } }
-    #nutritionFact .rte strong {
-      font-family: "filson-pro", sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      color: #1D1D1D;
-      margin-top: 20px;
-      font-size: 30px;
-      line-height: 32px;
-      display: inline-block; }
 
 #about {
   background: white;
@@ -1316,36 +1319,38 @@ footer #footerLogo {
           #about #infowrap .logos .aboutLogo .aboutLogoTitle {
             text-align: left;
             margin-right: 0; } }
-  #about #infowrap .textContent .subtitle {
-    font-family: "filson-pro", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    color: #000;
-    font-size: 25px;
-    margin-bottom: 20px; }
-  #about #infowrap .textContent .title {
-    font-family: "filson-pro", sans-serif;
-    font-style: normal;
-    font-weight: 900 !important;
-    color: #000;
-    font-size: 48px;
-    line-height: 58px;
-    margin-bottom: 30px; }
-    @media screen and (max-width: 768px) {
-      #about #infowrap .textContent .title {
-        font-size: 38px;
-        line-height: 48px; } }
-  #about #infowrap .textContent .rte padding {
-    font-family: "century-gothic", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    color: #1D1D1D;
-    font-size: 18px;
-    line-height: 28px; }
-  @media screen and (max-width: 768px) {
-    #about #infowrap .textContent .rte {
+  #about #infowrap .textContent {
+    margin-bottom: 100px; }
+    #about #infowrap .textContent .subtitle {
+      font-family: "filson-pro", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      color: #000;
+      font-size: 25px;
+      margin-bottom: 20px; }
+    #about #infowrap .textContent .title {
+      font-family: "filson-pro", sans-serif;
+      font-style: normal;
+      font-weight: 900 !important;
+      color: #000;
+      font-size: 48px;
+      line-height: 58px;
+      margin-bottom: 30px; }
+      @media screen and (max-width: 768px) {
+        #about #infowrap .textContent .title {
+          font-size: 38px;
+          line-height: 48px; } }
+    #about #infowrap .textContent .rte padding {
+      font-family: "century-gothic", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      color: #1D1D1D;
       font-size: 18px;
-      line-height: 28px; } }
+      line-height: 28px; }
+    @media screen and (max-width: 768px) {
+      #about #infowrap .textContent .rte {
+        font-size: 18px;
+        line-height: 28px; } }
   #about #headerLogosContainer {
     justify-content: flex-start; }
     @media screen and (max-width: 992px) {
@@ -1394,12 +1399,16 @@ footer #footerLogo {
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 125px; }
     #about .imgWrap #aboutImg {
       border-radius: 15px;
       margin-bottom: 100px;
       max-width: 100%;
       height: auto; }
+    @media screen and (max-width: 992px) {
+      #about .imgWrap {
+        padding-top: 0; } }
 
 #profile {
   background: url(/images/placeholders/Bg_Pattern_On_White.svg) 0 0 repeat #fff;
@@ -1408,7 +1417,7 @@ footer #footerLogo {
     height: 1200px;
     width: 100%;
     position: relative;
-    /*@media screen and (max-width: 768px) {
+    /*@media screen and (max-width: 992px) {
             height: 751px;
         }*/ }
     #profile .banner #bannerInfo {
@@ -1419,7 +1428,7 @@ footer #footerLogo {
         line-height: 112px;
         letter-spacing: -2.6px;
         text-align: left !important; }
-        @media screen and (min-width: 415px) and (max-width: 768px) {
+        @media screen and (min-width: 415px) and (max-width: 992px) {
           #profile .banner #bannerInfo .htitle {
             font-size: 44px;
             line-height: 46px;
@@ -1437,7 +1446,7 @@ footer #footerLogo {
         line-height: 24px;
         color: #fff;
         max-width: 350px; }
-      @media screen and (min-width: 415px) and (max-width: 768px) {
+      @media screen and (min-width: 415px) and (max-width: 992px) {
         #profile .banner #bannerInfo {
           margin-top: 200px; } }
       @media screen and (max-width: 414px) {
@@ -1446,7 +1455,8 @@ footer #footerLogo {
           margin-top: 582px;
           text-align: center; } }
     #profile .banner .bannerBtn {
-      height: 56px;
+      min-height: 56px;
+      height: auto;
       background-color: #fff;
       padding: 10px;
       border-radius: 35px;
@@ -1473,10 +1483,11 @@ footer #footerLogo {
       #profile .banner .bannerBtn:hover .bannerBtnIcon {
         transform: scale(1.1);
         transition: transform ease-in .3s; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         #profile .banner .bannerBtn {
           padding: 8px;
           height: 45px;
+          min-height: unset;
           width: 45px; }
           #profile .banner .bannerBtn .bannerBtnIcon {
             margin-right: 0;
@@ -1500,7 +1511,9 @@ footer #footerLogo {
       left: 50%;
       transform: translateX(-50%); }
       #profile .banner #recipeMarker img {
-        margin-bottom: 6px; }
+        margin-bottom: 6px;
+        transform: scale(1);
+        transition: transform ease-out .3s; }
       #profile .banner #recipeMarker .markerLabel {
         font-family: "century-gothic", sans-serif;
         font-style: italic;
@@ -1516,327 +1529,422 @@ footer #footerLogo {
           stroke: #31BED7;
           stroke-linecap: round;
           stroke-width: 2px; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 992px) {
         #profile .banner #recipeMarker {
           display: none; } }
+      #profile .banner #recipeMarker:hover {
+        cursor: pointer; }
+        #profile .banner #recipeMarker:hover img {
+          transform: scale(1.1);
+          transition: transform ease-in .3s; }
     @media screen and (min-width: 1921px) {
       #profile .banner {
         background-size: cover !important; } }
-    #profile .banner.taste-for-music #factPanelBtn-1 {
-      top: 52%;
-      left: 51%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.taste-for-music #factPanelBtn-1 {
-          top: 34%;
-          left: 48%; } }
-    #profile .banner.taste-for-music #factPanelBtn-2 {
-      top: 61%;
-      left: 25%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.taste-for-music #factPanelBtn-2 {
-          top: 48%;
-          left: 5%; } }
-    #profile .banner.taste-for-music #factPanelBtn-3 {
-      top: 81%;
-      left: 33%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.taste-for-music #factPanelBtn-3 {
-          top: 66%;
-          left: 17%; } }
-    #profile .banner.taste-for-music #factPanelBtn-4 {
-      top: 82%;
-      left: 61%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.taste-for-music #factPanelBtn-4 {
-          top: 62%;
-          left: 75%; } }
-    #profile .banner.taste-for-music #factPage {
-      top: 61%;
-      left: 67%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.taste-for-music #factPage {
-          top: 45%;
-          left: 87%; } }
-    #profile .banner.yoga-lover #factPanelBtn-1 {
-      top: 45%;
-      left: 49%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.yoga-lover #factPanelBtn-1 {
-          top: 30%;
-          left: 43%; } }
-    #profile .banner.yoga-lover #factPanelBtn-2 {
-      top: 61%;
-      left: 67%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.yoga-lover #factPanelBtn-2 {
-          top: 42%;
-          left: 76%; } }
-    #profile .banner.yoga-lover #factPanelBtn-3 {
-      top: 67%;
-      left: 45%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.yoga-lover #factPanelBtn-3 {
-          top: 47%;
-          left: 35%; } }
-    #profile .banner.yoga-lover #factPanelBtn-4 {
-      top: 76%;
-      left: 68%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.yoga-lover #factPanelBtn-4 {
-          top: 55%;
-          left: 77%; } }
-    #profile .banner.yoga-lover #factPage {
-      top: 55%;
-      left: 32%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.yoga-lover #factPage {
-          top: 39%;
-          left: 7%; } }
-    #profile .banner.food-intolerance #factPanelBtn-1 {
-      top: 40%;
-      left: 46%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.food-intolerance #factPanelBtn-1 {
-          top: 28%;
-          left: 41%; } }
-    #profile .banner.food-intolerance #factPanelBtn-2 {
-      top: 67%;
-      left: 42%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.food-intolerance #factPanelBtn-2 {
-          top: 49%;
-          left: 35%; } }
-    #profile .banner.food-intolerance #factPanelBtn-3 {
-      top: 75%;
-      left: 28%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.food-intolerance #factPanelBtn-3 {
-          top: 54%;
-          left: 8%; } }
-    #profile .banner.food-intolerance #factPanelBtn-4 {
-      top: 76%;
-      left: 65%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.food-intolerance #factPanelBtn-4 {
-          top: 57%;
-          left: 75%; } }
-    #profile .banner.food-intolerance #factPage {
-      top: 52%;
-      left: 53%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.food-intolerance #factPage {
-          top: 39%;
-          left: 54%; } }
-    #profile .banner.on-the-go #factPanelBtn-1 {
-      top: 59%;
-      left: 65%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.on-the-go #factPanelBtn-1 {
-          top: 41%;
-          left: 78%; } }
-    #profile .banner.on-the-go #factPanelBtn-2 {
-      top: 70%;
-      left: 23%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.on-the-go #factPanelBtn-2 {
-          top: 48%;
-          left: 6%; } }
-    #profile .banner.on-the-go #factPanelBtn-3 {
-      top: 76%;
-      left: 45%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.on-the-go #factPanelBtn-3 {
-          top: 50%;
-          left: 39%; } }
-    #profile .banner.on-the-go #factPanelBtn-4 {
-      top: 78%;
-      left: 67%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.on-the-go #factPanelBtn-4 {
-          top: 53%;
-          left: 84%; } }
-    #profile .banner.on-the-go #factPage {
-      top: 48%;
-      left: 45%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.on-the-go #factPage {
-          top: 30%;
-          left: 40%; } }
-    #profile .banner.family-togetherness #factPanelBtn-1 {
-      top: 36%;
-      left: 22%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.family-togetherness #factPanelBtn-1 {
-          top: 28%;
-          left: 5%; } }
-    #profile .banner.family-togetherness #factPanelBtn-2 {
-      top: 43%;
-      left: 44%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.family-togetherness #factPanelBtn-2 {
-          top: 35%;
-          left: 44%; } }
-    #profile .banner.family-togetherness #factPanelBtn-3 {
-      top: 62%;
-      left: 33%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.family-togetherness #factPanelBtn-3 {
-          top: 47%;
-          left: 23%; } }
-    #profile .banner.family-togetherness #factPanelBtn-4 {
-      top: 71%;
-      left: 59%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.family-togetherness #factPanelBtn-4 {
-          top: 53%;
-          left: 70%; } }
-    #profile .banner.family-togetherness #factPage {
-      top: 52%;
-      left: 64%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.family-togetherness #factPage {
-          top: 42%;
-          left: 81%; } }
-    #profile .banner.active-lifestyle #factPanelBtn-1 {
-      top: 48%;
-      left: 46%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.active-lifestyle #factPanelBtn-1 {
-          top: 32%;
-          left: 46%; } }
-    #profile .banner.active-lifestyle #factPanelBtn-2 {
-      top: 61%;
-      left: 60%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.active-lifestyle #factPanelBtn-2 {
-          top: 43%;
-          left: 73%; } }
-    #profile .banner.active-lifestyle #factPanelBtn-3 {
-      top: 73%;
-      left: 68%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.active-lifestyle #factPanelBtn-3 {
-          top: 54%;
-          left: 83%; } }
-    #profile .banner.active-lifestyle #factPanelBtn-4 {
-      top: 77%;
-      left: 38%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.active-lifestyle #factPanelBtn-4 {
-          top: 55%;
-          left: 30%; } }
-    #profile .banner.active-lifestyle #factPage {
-      top: 58%;
-      left: 19%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.active-lifestyle #factPage {
-          top: 40%;
-          left: 2%; } }
-    #profile .banner.budget-crunch #factPanelBtn-1 {
-      top: 39%;
-      left: 45%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.budget-crunch #factPanelBtn-1 {
-          top: 29%;
-          left: 42%; } }
-    #profile .banner.budget-crunch #factPanelBtn-2 {
-      top: 58%;
-      left: 68%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.budget-crunch #factPanelBtn-2 {
-          top: 43%;
-          left: 86%; } }
-    #profile .banner.budget-crunch #factPanelBtn-3 {
-      top: 80%;
-      left: 35%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.budget-crunch #factPanelBtn-3 {
-          top: 60%;
-          left: 22%; } }
-    #profile .banner.budget-crunch #factPanelBtn-4 {
-      top: 82%;
-      left: 68%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.budget-crunch #factPanelBtn-4 {
-          top: 61%;
-          left: 87%; } }
-    #profile .banner.budget-crunch #factPage {
-      top: 62%;
-      left: 29%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.budget-crunch #factPage {
-          top: 47%;
-          left: 5%; } }
-    #profile .banner.breakfast #factPanelBtn-1 {
-      top: 48%;
-      left: 38%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.breakfast #factPanelBtn-1 {
-          top: 31%;
-          left: 32%; } }
-    #profile .banner.breakfast #factPanelBtn-2 {
-      top: 72%;
-      left: 46%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.breakfast #factPanelBtn-2 {
-          top: 50%;
-          left: 47%; } }
-    #profile .banner.breakfast #factPanelBtn-3 {
-      top: 75%;
-      left: 20%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.breakfast #factPanelBtn-3 {
-          top: 54%;
-          left: 9%; } }
-    #profile .banner.breakfast #factPanelBtn-4 {
-      top: 79%;
-      left: 62%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.breakfast #factPanelBtn-4 {
-          top: 60%;
-          left: 82%; } }
-    #profile .banner.breakfast #factPage {
-      top: 60%;
-      left: 63%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.breakfast #factPage {
-          top: 41%;
-          left: 80%; } }
-    #profile .banner.healthy-wisdom #factPanelBtn-1 {
-      top: 40%;
-      left: 24%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.healthy-wisdom #factPanelBtn-1 {
-          top: 25%;
-          left: 8%; } }
-    #profile .banner.healthy-wisdom #factPanelBtn-2 {
-      top: 63%;
-      left: 68%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.healthy-wisdom #factPanelBtn-2 {
-          top: 40%;
-          left: 84%; } }
-    #profile .banner.healthy-wisdom #factPanelBtn-3 {
-      top: 64%;
-      left: 31%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.healthy-wisdom #factPanelBtn-3 {
-          top: 40%;
-          left: 20%; } }
-    #profile .banner.healthy-wisdom #factPanelBtn-4 {
-      top: 86%;
-      left: 26%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.healthy-wisdom #factPanelBtn-4 {
-          top: 57%;
-          left: 26%; } }
-    #profile .banner.healthy-wisdom #factPage {
-      top: 49%;
-      left: 46%; }
-      @media screen and (max-width: 414px) {
-        #profile .banner.healthy-wisdom #factPage {
-          top: 31%;
-          left: 46%; } }
+    #profile .banner.taste-for-music {
+      /*#factPage {
+                top: 61%;
+                left: 67%;
+
+                @media screen and (max-width: 414px) {
+                    top: 45%;
+                    left: 87%;
+                }
+            }*/ }
+      #profile .banner.taste-for-music #factPanelBtn-1 {
+        top: 52%;
+        left: 51%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.taste-for-music #factPanelBtn-1 {
+            top: 34%;
+            left: 48%; } }
+      #profile .banner.taste-for-music #factPanelBtn-2 {
+        top: 61%;
+        left: 25%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.taste-for-music #factPanelBtn-2 {
+            top: 48%;
+            left: 5%; } }
+      #profile .banner.taste-for-music #factPanelBtn-3 {
+        top: 61%;
+        left: 67%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.taste-for-music #factPanelBtn-3 {
+            top: 45%;
+            left: 87%; } }
+      #profile .banner.taste-for-music #factPanelBtn-4 {
+        top: 81%;
+        left: 33%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.taste-for-music #factPanelBtn-4 {
+            top: 66%;
+            left: 17%; } }
+      #profile .banner.taste-for-music #factPanelBtn-5 {
+        top: 82%;
+        left: 61%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.taste-for-music #factPanelBtn-5 {
+            top: 62%;
+            left: 75%; } }
+    #profile .banner.yoga-lover {
+      /*#factPage {
+                top: 55%;
+                left: 32%;
+
+                @media screen and (max-width: 414px) {
+                    top: 39%;
+                    left: 7%;
+                }
+            }*/ }
+      #profile .banner.yoga-lover #factPanelBtn-1 {
+        top: 45%;
+        left: 49%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.yoga-lover #factPanelBtn-1 {
+            top: 30%;
+            left: 43%; } }
+      #profile .banner.yoga-lover #factPanelBtn-2 {
+        top: 55%;
+        left: 32%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.yoga-lover #factPanelBtn-2 {
+            top: 39%;
+            left: 7%; } }
+      #profile .banner.yoga-lover #factPanelBtn-3 {
+        top: 61%;
+        left: 67%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.yoga-lover #factPanelBtn-3 {
+            top: 42%;
+            left: 76%; } }
+      #profile .banner.yoga-lover #factPanelBtn-4 {
+        top: 67%;
+        left: 45%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.yoga-lover #factPanelBtn-4 {
+            top: 47%;
+            left: 35%; } }
+      #profile .banner.yoga-lover #factPanelBtn-5 {
+        top: 76%;
+        left: 68%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.yoga-lover #factPanelBtn-5 {
+            top: 55%;
+            left: 77%; } }
+    #profile .banner.food-intolerance {
+      /*#factPage {
+                top: 52%;
+                left: 53%;
+
+                @media screen and (max-width: 414px) {
+                    top: 39%;
+                    left: 54%;
+                }
+            }*/ }
+      #profile .banner.food-intolerance #factPanelBtn-1 {
+        top: 40%;
+        left: 46%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.food-intolerance #factPanelBtn-1 {
+            top: 28%;
+            left: 41%; } }
+      #profile .banner.food-intolerance #factPanelBtn-2 {
+        top: 52%;
+        left: 53%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.food-intolerance #factPanelBtn-2 {
+            top: 39%;
+            left: 54%; } }
+      #profile .banner.food-intolerance #factPanelBtn-3 {
+        top: 67%;
+        left: 42%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.food-intolerance #factPanelBtn-3 {
+            top: 49%;
+            left: 35%; } }
+      #profile .banner.food-intolerance #factPanelBtn-4 {
+        top: 75%;
+        left: 28%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.food-intolerance #factPanelBtn-4 {
+            top: 54%;
+            left: 8%; } }
+      #profile .banner.food-intolerance #factPanelBtn-5 {
+        top: 76%;
+        left: 65%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.food-intolerance #factPanelBtn-5 {
+            top: 57%;
+            left: 75%; } }
+    #profile .banner.on-the-go {
+      /*#factPage {
+                top: 48%;
+                left: 45%;
+
+                @media screen and (max-width: 414px) {
+                    top: 30%;
+                    left: 40%;
+                }
+            }*/ }
+      #profile .banner.on-the-go #factPanelBtn-1 {
+        top: 48%;
+        left: 45%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.on-the-go #factPanelBtn-1 {
+            top: 30%;
+            left: 40%; } }
+      #profile .banner.on-the-go #factPanelBtn-2 {
+        top: 59%;
+        left: 65%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.on-the-go #factPanelBtn-2 {
+            top: 41%;
+            left: 78%; } }
+      #profile .banner.on-the-go #factPanelBtn-3 {
+        top: 70%;
+        left: 23%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.on-the-go #factPanelBtn-3 {
+            top: 48%;
+            left: 6%; } }
+      #profile .banner.on-the-go #factPanelBtn-4 {
+        top: 67%;
+        left: 71%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.on-the-go #factPanelBtn-4 {
+            top: 53%;
+            left: 84%; } }
+      #profile .banner.on-the-go #factPanelBtn-5 {
+        top: 76%;
+        left: 45%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.on-the-go #factPanelBtn-5 {
+            top: 50%;
+            left: 39%; } }
+    #profile .banner.family-togetherness {
+      /*#factPage {
+                top: 52%;
+                left: 64%;
+
+                @media screen and (max-width: 414px) {
+                    top: 42%;
+                    left: 81%;
+                }
+            }*/ }
+      #profile .banner.family-togetherness #factPanelBtn-1 {
+        top: 36%;
+        left: 22%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.family-togetherness #factPanelBtn-1 {
+            top: 28%;
+            left: 5%; } }
+      #profile .banner.family-togetherness #factPanelBtn-2 {
+        top: 43%;
+        left: 44%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.family-togetherness #factPanelBtn-2 {
+            top: 35%;
+            left: 44%; } }
+      #profile .banner.family-togetherness #factPanelBtn-3 {
+        top: 52%;
+        left: 64%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.family-togetherness #factPanelBtn-3 {
+            top: 42%;
+            left: 81%; } }
+      #profile .banner.family-togetherness #factPanelBtn-4 {
+        top: 62%;
+        left: 33%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.family-togetherness #factPanelBtn-4 {
+            top: 47%;
+            left: 23%; } }
+      #profile .banner.family-togetherness #factPanelBtn-5 {
+        top: 71%;
+        left: 59%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.family-togetherness #factPanelBtn-5 {
+            top: 53%;
+            left: 70%; } }
+    #profile .banner.active-lifestyle {
+      /*#factPage {
+                top: 58%;
+                left: 19%;
+
+                @media screen and (max-width: 414px) {
+                    top: 40%;
+                    left: 2%;
+                }
+            }*/ }
+      #profile .banner.active-lifestyle #factPanelBtn-1 {
+        top: 48%;
+        left: 46%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.active-lifestyle #factPanelBtn-1 {
+            top: 32%;
+            left: 46%; } }
+      #profile .banner.active-lifestyle #factPanelBtn-2 {
+        top: 58%;
+        left: 19%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.active-lifestyle #factPanelBtn-2 {
+            top: 40%;
+            left: 2%; } }
+      #profile .banner.active-lifestyle #factPanelBtn-3 {
+        top: 61%;
+        left: 60%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.active-lifestyle #factPanelBtn-3 {
+            top: 43%;
+            left: 73%; } }
+      #profile .banner.active-lifestyle #factPanelBtn-4 {
+        top: 73%;
+        left: 68%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.active-lifestyle #factPanelBtn-4 {
+            top: 54%;
+            left: 83%; } }
+      #profile .banner.active-lifestyle #factPanelBtn-5 {
+        top: 77%;
+        left: 38%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.active-lifestyle #factPanelBtn-5 {
+            top: 55%;
+            left: 30%; } }
+    #profile .banner.budget-crunch {
+      /*#factPage {
+                top: 62%;
+                left: 29%;
+
+                @media screen and (max-width: 414px) {
+                    top: 47%;
+                    left: 5%;
+                }
+            }*/ }
+      #profile .banner.budget-crunch #factPanelBtn-1 {
+        top: 39%;
+        left: 45%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.budget-crunch #factPanelBtn-1 {
+            top: 29%;
+            left: 42%; } }
+      #profile .banner.budget-crunch #factPanelBtn-2 {
+        top: 58%;
+        left: 68%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.budget-crunch #factPanelBtn-2 {
+            top: 43%;
+            left: 86%; } }
+      #profile .banner.budget-crunch #factPanelBtn-3 {
+        top: 62%;
+        left: 29%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.budget-crunch #factPanelBtn-3 {
+            top: 47%;
+            left: 5%; } }
+      #profile .banner.budget-crunch #factPanelBtn-4 {
+        top: 80%;
+        left: 35%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.budget-crunch #factPanelBtn-4 {
+            top: 60%;
+            left: 22%; } }
+      #profile .banner.budget-crunch #factPanelBtn-5 {
+        top: 82%;
+        left: 68%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.budget-crunch #factPanelBtn-5 {
+            top: 61%;
+            left: 87%; } }
+    #profile .banner.breakfast {
+      /*#factPage {
+                top: 60%;
+                left: 63%;
+
+                @media screen and (max-width: 414px) {
+                    top: 41%;
+                    left: 80%;
+                }
+            }*/ }
+      #profile .banner.breakfast #factPanelBtn-1 {
+        top: 48%;
+        left: 38%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.breakfast #factPanelBtn-1 {
+            top: 31%;
+            left: 32%; } }
+      #profile .banner.breakfast #factPanelBtn-2 {
+        top: 60%;
+        left: 63%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.breakfast #factPanelBtn-2 {
+            top: 41%;
+            left: 80%; } }
+      #profile .banner.breakfast #factPanelBtn-3 {
+        top: 72%;
+        left: 46%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.breakfast #factPanelBtn-3 {
+            top: 50%;
+            left: 47%; } }
+      #profile .banner.breakfast #factPanelBtn-4 {
+        top: 75%;
+        left: 20%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.breakfast #factPanelBtn-4 {
+            top: 54%;
+            left: 9%; } }
+      #profile .banner.breakfast #factPanelBtn-5 {
+        top: 79%;
+        left: 62%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.breakfast #factPanelBtn-5 {
+            top: 60%;
+            left: 82%; } }
+    #profile .banner.healthy-wisdom {
+      /*#factPage {
+                top: 49%;
+                left: 46%;
+
+                @media screen and (max-width: 414px) {
+                    top: 31%;
+                    left: 46%;
+                }
+            }*/ }
+      #profile .banner.healthy-wisdom #factPanelBtn-1 {
+        top: 40%;
+        left: 24%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.healthy-wisdom #factPanelBtn-1 {
+            top: 25%;
+            left: 8%; } }
+      #profile .banner.healthy-wisdom #factPanelBtn-2 {
+        top: 49%;
+        left: 46%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.healthy-wisdom #factPanelBtn-2 {
+            top: 31%;
+            left: 46%; } }
+      #profile .banner.healthy-wisdom #factPanelBtn-3 {
+        top: 63%;
+        left: 68%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.healthy-wisdom #factPanelBtn-3 {
+            top: 40%;
+            left: 84%; } }
+      #profile .banner.healthy-wisdom #factPanelBtn-4 {
+        top: 64%;
+        left: 31%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.healthy-wisdom #factPanelBtn-4 {
+            top: 40%;
+            left: 20%; } }
+      #profile .banner.healthy-wisdom #factPanelBtn-5 {
+        top: 86%;
+        left: 26%; }
+        @media screen and (max-width: 414px) {
+          #profile .banner.healthy-wisdom #factPanelBtn-5 {
+            top: 57%;
+            left: 26%; } }
     @media screen and (max-width: 414px) {
       #profile .banner {
         background-size: contain !important;
@@ -1875,7 +1983,8 @@ footer #footerLogo {
       margin-bottom: 32px;
       text-align: center; }
       #profile .factPanel .panelImageWrap .panelImage {
-        max-width: 100%; }
+        max-width: 100%;
+        border-radius: 20px; }
     #profile .factPanel .info {
       text-align: left; }
       #profile .factPanel .info .factStatement {
@@ -1906,11 +2015,12 @@ footer #footerLogo {
         color: #31BED7; }
         #profile .factPanel .info .globalCta .globalCtaArrowStyle {
           stroke: #31BED7; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 992px) {
       #profile .factPanel {
         width: 100%; } }
   #profile #recipes {
-    margin-top: 160px; }
+    margin-top: 160px;
+    position: relative; }
     #profile #recipes .recipe {
       margin-bottom: 112px; }
       #profile #recipes .recipe .recipeContentLeft {
@@ -1932,7 +2042,7 @@ footer #footerLogo {
             position: absolute;
             left: 3px;
             top: -5px; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 992px) {
               #profile #recipes .recipe .recipeContentLeft .recipeStatement:before {
                 left: 18px;
                 top: 44px; } }
@@ -1944,7 +2054,7 @@ footer #footerLogo {
           font-size: 46px;
           line-height: 50px;
           margin-bottom: 15px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 992px) {
             #profile #recipes .recipe .recipeContentLeft .recipeName {
               font-size: 40px;
               line-height: 42px; } }
@@ -1955,7 +2065,7 @@ footer #footerLogo {
           color: #000;
           font-size: 22px;
           line-height: 26px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 992px) {
             #profile #recipes .recipe .recipeContentLeft .info {
               font-size: 18px;
               line-height: 22px; } }
@@ -1966,7 +2076,7 @@ footer #footerLogo {
           color: #000;
           font-size: 17px;
           margin-top: 14px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 992px) {
             #profile #recipes .recipe .recipeContentLeft .author {
               font-size: 16px; } }
         #profile #recipes .recipe .recipeContentLeft .preparationSteps {
@@ -2001,7 +2111,7 @@ footer #footerLogo {
               font-size: 20px;
               line-height: 28px;
               padding-left: 25px; }
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 992px) {
                 #profile #recipes .recipe .recipeContentLeft .preparationSteps li .step {
                   font-size: 16px;
                   line-height: 24px; } }
@@ -2023,7 +2133,7 @@ footer #footerLogo {
             left: -36px;
             transform: translateY(-50%);
             border-radius: 50%; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 992px) {
               #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsIcon {
                 left: -12px; } }
           #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsContent {
@@ -2043,14 +2153,14 @@ footer #footerLogo {
             #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsContent .tipsPic {
               max-width: 241px;
               margin-left: 22px; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 992px) {
               #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsContent {
                 flex-direction: column-reverse; }
                 #profile #recipes .recipe .recipeContentLeft .tipsBox .tipsContent .tipsPic {
                   max-width: 100%;
                   margin-left: 0;
                   margin-bottom: 10px; } }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 992px) {
           #profile #recipes .recipe .recipeContentLeft {
             margin-top: 50px;
             padding: 0 15px; } }
@@ -2087,11 +2197,11 @@ footer #footerLogo {
               transition: all 0.2s ease-out; }
               #profile #recipes .recipe .recipeContentRight #printAndShare button:hover .a, #profile #recipes .recipe .recipeContentRight #printAndShare a:hover .a {
                 fill: #31BED7; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 992px) {
             #profile #recipes .recipe .recipeContentRight #printAndShare {
               top: unset;
               right: unset;
-              bottom: 0;
+              bottom: 18px;
               left: 0;
               width: 100%;
               display: flex;
@@ -2100,8 +2210,9 @@ footer #footerLogo {
         #profile #recipes .recipe .recipeContentRight .recipeImage {
           width: 100%;
           position: relative;
-          z-index: 0; }
-          @media screen and (max-width: 768px) {
+          z-index: 0;
+          border-radius: 15px; }
+          @media screen and (max-width: 992px) {
             #profile #recipes .recipe .recipeContentRight .recipeImage {
               margin-top: 0; } }
         #profile #recipes .recipe .recipeContentRight .ingredientsWrap {
@@ -2131,26 +2242,36 @@ footer #footerLogo {
               border-bottom: rgba(49, 190, 215, 0.5) 1px solid;
               font-size: 18px;
               line-height: 31px; }
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 992px) {
                 #profile #recipes .recipe .recipeContentRight .ingredientsWrap .ingredients li {
                   font-size: 15px;
                   line-height: 20px; } }
               #profile #recipes .recipe .recipeContentRight .ingredientsWrap .ingredients li:last-child {
                 border: none; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 992px) {
             #profile #recipes .recipe .recipeContentRight .ingredientsWrap {
               width: auto;
               max-width: 88%;
               margin: auto;
               margin-top: -16px;
               margin-bottom: 30px; } }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 992px) {
           #profile #recipes .recipe .recipeContentRight {
             padding-left: 0;
-            padding-bottom: 56px; } }
+            padding-bottom: 56px;
+            position: unset; } }
       #profile #recipes .recipe:first-child .recipeImage {
         margin-top: 58px; }
-    @media screen and (max-width: 768px) {
+      @media screen and (max-width: 992px) {
+        #profile #recipes .recipe {
+          margin-bottom: 0; }
+          #profile #recipes .recipe .rightcol {
+            position: unset; }
+          #profile #recipes .recipe:last-child .recipeContentLeft {
+            margin-top: 0; }
+          #profile #recipes .recipe:last-child .recipeImage {
+            margin-top: 58px; } }
+    @media screen and (max-width: 992px) {
       #profile #recipes {
         margin-top: 0; } }
 
@@ -2236,6 +2357,18 @@ footer #footerLogo {
               color: #fff; }
               #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer .findImgTxt .globalCta .globalCtaArrowStyle {
                 fill: #fff; }
+            #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer .findImgTxt .globalDownloadCta {
+              margin-bottom: 20px;
+              color: #31BED7;
+              transform: scale(1);
+              transition: transform ease-in .2s; }
+              #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer .findImgTxt .globalDownloadCta .globalCtaArrow {
+                margin-left: 10px; }
+              #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer .findImgTxt .globalDownloadCta:hover {
+                text-decoration: none;
+                color: #31BED7;
+                transform: scale(1.03);
+                transition: transform ease-out .2s; }
           #resources .resourcesListingBg .resourcesListingRow .resourcesListingCol .finRImgContainer .findRImg {
             width: 100%;
             height: 100%;

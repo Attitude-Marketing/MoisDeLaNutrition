@@ -1,0 +1,15 @@
+
+
+
+
+/**umb_name:Title*/
+.title {
+    font-family: "filson-pro",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #1D1D1D;
+    margin-top: 20px;
+    font-size: 30px;
+    line-height: 32px;
+    display: inline-block;
+}

@@ -27,7 +27,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-10 offset-sm-1">
-                <div id="test">
+                <div id="wrapper">
                     <div class="grid">
                         @foreach (var profile in profiles)
                         {
@@ -41,7 +41,7 @@
                             }
 
                             <div id="profile-@counter" class=" grid__item">
-                                <a href="@(profile.Url)" target="_self" class="content findImgTxt triggerGlobalArrow" style="background:url(@profilePicUrl); background-size:auto 101%; background-position:center center; background-repeat:no-repeat;">
+                                <a href="@(profile.Url)" target="_self" class="content findImgTxt triggerGlobalArrow" style="background:url(@profilePicUrl); background-size:auto 103%; background-position:center center; background-repeat:no-repeat;">
                                     <div class="info">
                                         <p class="findImgTxtTitle">@Html.Raw(profile.GetPropertyValue<string>("pageTitle"))</p>
                                         <p class="globalCta">@(Umbraco.Field("#learnMore"))<span class="globalCtaArrow"><svg xmlns="http://www.w3.org/2000/svg" width="21.715" height="12" viewBox="0 0 21.715 12"><path class="globalCtaArrowStyle" d="M504.7,357.685c0-.015-.009-.029-.013-.044a.464.464,0,0,0-.016-.052.488.488,0,0,0-.026-.049c-.007-.013-.013-.027-.021-.04a.529.529,0,0,0-.065-.079l-5.483-5.483a.517.517,0,1,0-.731.731l4.6,4.6H483.51a.517.517,0,0,0,0,1.034h19.434l-4.6,4.6a.517.517,0,1,0,.731.731l5.483-5.483a.53.53,0,0,0,.065-.079c.009-.013.014-.026.021-.04a.491.491,0,0,0,.026-.049.466.466,0,0,0,.016-.052c0-.015.01-.029.013-.044A.514.514,0,0,0,504.7,357.685Z" transform="translate(-482.993 -351.786)" /></svg></span></p>

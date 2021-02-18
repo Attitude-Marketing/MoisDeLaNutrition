@@ -75,11 +75,15 @@
                     <a id="factPanelBtn-@factCounter" class="bannerBtn quickFacts" href="#" data-fact="fact-@factCounter"><img src="~/images/icons/Icon_Tips.svg" class="bannerBtnIcon"><span class="bannerBtnStatement">@Html.Raw(fact.GetPropertyValue<string>("factStatement"))</span></a>
                     <div id="fact-@factCounter" class="factPanel">
                         <button class="btnClose"><img src="~/images/icons/close_panel_icon.svg" /></button>
+
                         <div class="panelImageWrap">
-                            <img class="panelImage" src="@imgUrl" />
+                            @if (img != null)
+                            {
+                                <img class="panelImage" src="@imgUrl" />
+                            }
                         </div>
                         <div class="info">
-                            <p class="factStatement">@(fact.GetPropertyValue<string>("factStatement"))</p>
+                            <p class="factStatement">@(fact.GetPropertyValue<string>("factStatement").Replace("<br>", "").Replace("<strong>", "").Replace("</strong>", ""))</p>
                             <p class="factTitle">@(fact.GetPropertyValue<string>("factTitle"))</p>
                             <div class="factText">@(fact.GetPropertyValue<HtmlString>("factText"))</div>
                             @if (factPage != null)
@@ -92,10 +96,10 @@
                     factCounter++;
                 }
             }
-            @if (factPageAssoc != null)
+            @*@if (factPageAssoc != null)
             {
                 <a class="bannerBtn factPage" id="factPage" href="@factPageAssocUrl"><img src="@factPageBtnIcon" class="bannerBtnIcon"><span class="bannerBtnStatement">@Html.Raw(factPageAssoc.GetPropertyValue<string>("statement"))<svg xmlns="http://www.w3.org/2000/svg" width="21.715" height="12" viewBox="0 0 21.715 12"><path class="arrowPath" d="M504.7,357.685c0-.015-.009-.029-.013-.044a.464.464,0,0,0-.016-.052.488.488,0,0,0-.026-.049c-.007-.013-.013-.027-.021-.04a.529.529,0,0,0-.065-.079l-5.483-5.483a.517.517,0,1,0-.731.731l4.6,4.6H483.51a.517.517,0,0,0,0,1.034h19.434l-4.6,4.6a.517.517,0,1,0,.731.731l5.483-5.483a.53.53,0,0,0,.065-.079c.009-.013.014-.026.021-.04a.491.491,0,0,0,.026-.049.466.466,0,0,0,.016-.052c0-.015.01-.029.013-.044A.514.514,0,0,0,504.7,357.685Z" transform="translate(-482.993 -351.786)" /></svg></span></a>
-            }
+            }*@
             <span id="recipeMarker">
                 <img src="~/images/icons/Icon_Recipe.svg" />
                 <span class="markerLabel">@(Umbraco.Field("#Recipe"))</span>
@@ -119,7 +123,7 @@
 
                             <div class="recipe">
                                 <div class="row no-gutters">
-                                    <div class="col-sm-6 order-2 order-sm-1">
+                                    <div class="col-lg-6 order-1">
                                         <div class="recipeContentLeft">
                                             
                                             <h3 class="recipeName">@(recipe.GetPropertyValue<string>("recipeName"))</h3>
@@ -166,7 +170,7 @@
                                             }
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 order-1 order-sm-2">
+                                    <div class="col-lg-6 order-2 rightcol">
                                         <div class="recipeContentRight">
                                             @if (recipeCounter == 1)
                                             {

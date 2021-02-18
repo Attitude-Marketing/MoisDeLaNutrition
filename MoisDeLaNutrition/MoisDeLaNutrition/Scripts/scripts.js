@@ -139,6 +139,13 @@ $(document).ready(function () {
             }
         }
     });
+
+    if ($("#profile").length) {
+        $("#recipeMarker").click(function () {
+            var tgt = $(".recipe:first-child").find('.recipeName').offset().top;
+            $('html, body').animate({ scrollTop: tgt - 30 }, 1000);
+        });
+    }
 }); // end doc ready
 
 /* == FUNCTIONS == */

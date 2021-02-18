@@ -80,6 +80,8 @@
         }
 
         .textContent {
+            margin-bottom: 100px;
+
             .subtitle {
                 @include filson-400;
                 color: #000;
@@ -178,12 +180,17 @@
         position: relative;
         display: flex;
         justify-content: center;
+        padding-top: 125px;
 
         #aboutImg {
             border-radius: 15px;
             margin-bottom: 100px;
             max-width: 100%;
             height: auto;
+        }
+
+        @media screen and (max-width: 992px) {
+            padding-top: 0;
         }
     }
 }

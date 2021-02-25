@@ -98,7 +98,7 @@
             <div class="col-sm-10 offset-sm-1 col-lg-5 offset-lg-0 col-xl-5 offset-xl-0">
                 @if (selectedFact != null)
                 {
-                    var factPic = selectedFact.GetPropertyValue<IPublishedContent>("bannerImage");
+                    var factPic = selectedFact.GetPropertyValue<IPublishedContent>("listingImage");
                     var factPicUrl = "/images/placeholders/placeholder-vertical.jpg";
 
                     if (factPic != null)

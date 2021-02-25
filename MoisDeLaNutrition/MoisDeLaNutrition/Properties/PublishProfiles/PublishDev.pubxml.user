@@ -403,10 +403,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 14:36:41</publishTime>
     </File>
     <File Include="bin/MoisDeLaNutrition.dll">
-      <publishTime>02/08/2021 11:06:13</publishTime>
+      <publishTime>02/18/2021 16:36:36</publishTime>
     </File>
     <File Include="bin/MoisDeLaNutrition.pdb">
-      <publishTime>02/08/2021 11:06:13</publishTime>
+      <publishTime>02/18/2021 16:36:36</publishTime>
     </File>
     <File Include="bin/MySql.Data.dll">
       <publishTime>12/01/2020 14:36:41</publishTime>
@@ -847,7 +847,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 14:36:39</publishTime>
     </File>
     <File Include="Content/application.css">
-      <publishTime>02/08/2021 08:38:40</publishTime>
+      <publishTime>02/23/2021 12:59:23</publishTime>
+    </File>
+    <File Include="css/Titres.css">
+      <publishTime>02/18/2021 09:26:01</publishTime>
     </File>
     <File Include="default.aspx">
       <publishTime>12/01/2020 14:36:39</publishTime>
@@ -884,6 +887,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="images/icons/Share_Icon.svg">
       <publishTime>01/27/2021 18:22:08</publishTime>
+    </File>
+    <File Include="images/logos/Logo_DFC_Footer_en.png">
+      <publishTime>02/09/2021 21:13:08</publishTime>
+    </File>
+    <File Include="images/logos/Logo_DFC_Footer_fr.png">
+      <publishTime>02/09/2021 21:13:08</publishTime>
     </File>
     <File Include="images/placeholders/Arrow_Whhite.svg">
       <publishTime>01/18/2021 16:20:38</publishTime>
@@ -1113,6 +1122,303 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Media/1069/active-lifestyle_1.png">
       <publishTime>02/08/2021 10:08:30</publishTime>
     </File>
+    <File Include="Media/1070/energy_to_fuel.png">
+      <publishTime>02/08/2021 15:36:52</publishTime>
+    </File>
+    <File Include="Media/1071/active_lifestyle-2x.png">
+      <publishTime>02/09/2021 13:14:51</publishTime>
+    </File>
+    <File Include="Media/1072/breakfast_for_hectic_days-2x.png">
+      <publishTime>02/09/2021 13:15:03</publishTime>
+    </File>
+    <File Include="Media/1073/budget_crunch-2x.png">
+      <publishTime>02/09/2021 13:15:18</publishTime>
+    </File>
+    <File Include="Media/1074/energy_to_fuel-2x.png">
+      <publishTime>02/09/2021 13:15:31</publishTime>
+    </File>
+    <File Include="Media/1075/family_togetherness-2x.png">
+      <publishTime>02/09/2021 13:15:47</publishTime>
+    </File>
+    <File Include="Media/1076/food_intolerance-2x.png">
+      <publishTime>02/09/2021 13:15:59</publishTime>
+    </File>
+    <File Include="Media/1077/healthy_wisdom-2x.png">
+      <publishTime>02/09/2021 13:16:12</publishTime>
+    </File>
+    <File Include="Media/1078/music_lover-2x.png">
+      <publishTime>02/09/2021 13:16:25</publishTime>
+    </File>
+    <File Include="Media/1079/wellness_poursuit-2x.png">
+      <publishTime>02/09/2021 13:16:36</publishTime>
+    </File>
+    <File Include="Media/1080/active_lifestyle_next.jpg">
+      <publishTime>02/09/2021 13:19:12</publishTime>
+    </File>
+    <File Include="Media/1081/breakfast_for_hectic_days_next.jpg">
+      <publishTime>02/09/2021 13:19:17</publishTime>
+    </File>
+    <File Include="Media/1082/budget_crunch_next.jpg">
+      <publishTime>02/09/2021 13:19:23</publishTime>
+    </File>
+    <File Include="Media/1083/energy_to_fuel_next.jpg">
+      <publishTime>02/09/2021 13:19:28</publishTime>
+    </File>
+    <File Include="Media/1084/family_togetherness_next.jpg">
+      <publishTime>02/09/2021 13:19:35</publishTime>
+    </File>
+    <File Include="Media/1085/food_intolerance_next.jpg">
+      <publishTime>02/09/2021 13:19:40</publishTime>
+    </File>
+    <File Include="Media/1086/healthy_wisdom_next.jpg">
+      <publishTime>02/09/2021 13:19:45</publishTime>
+    </File>
+    <File Include="Media/1087/heritage_pride_next.jpg">
+      <publishTime>02/09/2021 13:19:57</publishTime>
+    </File>
+    <File Include="Media/1088/music_lover_next.jpg">
+      <publishTime>02/09/2021 13:20:02</publishTime>
+    </File>
+    <File Include="Media/1089/wellness_poursuit_next.jpg">
+      <publishTime>02/09/2021 13:20:08</publishTime>
+    </File>
+    <File Include="Media/1090/active_lifestyle_1.png">
+      <publishTime>02/10/2021 08:18:48</publishTime>
+    </File>
+    <File Include="Media/1091/active_lifestyle_2.png">
+      <publishTime>02/10/2021 08:18:56</publishTime>
+    </File>
+    <File Include="Media/1092/breakfast_for_hectic_days.png">
+      <publishTime>02/10/2021 08:19:04</publishTime>
+    </File>
+    <File Include="Media/1093/budget_crunch.png">
+      <publishTime>02/10/2021 08:19:12</publishTime>
+    </File>
+    <File Include="Media/1094/family_togetherness_recipe.png">
+      <publishTime>02/10/2021 08:19:22</publishTime>
+    </File>
+    <File Include="Media/1095/food_intolerance_burata.png">
+      <publishTime>02/10/2021 08:19:32</publishTime>
+    </File>
+    <File Include="Media/1096/food_intolerance_cheddar.png">
+      <publishTime>02/10/2021 08:19:42</publishTime>
+    </File>
+    <File Include="Media/1097/wellness_poursuit_1.png">
+      <publishTime>02/10/2021 08:20:27</publishTime>
+    </File>
+    <File Include="Media/1098/wellness_poursuit_2.png">
+      <publishTime>02/10/2021 08:20:34</publishTime>
+    </File>
+    <File Include="Media/1099/healthy_wisdom.png">
+      <publishTime>02/10/2021 08:20:41</publishTime>
+    </File>
+    <File Include="Media/1100/music_lover_recipe.png">
+      <publishTime>02/10/2021 08:20:49</publishTime>
+    </File>
+    <File Include="Media/1101/on_the_go.png">
+      <publishTime>02/10/2021 08:20:57</publishTime>
+    </File>
+    <File Include="Media/1102/food_intolerance_burata.png">
+      <publishTime>02/11/2021 16:16:57</publishTime>
+    </File>
+    <File Include="Media/1102/stocksy-1228021.jpg">
+      <publishTime>02/15/2021 08:59:07</publishTime>
+    </File>
+    <File Include="Media/1103/food_intolerance_cheddar.png">
+      <publishTime>02/11/2021 16:17:06</publishTime>
+    </File>
+    <File Include="Media/1104/healthy_wisdom.png">
+      <publishTime>02/11/2021 16:17:14</publishTime>
+    </File>
+    <File Include="Media/1105/music_lover_recipe.png">
+      <publishTime>02/11/2021 16:17:22</publishTime>
+    </File>
+    <File Include="Media/1106/on_the_go.png">
+      <publishTime>02/11/2021 16:17:30</publishTime>
+    </File>
+    <File Include="Media/1107/wellness_poursuit_1.png">
+      <publishTime>02/11/2021 16:17:37</publishTime>
+    </File>
+    <File Include="Media/1108/wellness_poursuit_2.png">
+      <publishTime>02/11/2021 16:17:45</publishTime>
+    </File>
+    <File Include="Media/1109/active_lifestyle_1.png">
+      <publishTime>02/11/2021 16:17:53</publishTime>
+    </File>
+    <File Include="Media/1110/active_lifestyle_2.png">
+      <publishTime>02/11/2021 16:18:01</publishTime>
+    </File>
+    <File Include="Media/1111/breakfast_for_hectic_days.png">
+      <publishTime>02/11/2021 16:18:09</publishTime>
+    </File>
+    <File Include="Media/1112/budget_crunch.png">
+      <publishTime>02/11/2021 16:18:18</publishTime>
+    </File>
+    <File Include="Media/1113/family_togetherness_recipe.png">
+      <publishTime>02/11/2021 16:18:27</publishTime>
+    </File>
+    <File Include="Media/1114/istock-918056804.jpg">
+      <publishTime>02/15/2021 08:59:07</publishTime>
+    </File>
+    <File Include="Media/1115/istock-956729566.jpg">
+      <publishTime>02/15/2021 08:59:07</publishTime>
+    </File>
+    <File Include="Media/1116/stocksy-1228021.jpg">
+      <publishTime>02/15/2021 08:59:08</publishTime>
+    </File>
+    <File Include="Media/1117/08_sac_epicerie_istock.jpg">
+      <publishTime>02/15/2021 08:59:08</publishTime>
+    </File>
+    <File Include="Media/1118/253b2.eps">
+      <publishTime>02/15/2021 08:59:08</publishTime>
+    </File>
+    <File Include="Media/1119/254a1.eps">
+      <publishTime>02/15/2021 08:59:09</publishTime>
+    </File>
+    <File Include="Media/1120/c69fdee6-low-22826660.jpg">
+      <publishTime>02/15/2021 08:59:10</publishTime>
+    </File>
+    <File Include="Media/1121/istock-599113320.jpg">
+      <publishTime>02/15/2021 08:59:11</publishTime>
+    </File>
+    <File Include="Media/1122/istock-613765470.jpg">
+      <publishTime>02/15/2021 08:59:11</publishTime>
+    </File>
+    <File Include="Media/1123/istock-643847438.jpg">
+      <publishTime>02/15/2021 08:59:11</publishTime>
+    </File>
+    <File Include="Media/1124/istock-641197452.jpg">
+      <publishTime>02/15/2021 08:59:11</publishTime>
+    </File>
+    <File Include="Media/1125/istock-675641732.jpg">
+      <publishTime>02/15/2021 08:59:11</publishTime>
+    </File>
+    <File Include="Media/1126/istock-876656666.jpg">
+      <publishTime>02/15/2021 08:59:13</publishTime>
+    </File>
+    <File Include="Media/1127/shutterstock_12052669.jpg">
+      <publishTime>02/15/2021 08:59:13</publishTime>
+    </File>
+    <File Include="Media/1128/istock_000008453333medium_ret.jpg">
+      <publishTime>02/15/2021 08:59:14</publishTime>
+    </File>
+    <File Include="Media/1129/253b2.jpg">
+      <publishTime>02/15/2021 08:59:14</publishTime>
+    </File>
+    <File Include="Media/1130/active_lifestyle_big.png">
+      <publishTime>02/15/2021 08:59:15</publishTime>
+    </File>
+    <File Include="Media/1131/active_lifestyle.png">
+      <publishTime>02/17/2021 14:36:23</publishTime>
+    </File>
+    <File Include="Media/1132/breakfast_for_hectic_days.png">
+      <publishTime>02/17/2021 14:36:28</publishTime>
+    </File>
+    <File Include="Media/1133/budget_crunch.png">
+      <publishTime>02/17/2021 14:36:40</publishTime>
+    </File>
+    <File Include="Media/1134/family_togetherness.png">
+      <publishTime>02/17/2021 14:36:56</publishTime>
+    </File>
+    <File Include="Media/1135/food_intolerance.png">
+      <publishTime>02/17/2021 14:37:09</publishTime>
+    </File>
+    <File Include="Media/1136/healthy_wisdom.png">
+      <publishTime>02/17/2021 14:37:16</publishTime>
+    </File>
+    <File Include="Media/1137/music_lover.png">
+      <publishTime>02/17/2021 14:37:22</publishTime>
+    </File>
+    <File Include="Media/1138/wellness_poursuit.png">
+      <publishTime>02/17/2021 14:37:31</publishTime>
+    </File>
+    <File Include="Media/1139/energy_to_fuel.png">
+      <publishTime>02/17/2021 14:43:25</publishTime>
+    </File>
+    <File Include="Media/1140/active_lifestyle.jpg">
+      <publishTime>02/17/2021 15:00:45</publishTime>
+    </File>
+    <File Include="Media/1141/breakfast_for_hectic_days.jpg">
+      <publishTime>02/17/2021 15:00:50</publishTime>
+    </File>
+    <File Include="Media/1142/budget_crunch.jpg">
+      <publishTime>02/17/2021 15:00:57</publishTime>
+    </File>
+    <File Include="Media/1143/energy_to_fuel.jpg">
+      <publishTime>02/17/2021 15:01:04</publishTime>
+    </File>
+    <File Include="Media/1144/family_togetherness.jpg">
+      <publishTime>02/17/2021 15:01:10</publishTime>
+    </File>
+    <File Include="Media/1145/food_intolerance.jpg">
+      <publishTime>02/17/2021 15:01:15</publishTime>
+    </File>
+    <File Include="Media/1146/healthy_wisdom.jpg">
+      <publishTime>02/17/2021 15:01:19</publishTime>
+    </File>
+    <File Include="Media/1147/music_lover.jpg">
+      <publishTime>02/17/2021 15:01:23</publishTime>
+    </File>
+    <File Include="Media/1148/wellness_poursuit.jpg">
+      <publishTime>02/17/2021 15:01:29</publishTime>
+    </File>
+    <File Include="Media/1149/placeholder-pdf.pdf">
+      <publishTime>02/18/2021 10:50:20</publishTime>
+    </File>
+    <File Include="Media/1150/active_lifestyle.jpg">
+      <publishTime>02/18/2021 11:26:54</publishTime>
+    </File>
+    <File Include="Media/1151/breakfast_for_hectic_days.jpg">
+      <publishTime>02/18/2021 11:27:02</publishTime>
+    </File>
+    <File Include="Media/1152/budget_crunch.jpg">
+      <publishTime>02/18/2021 11:27:20</publishTime>
+    </File>
+    <File Include="Media/1153/energy_to_fuel.jpg">
+      <publishTime>02/18/2021 11:27:34</publishTime>
+    </File>
+    <File Include="Media/1154/family_togetherness.jpg">
+      <publishTime>02/18/2021 11:27:45</publishTime>
+    </File>
+    <File Include="Media/1155/food_intolerance.jpg">
+      <publishTime>02/18/2021 11:27:51</publishTime>
+    </File>
+    <File Include="Media/1156/healthy_wisdom.jpg">
+      <publishTime>02/18/2021 11:27:58</publishTime>
+    </File>
+    <File Include="Media/1157/music_lover.jpg">
+      <publishTime>02/18/2021 11:28:05</publishTime>
+    </File>
+    <File Include="Media/1158/wellness_poursuit.jpg">
+      <publishTime>02/18/2021 11:28:14</publishTime>
+    </File>
+    <File Include="Media/1159/active_lifestyle.jpg">
+      <publishTime>02/18/2021 11:54:48</publishTime>
+    </File>
+    <File Include="Media/1160/breakfast_for_hectic_days.jpg">
+      <publishTime>02/18/2021 11:54:53</publishTime>
+    </File>
+    <File Include="Media/1161/budget_crunch.jpg">
+      <publishTime>02/18/2021 11:55:03</publishTime>
+    </File>
+    <File Include="Media/1162/energy_to_fuel.jpg">
+      <publishTime>02/18/2021 11:55:14</publishTime>
+    </File>
+    <File Include="Media/1163/family_togetherness.jpg">
+      <publishTime>02/18/2021 11:55:22</publishTime>
+    </File>
+    <File Include="Media/1164/food_intolerance.jpg">
+      <publishTime>02/18/2021 11:55:28</publishTime>
+    </File>
+    <File Include="Media/1165/healthy_wisdom.jpg">
+      <publishTime>02/18/2021 11:55:37</publishTime>
+    </File>
+    <File Include="Media/1166/music_lover.jpg">
+      <publishTime>02/18/2021 11:55:45</publishTime>
+    </File>
+    <File Include="Media/1167/wellness_poursuit.jpg">
+      <publishTime>02/18/2021 11:55:54</publishTime>
+    </File>
     <File Include="Media/Web.config">
       <publishTime>12/01/2020 14:36:31</publishTime>
     </File>
@@ -1135,7 +1441,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/13/2021 13:47:36</publishTime>
     </File>
     <File Include="Scripts/scripts.js">
-      <publishTime>02/05/2021 16:32:44</publishTime>
+      <publishTime>02/17/2021 16:31:28</publishTime>
     </File>
     <File Include="scss/0-base/_functions.scss">
       <publishTime>01/13/2021 13:48:01</publishTime>
@@ -1156,25 +1462,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/22/2021 14:27:19</publishTime>
     </File>
     <File Include="scss/2-layout/_footer.scss">
-      <publishTime>02/05/2021 15:28:59</publishTime>
+      <publishTime>02/11/2021 15:24:04</publishTime>
     </File>
     <File Include="scss/2-layout/_general.scss">
       <publishTime>01/27/2021 08:58:06</publishTime>
     </File>
     <File Include="scss/2-layout/_header.scss">
-      <publishTime>02/05/2021 16:32:44</publishTime>
+      <publishTime>02/08/2021 19:58:10</publishTime>
     </File>
     <File Include="scss/2-layout/_wrappers.scss">
       <publishTime>01/13/2021 13:48:01</publishTime>
     </File>
     <File Include="scss/3-typography/_general.scss">
-      <publishTime>01/20/2021 15:15:43</publishTime>
+      <publishTime>02/08/2021 19:58:10</publishTime>
     </File>
     <File Include="scss/3-typography/_titles.scss">
-      <publishTime>02/05/2021 16:32:44</publishTime>
+      <publishTime>02/18/2021 08:58:03</publishTime>
     </File>
     <File Include="scss/4-modules/_buttons.scss">
-      <publishTime>01/18/2021 16:20:38</publishTime>
+      <publishTime>02/09/2021 16:47:50</publishTime>
     </File>
     <File Include="scss/4-modules/_carrousels.scss">
       <publishTime>01/13/2021 13:48:01</publishTime>
@@ -1183,28 +1489,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/05/2021 10:52:33</publishTime>
     </File>
     <File Include="scss/4-modules/_menus.scss">
-      <publishTime>02/05/2021 16:32:44</publishTime>
+      <publishTime>02/11/2021 14:52:25</publishTime>
     </File>
     <File Include="scss/5-templates/_about.scss">
-      <publishTime>02/03/2021 10:43:49</publishTime>
+      <publishTime>02/17/2021 16:11:57</publishTime>
     </File>
     <File Include="scss/5-templates/_index.scss">
-      <publishTime>02/05/2021 16:32:44</publishTime>
+      <publishTime>02/18/2021 15:25:47</publishTime>
     </File>
     <File Include="scss/5-templates/_nutritonFact.scss">
-      <publishTime>02/03/2021 11:45:05</publishTime>
+      <publishTime>02/18/2021 09:20:32</publishTime>
     </File>
     <File Include="scss/5-templates/_nutritonFactsListing.scss">
-      <publishTime>02/05/2021 16:32:44</publishTime>
+      <publishTime>02/23/2021 12:59:22</publishTime>
     </File>
     <File Include="scss/5-templates/_page404.scss">
       <publishTime>01/13/2021 13:48:01</publishTime>
     </File>
     <File Include="scss/5-templates/_profile.scss">
-      <publishTime>02/05/2021 16:34:52</publishTime>
+      <publishTime>02/23/2021 12:44:24</publishTime>
+    </File>
+    <File Include="scss/5-templates/_resources.scss">
+      <publishTime>02/18/2021 11:07:59</publishTime>
     </File>
     <File Include="scss/application.scss">
-      <publishTime>01/22/2021 09:26:40</publishTime>
+      <publishTime>02/11/2021 16:29:57</publishTime>
     </File>
     <File Include="umbraco/Actions/delete.aspx">
       <publishTime>12/01/2020 14:36:31</publishTime>
@@ -5866,25 +6175,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 14:36:38</publishTime>
     </File>
     <File Include="Views/About.cshtml">
-      <publishTime>01/28/2021 18:28:11</publishTime>
+      <publishTime>02/08/2021 19:58:09</publishTime>
     </File>
     <File Include="Views/Landing.cshtml">
-      <publishTime>02/05/2021 16:32:44</publishTime>
+      <publishTime>02/23/2021 08:56:45</publishTime>
     </File>
     <File Include="Views/NutritionFact.cshtml">
-      <publishTime>01/28/2021 14:16:27</publishTime>
+      <publishTime>02/08/2021 19:58:09</publishTime>
     </File>
     <File Include="Views/NutritionFactsListing.cshtml">
-      <publishTime>02/05/2021 16:32:44</publishTime>
+      <publishTime>02/09/2021 16:47:50</publishTime>
     </File>
     <File Include="Views/Partials/dfcSvg.cshtml">
-      <publishTime>01/20/2021 15:15:43</publishTime>
+      <publishTime>02/10/2021 08:57:55</publishTime>
     </File>
     <File Include="Views/Partials/dieticianSvg.cshtml">
-      <publishTime>01/20/2021 15:15:43</publishTime>
+      <publishTime>02/10/2021 09:03:48</publishTime>
     </File>
     <File Include="Views/Partials/FooterView.cshtml">
-      <publishTime>02/05/2021 16:32:44</publishTime>
+      <publishTime>02/23/2021 09:41:09</publishTime>
     </File>
     <File Include="Views/Partials/Grid/Bootstrap2-Fluid.cshtml">
       <publishTime>12/01/2020 14:36:38</publishTime>
@@ -5917,10 +6226,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 14:36:38</publishTime>
     </File>
     <File Include="Views/Partials/HeaderView.cshtml">
-      <publishTime>02/05/2021 16:32:44</publishTime>
+      <publishTime>02/18/2021 08:56:55</publishTime>
     </File>
     <File Include="Views/Profile.cshtml">
-      <publishTime>02/08/2021 11:42:56</publishTime>
+      <publishTime>02/18/2021 10:09:56</publishTime>
+    </File>
+    <File Include="Views/Resources.cshtml">
+      <publishTime>02/23/2021 13:01:30</publishTime>
     </File>
     <File Include="Views/web.config">
       <publishTime>01/13/2021 13:47:36</publishTime>
@@ -5929,7 +6241,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/13/2021 13:47:36</publishTime>
     </File>
     <File Include="Views/_Master.cshtml">
-      <publishTime>02/04/2021 09:37:08</publishTime>
+      <publishTime>02/18/2021 09:19:16</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>02/05/2021 10:55:28</publishTime>

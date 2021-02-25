@@ -84,29 +84,33 @@
 
 @if (pageNode.DocumentTypeAlias.ToLower() == "landing" || pageNode.DocumentTypeAlias.ToLower() == "nutritionfactslisting")
 {
-    <div class="container-fluid pageHeader full">
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 offset-xl-1 col-xl-6 offset-xl-3">
-                <div id="header-title">
-                    <h1 class="first-line text-center">@Html.Raw(pageNode.GetPropertyValue<string>("pageTitle"))</h1>
-                    <h2 class="second-line text-center">@(pageNode.GetPropertyValue<string>("pageSubtitle"))</h2>
+<div class="container-fluid pageHeader full">
+    <div class="row">
+        <div class="col-sm-10 offset-sm-1">
+            <div id="header-title">
+                <h1 class="first-line text-center">@Html.Raw(pageNode.GetPropertyValue<string>("pageTitle"))</h1>
+                <h2 class="second-line text-center">@Html.Raw(pageNode.GetPropertyValue<string>("pageSubtitle"))</h2>
+            </div>
+            <div id="headerLogosContainer">
+                <div class="headerLogo">
+                    <p class="headerLogoTitle">@(Umbraco.Field("#nutritionMonth"))</p>
+                    @Html.Partial("~/Views/Partials/dieticianSvg.cshtml")
                 </div>
-                <div id="headerLogosContainer">
-                    <div class="headerLogo">
-                        <p class="headerLogoTitle">@(Umbraco.Field("#nutritionMonth"))</p>
-                        @Html.Partial("~/Views/Partials/dieticianSvg.cshtml")
-                    </div>
-                    <div class="headerLogo">
-                        <p class="headerLogoTitle">@(Umbraco.Field("#sponsor"))</p>
-                        @Html.Partial("~/Views/Partials/dfcSvg.cshtml")
-                    </div>
+                <div class="headerLogo">
+                    <p class="headerLogoTitle">@(Umbraco.Field("#sponsor"))</p>
+                    @Html.Partial("~/Views/Partials/dfcSvg.cshtml")
                 </div>
-                <div id="headerIntroWrapper">
-                    <h3 id="motto">@(pageNode.GetPropertyValue<string>("tagLine"))</h3>
-                    <div id="header-intro" class="text-center">@(pageNode.GetPropertyValue<HtmlString>("introText"))</div>
-                </div>
-                
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1 offset-xl-1 col-xl-6 offset-xl-3">
+            <div id="headerIntroWrapper">
+                <h3 id="motto">@Html.Raw(pageNode.GetPropertyValue<string>("tagLine"))</h3>
+                <div id="header-intro" class="text-center">@(pageNode.GetPropertyValue<HtmlString>("introText"))</div>
+            </div>
+
+        </div>
+    </div>
+</div>
 }

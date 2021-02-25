@@ -22,7 +22,7 @@
             next = Umbraco.GetDictionaryValue("NextFact");
         }
         if (pageNode.DocumentTypeAlias.ToLower() == "profile") {
-            next = "Next";
+            next = Umbraco.GetDictionaryValue("Next");
         }
 
         if (nextNode == null)

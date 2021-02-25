@@ -1033,8 +1033,8 @@ footer #footerLogo {
         font-family: "filson-pro", sans-serif;
         font-style: italic;
         font-weight: 900;
-        font-size: 34px;
-        line-height: 41px;
+        font-size: 30px;
+        line-height: 37px;
         color: #31BED7;
         margin-bottom: 40px; }
       .cardClickable .cardContainer .cardContent .cardTags {
@@ -1398,7 +1398,6 @@ footer #footerLogo {
   #about .imgWrap {
     width: 100%;
     position: relative;
-    display: flex;
     justify-content: center;
     padding-top: 125px; }
     #about .imgWrap #aboutImg {
@@ -1746,11 +1745,11 @@ footer #footerLogo {
             left: 44%; } }
       #profile .banner.family-togetherness #factPanelBtn-3 {
         top: 52%;
-        left: 64%; }
+        left: 20%; }
         @media screen and (max-width: 414px) {
           #profile .banner.family-togetherness #factPanelBtn-3 {
             top: 42%;
-            left: 81%; } }
+            left: 12%; } }
       #profile .banner.family-togetherness #factPanelBtn-4 {
         top: 62%;
         left: 33%; }
@@ -1888,7 +1887,7 @@ footer #footerLogo {
             left: 47%; } }
       #profile .banner.breakfast #factPanelBtn-4 {
         top: 75%;
-        left: 20%; }
+        left: 10%; }
         @media screen and (max-width: 414px) {
           #profile .banner.breakfast #factPanelBtn-4 {
             top: 54%;

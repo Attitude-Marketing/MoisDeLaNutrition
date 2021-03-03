@@ -228,6 +228,35 @@ footer {
                 }
             }
         }
+
+        #socialWrap {
+            margin-top: 20px;
+            display: flex;
+
+            .social {
+                width: 40px;
+                height: 40px;
+                display: block;
+                margin-right: 10px;
+                text-decoration: none;
+
+                &:not(#fb) {
+                    border-radius: 50%;
+                    background-color: $scooter;
+                    color: #fff;
+                    font-size: 25px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &#fb {
+                    color: $scooter;
+                    font-size: 40px;
+                    margin-top: -2px;
+                }
+            }
+        }
     }
 
     #footerLogo {

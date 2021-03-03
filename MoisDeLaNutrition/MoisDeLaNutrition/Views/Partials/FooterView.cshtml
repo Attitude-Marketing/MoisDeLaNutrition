@@ -95,6 +95,20 @@
                                     <li @activeClass><a href="@(menuItem.Url)">@(menuItem.GetPropertyValue<string>("menuTitle"))</a></li>
                                 }
                             </ul>
+                            <div id="socialWrap">
+                                @if (!brandNode.GetPropertyValue<string>("facebookUrl").IsNullOrWhiteSpace())
+                                {
+                                    <a id="fb" class="social" target="_blank" href="@(brandNode.GetPropertyValue<string>("facebookUrl"))"><i class="fab fa-facebook"></i></a>
+                                }
+                                @if (!brandNode.GetPropertyValue<string>("twitterUrl").IsNullOrWhiteSpace())
+                                {
+                                    <a id="twit" class="social" target="_blank" href="@(brandNode.GetPropertyValue<string>("twitterUrl"))"><i class="fab fa-twitter"></i></a>
+                                }
+                                @if (!brandNode.GetPropertyValue<string>("instagramUrl").IsNullOrWhiteSpace())
+                                {
+                                    <a id="insta" class="social" target="_blank" href="@(brandNode.GetPropertyValue<string>("instagramUrl"))"><i class="fab fa-instagram"></i></a>
+                                }
+                            </div>
                         </div>
                         <div id="footerLogo">
                             <img class="logo" src="~/images/logos/Logo_DFC_Footer_@(lang).png" />

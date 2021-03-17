@@ -29,12 +29,12 @@
     @*sharing*@
     //le true signifie que si la pagenode n'a pas de valeur, va chercher la valeur du parent.
     //ex.: Si la page n'a pas de SEO, va chercher le seo genérique de la langnode.
-    var ogUrl = Request.Url.ToString();
+    var ogUrl = Html.Raw(pageNode.UrlWithDomain());
     var ogType = pageNode.GetPropertyValue<string>("oGType", true);
 
     // Si le OG Title est vide, on prendre le title. Pareil pour le OG Description avec le Meta description
     var ogTitle = pageNode.GetPropertyValue<string>("oGTitle").IsNullOrWhiteSpace() ? browserTitle : pageNode.GetPropertyValue<string>("oGTitle");
-    var ogDescription = pageNode.GetPropertyValue<string>("oGDescription").IsNullOrWhiteSpace() ? metaDesc : pageNode.GetPropertyValue<string>("oGDescription");
+    var ogDescription = pageNode.GetPropertyValue<string>("oGDescription").IsNullOrWhiteSpace() ? Html.Raw(metaDesc) : Html.Raw(pageNode.GetPropertyValue<string>("oGDescription"));
 
 
     var ogImage = pageNode.GetPropertyValue<IPublishedContent>("oGImage", true);
@@ -79,7 +79,7 @@
     }
     @if (!metaDesc.IsNullOrWhiteSpace())
     {
-        <meta name="description" content="@metaDesc" />
+        <meta name="description" content="@Html.Raw(metaDesc)" />
     }
     @*=================================================================
         --sharing meta

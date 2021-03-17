@@ -1560,7 +1560,7 @@ footer #footerLogo {
     @media screen and (min-width: 1921px) {
       #profile .banner {
         background-size: cover !important; } }
-    #profile .banner.taste-for-music {
+    #profile .banner.taste-for-music, #profile .banner.in-tune-with-the-times, #profile .banner.en-harmonie-avec-son-temps {
       /*#factPage {
                 top: 61%;
                 left: 67%;
@@ -1570,42 +1570,42 @@ footer #footerLogo {
                     left: 87%;
                 }
             }*/ }
-      #profile .banner.taste-for-music #factPanelBtn-1 {
+      #profile .banner.taste-for-music #factPanelBtn-1, #profile .banner.in-tune-with-the-times #factPanelBtn-1, #profile .banner.en-harmonie-avec-son-temps #factPanelBtn-1 {
         top: 52%;
         left: 51%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.taste-for-music #factPanelBtn-1 {
+          #profile .banner.taste-for-music #factPanelBtn-1, #profile .banner.in-tune-with-the-times #factPanelBtn-1, #profile .banner.en-harmonie-avec-son-temps #factPanelBtn-1 {
             top: 34%;
             left: 48%; } }
-      #profile .banner.taste-for-music #factPanelBtn-2 {
+      #profile .banner.taste-for-music #factPanelBtn-2, #profile .banner.in-tune-with-the-times #factPanelBtn-2, #profile .banner.en-harmonie-avec-son-temps #factPanelBtn-2 {
         top: 61%;
         left: 25%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.taste-for-music #factPanelBtn-2 {
+          #profile .banner.taste-for-music #factPanelBtn-2, #profile .banner.in-tune-with-the-times #factPanelBtn-2, #profile .banner.en-harmonie-avec-son-temps #factPanelBtn-2 {
             top: 48%;
             left: 5%; } }
-      #profile .banner.taste-for-music #factPanelBtn-3 {
+      #profile .banner.taste-for-music #factPanelBtn-3, #profile .banner.in-tune-with-the-times #factPanelBtn-3, #profile .banner.en-harmonie-avec-son-temps #factPanelBtn-3 {
         top: 61%;
         left: 67%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.taste-for-music #factPanelBtn-3 {
+          #profile .banner.taste-for-music #factPanelBtn-3, #profile .banner.in-tune-with-the-times #factPanelBtn-3, #profile .banner.en-harmonie-avec-son-temps #factPanelBtn-3 {
             top: 45%;
             left: 87%; } }
-      #profile .banner.taste-for-music #factPanelBtn-4 {
+      #profile .banner.taste-for-music #factPanelBtn-4, #profile .banner.in-tune-with-the-times #factPanelBtn-4, #profile .banner.en-harmonie-avec-son-temps #factPanelBtn-4 {
         top: 81%;
         left: 33%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.taste-for-music #factPanelBtn-4 {
+          #profile .banner.taste-for-music #factPanelBtn-4, #profile .banner.in-tune-with-the-times #factPanelBtn-4, #profile .banner.en-harmonie-avec-son-temps #factPanelBtn-4 {
             top: 66%;
             left: 17%; } }
-      #profile .banner.taste-for-music #factPanelBtn-5 {
+      #profile .banner.taste-for-music #factPanelBtn-5, #profile .banner.in-tune-with-the-times #factPanelBtn-5, #profile .banner.en-harmonie-avec-son-temps #factPanelBtn-5 {
         top: 82%;
         left: 61%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.taste-for-music #factPanelBtn-5 {
+          #profile .banner.taste-for-music #factPanelBtn-5, #profile .banner.in-tune-with-the-times #factPanelBtn-5, #profile .banner.en-harmonie-avec-son-temps #factPanelBtn-5 {
             top: 62%;
             left: 75%; } }
-    #profile .banner.yoga-lover {
+    #profile .banner.yoga-lover, #profile .banner.pursuing-wellness, #profile .banner.recherche-du-bien-etre {
       /*#factPage {
                 top: 55%;
                 left: 32%;
@@ -1615,42 +1615,42 @@ footer #footerLogo {
                     left: 7%;
                 }
             }*/ }
-      #profile .banner.yoga-lover #factPanelBtn-1 {
+      #profile .banner.yoga-lover #factPanelBtn-1, #profile .banner.pursuing-wellness #factPanelBtn-1, #profile .banner.recherche-du-bien-etre #factPanelBtn-1 {
         top: 45%;
         left: 49%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.yoga-lover #factPanelBtn-1 {
+          #profile .banner.yoga-lover #factPanelBtn-1, #profile .banner.pursuing-wellness #factPanelBtn-1, #profile .banner.recherche-du-bien-etre #factPanelBtn-1 {
             top: 30%;
             left: 43%; } }
-      #profile .banner.yoga-lover #factPanelBtn-2 {
+      #profile .banner.yoga-lover #factPanelBtn-2, #profile .banner.pursuing-wellness #factPanelBtn-2, #profile .banner.recherche-du-bien-etre #factPanelBtn-2 {
         top: 55%;
         left: 32%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.yoga-lover #factPanelBtn-2 {
+          #profile .banner.yoga-lover #factPanelBtn-2, #profile .banner.pursuing-wellness #factPanelBtn-2, #profile .banner.recherche-du-bien-etre #factPanelBtn-2 {
             top: 39%;
             left: 7%; } }
-      #profile .banner.yoga-lover #factPanelBtn-3 {
+      #profile .banner.yoga-lover #factPanelBtn-3, #profile .banner.pursuing-wellness #factPanelBtn-3, #profile .banner.recherche-du-bien-etre #factPanelBtn-3 {
         top: 61%;
         left: 67%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.yoga-lover #factPanelBtn-3 {
+          #profile .banner.yoga-lover #factPanelBtn-3, #profile .banner.pursuing-wellness #factPanelBtn-3, #profile .banner.recherche-du-bien-etre #factPanelBtn-3 {
             top: 42%;
             left: 76%; } }
-      #profile .banner.yoga-lover #factPanelBtn-4 {
+      #profile .banner.yoga-lover #factPanelBtn-4, #profile .banner.pursuing-wellness #factPanelBtn-4, #profile .banner.recherche-du-bien-etre #factPanelBtn-4 {
         top: 67%;
         left: 45%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.yoga-lover #factPanelBtn-4 {
+          #profile .banner.yoga-lover #factPanelBtn-4, #profile .banner.pursuing-wellness #factPanelBtn-4, #profile .banner.recherche-du-bien-etre #factPanelBtn-4 {
             top: 47%;
             left: 35%; } }
-      #profile .banner.yoga-lover #factPanelBtn-5 {
+      #profile .banner.yoga-lover #factPanelBtn-5, #profile .banner.pursuing-wellness #factPanelBtn-5, #profile .banner.recherche-du-bien-etre #factPanelBtn-5 {
         top: 76%;
         left: 68%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.yoga-lover #factPanelBtn-5 {
+          #profile .banner.yoga-lover #factPanelBtn-5, #profile .banner.pursuing-wellness #factPanelBtn-5, #profile .banner.recherche-du-bien-etre #factPanelBtn-5 {
             top: 55%;
             left: 77%; } }
-    #profile .banner.food-intolerance {
+    #profile .banner.food-intolerance, #profile .banner.tummy-troubles, #profile .banner.troubles-digestifs {
       /*#factPage {
                 top: 52%;
                 left: 53%;
@@ -1660,42 +1660,42 @@ footer #footerLogo {
                     left: 54%;
                 }
             }*/ }
-      #profile .banner.food-intolerance #factPanelBtn-1 {
+      #profile .banner.food-intolerance #factPanelBtn-1, #profile .banner.tummy-troubles #factPanelBtn-1, #profile .banner.troubles-digestifs #factPanelBtn-1 {
         top: 40%;
         left: 46%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.food-intolerance #factPanelBtn-1 {
+          #profile .banner.food-intolerance #factPanelBtn-1, #profile .banner.tummy-troubles #factPanelBtn-1, #profile .banner.troubles-digestifs #factPanelBtn-1 {
             top: 28%;
             left: 41%; } }
-      #profile .banner.food-intolerance #factPanelBtn-2 {
+      #profile .banner.food-intolerance #factPanelBtn-2, #profile .banner.tummy-troubles #factPanelBtn-2, #profile .banner.troubles-digestifs #factPanelBtn-2 {
         top: 52%;
         left: 53%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.food-intolerance #factPanelBtn-2 {
+          #profile .banner.food-intolerance #factPanelBtn-2, #profile .banner.tummy-troubles #factPanelBtn-2, #profile .banner.troubles-digestifs #factPanelBtn-2 {
             top: 39%;
             left: 54%; } }
-      #profile .banner.food-intolerance #factPanelBtn-3 {
+      #profile .banner.food-intolerance #factPanelBtn-3, #profile .banner.tummy-troubles #factPanelBtn-3, #profile .banner.troubles-digestifs #factPanelBtn-3 {
         top: 67%;
         left: 42%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.food-intolerance #factPanelBtn-3 {
+          #profile .banner.food-intolerance #factPanelBtn-3, #profile .banner.tummy-troubles #factPanelBtn-3, #profile .banner.troubles-digestifs #factPanelBtn-3 {
             top: 49%;
             left: 35%; } }
-      #profile .banner.food-intolerance #factPanelBtn-4 {
+      #profile .banner.food-intolerance #factPanelBtn-4, #profile .banner.tummy-troubles #factPanelBtn-4, #profile .banner.troubles-digestifs #factPanelBtn-4 {
         top: 75%;
         left: 28%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.food-intolerance #factPanelBtn-4 {
+          #profile .banner.food-intolerance #factPanelBtn-4, #profile .banner.tummy-troubles #factPanelBtn-4, #profile .banner.troubles-digestifs #factPanelBtn-4 {
             top: 54%;
             left: 8%; } }
-      #profile .banner.food-intolerance #factPanelBtn-5 {
+      #profile .banner.food-intolerance #factPanelBtn-5, #profile .banner.tummy-troubles #factPanelBtn-5, #profile .banner.troubles-digestifs #factPanelBtn-5 {
         top: 76%;
         left: 65%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.food-intolerance #factPanelBtn-5 {
+          #profile .banner.food-intolerance #factPanelBtn-5, #profile .banner.tummy-troubles #factPanelBtn-5, #profile .banner.troubles-digestifs #factPanelBtn-5 {
             top: 57%;
             left: 75%; } }
-    #profile .banner.on-the-go {
+    #profile .banner.on-the-go, #profile .banner.toujours-en-action {
       /*#factPage {
                 top: 48%;
                 left: 45%;
@@ -1705,42 +1705,42 @@ footer #footerLogo {
                     left: 40%;
                 }
             }*/ }
-      #profile .banner.on-the-go #factPanelBtn-1 {
+      #profile .banner.on-the-go #factPanelBtn-1, #profile .banner.toujours-en-action #factPanelBtn-1 {
         top: 48%;
         left: 45%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.on-the-go #factPanelBtn-1 {
+          #profile .banner.on-the-go #factPanelBtn-1, #profile .banner.toujours-en-action #factPanelBtn-1 {
             top: 30%;
             left: 40%; } }
-      #profile .banner.on-the-go #factPanelBtn-2 {
+      #profile .banner.on-the-go #factPanelBtn-2, #profile .banner.toujours-en-action #factPanelBtn-2 {
         top: 59%;
         left: 65%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.on-the-go #factPanelBtn-2 {
+          #profile .banner.on-the-go #factPanelBtn-2, #profile .banner.toujours-en-action #factPanelBtn-2 {
             top: 41%;
             left: 78%; } }
-      #profile .banner.on-the-go #factPanelBtn-3 {
+      #profile .banner.on-the-go #factPanelBtn-3, #profile .banner.toujours-en-action #factPanelBtn-3 {
         top: 70%;
         left: 23%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.on-the-go #factPanelBtn-3 {
+          #profile .banner.on-the-go #factPanelBtn-3, #profile .banner.toujours-en-action #factPanelBtn-3 {
             top: 48%;
             left: 6%; } }
-      #profile .banner.on-the-go #factPanelBtn-4 {
+      #profile .banner.on-the-go #factPanelBtn-4, #profile .banner.toujours-en-action #factPanelBtn-4 {
         top: 67%;
         left: 71%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.on-the-go #factPanelBtn-4 {
+          #profile .banner.on-the-go #factPanelBtn-4, #profile .banner.toujours-en-action #factPanelBtn-4 {
             top: 53%;
             left: 84%; } }
-      #profile .banner.on-the-go #factPanelBtn-5 {
+      #profile .banner.on-the-go #factPanelBtn-5, #profile .banner.toujours-en-action #factPanelBtn-5 {
         top: 76%;
         left: 45%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.on-the-go #factPanelBtn-5 {
+          #profile .banner.on-the-go #factPanelBtn-5, #profile .banner.toujours-en-action #factPanelBtn-5 {
             top: 50%;
             left: 39%; } }
-    #profile .banner.family-togetherness {
+    #profile .banner.family-togetherness, #profile .banner.little-mouths-to-feed, #profile .banner.petites-bouches-a-nourrir {
       /*#factPage {
                 top: 52%;
                 left: 64%;
@@ -1750,42 +1750,42 @@ footer #footerLogo {
                     left: 81%;
                 }
             }*/ }
-      #profile .banner.family-togetherness #factPanelBtn-1 {
+      #profile .banner.family-togetherness #factPanelBtn-1, #profile .banner.little-mouths-to-feed #factPanelBtn-1, #profile .banner.petites-bouches-a-nourrir #factPanelBtn-1 {
         top: 36%;
         left: 22%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.family-togetherness #factPanelBtn-1 {
+          #profile .banner.family-togetherness #factPanelBtn-1, #profile .banner.little-mouths-to-feed #factPanelBtn-1, #profile .banner.petites-bouches-a-nourrir #factPanelBtn-1 {
             top: 28%;
             left: 5%; } }
-      #profile .banner.family-togetherness #factPanelBtn-2 {
+      #profile .banner.family-togetherness #factPanelBtn-2, #profile .banner.little-mouths-to-feed #factPanelBtn-2, #profile .banner.petites-bouches-a-nourrir #factPanelBtn-2 {
         top: 43%;
         left: 44%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.family-togetherness #factPanelBtn-2 {
+          #profile .banner.family-togetherness #factPanelBtn-2, #profile .banner.little-mouths-to-feed #factPanelBtn-2, #profile .banner.petites-bouches-a-nourrir #factPanelBtn-2 {
             top: 35%;
             left: 44%; } }
-      #profile .banner.family-togetherness #factPanelBtn-3 {
+      #profile .banner.family-togetherness #factPanelBtn-3, #profile .banner.little-mouths-to-feed #factPanelBtn-3, #profile .banner.petites-bouches-a-nourrir #factPanelBtn-3 {
         top: 52%;
         left: 20%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.family-togetherness #factPanelBtn-3 {
+          #profile .banner.family-togetherness #factPanelBtn-3, #profile .banner.little-mouths-to-feed #factPanelBtn-3, #profile .banner.petites-bouches-a-nourrir #factPanelBtn-3 {
             top: 42%;
             left: 12%; } }
-      #profile .banner.family-togetherness #factPanelBtn-4 {
+      #profile .banner.family-togetherness #factPanelBtn-4, #profile .banner.little-mouths-to-feed #factPanelBtn-4, #profile .banner.petites-bouches-a-nourrir #factPanelBtn-4 {
         top: 62%;
         left: 33%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.family-togetherness #factPanelBtn-4 {
+          #profile .banner.family-togetherness #factPanelBtn-4, #profile .banner.little-mouths-to-feed #factPanelBtn-4, #profile .banner.petites-bouches-a-nourrir #factPanelBtn-4 {
             top: 47%;
             left: 23%; } }
-      #profile .banner.family-togetherness #factPanelBtn-5 {
+      #profile .banner.family-togetherness #factPanelBtn-5, #profile .banner.little-mouths-to-feed #factPanelBtn-5, #profile .banner.petites-bouches-a-nourrir #factPanelBtn-5 {
         top: 71%;
         left: 59%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.family-togetherness #factPanelBtn-5 {
+          #profile .banner.family-togetherness #factPanelBtn-5, #profile .banner.little-mouths-to-feed #factPanelBtn-5, #profile .banner.petites-bouches-a-nourrir #factPanelBtn-5 {
             top: 53%;
             left: 70%; } }
-    #profile .banner.active-lifestyle {
+    #profile .banner.active-lifestyle, #profile .banner.mode-de-vie-actif {
       /*#factPage {
                 top: 58%;
                 left: 19%;
@@ -1795,42 +1795,42 @@ footer #footerLogo {
                     left: 2%;
                 }
             }*/ }
-      #profile .banner.active-lifestyle #factPanelBtn-1 {
+      #profile .banner.active-lifestyle #factPanelBtn-1, #profile .banner.mode-de-vie-actif #factPanelBtn-1 {
         top: 48%;
         left: 46%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.active-lifestyle #factPanelBtn-1 {
+          #profile .banner.active-lifestyle #factPanelBtn-1, #profile .banner.mode-de-vie-actif #factPanelBtn-1 {
             top: 32%;
             left: 46%; } }
-      #profile .banner.active-lifestyle #factPanelBtn-2 {
+      #profile .banner.active-lifestyle #factPanelBtn-2, #profile .banner.mode-de-vie-actif #factPanelBtn-2 {
         top: 58%;
         left: 19%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.active-lifestyle #factPanelBtn-2 {
+          #profile .banner.active-lifestyle #factPanelBtn-2, #profile .banner.mode-de-vie-actif #factPanelBtn-2 {
             top: 40%;
             left: 2%; } }
-      #profile .banner.active-lifestyle #factPanelBtn-3 {
+      #profile .banner.active-lifestyle #factPanelBtn-3, #profile .banner.mode-de-vie-actif #factPanelBtn-3 {
         top: 61%;
         left: 60%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.active-lifestyle #factPanelBtn-3 {
+          #profile .banner.active-lifestyle #factPanelBtn-3, #profile .banner.mode-de-vie-actif #factPanelBtn-3 {
             top: 43%;
             left: 73%; } }
-      #profile .banner.active-lifestyle #factPanelBtn-4 {
+      #profile .banner.active-lifestyle #factPanelBtn-4, #profile .banner.mode-de-vie-actif #factPanelBtn-4 {
         top: 73%;
         left: 68%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.active-lifestyle #factPanelBtn-4 {
+          #profile .banner.active-lifestyle #factPanelBtn-4, #profile .banner.mode-de-vie-actif #factPanelBtn-4 {
             top: 54%;
             left: 83%; } }
-      #profile .banner.active-lifestyle #factPanelBtn-5 {
+      #profile .banner.active-lifestyle #factPanelBtn-5, #profile .banner.mode-de-vie-actif #factPanelBtn-5 {
         top: 77%;
         left: 38%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.active-lifestyle #factPanelBtn-5 {
+          #profile .banner.active-lifestyle #factPanelBtn-5, #profile .banner.mode-de-vie-actif #factPanelBtn-5 {
             top: 55%;
             left: 30%; } }
-    #profile .banner.budget-crunch {
+    #profile .banner.budget-crunch, #profile .banner.budget-conscious, #profile .banner.attention-a-son-budget {
       /*#factPage {
                 top: 62%;
                 left: 29%;
@@ -1840,42 +1840,42 @@ footer #footerLogo {
                     left: 5%;
                 }
             }*/ }
-      #profile .banner.budget-crunch #factPanelBtn-1 {
+      #profile .banner.budget-crunch #factPanelBtn-1, #profile .banner.budget-conscious #factPanelBtn-1, #profile .banner.attention-a-son-budget #factPanelBtn-1 {
         top: 39%;
         left: 45%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.budget-crunch #factPanelBtn-1 {
+          #profile .banner.budget-crunch #factPanelBtn-1, #profile .banner.budget-conscious #factPanelBtn-1, #profile .banner.attention-a-son-budget #factPanelBtn-1 {
             top: 29%;
             left: 42%; } }
-      #profile .banner.budget-crunch #factPanelBtn-2 {
+      #profile .banner.budget-crunch #factPanelBtn-2, #profile .banner.budget-conscious #factPanelBtn-2, #profile .banner.attention-a-son-budget #factPanelBtn-2 {
         top: 58%;
         left: 68%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.budget-crunch #factPanelBtn-2 {
+          #profile .banner.budget-crunch #factPanelBtn-2, #profile .banner.budget-conscious #factPanelBtn-2, #profile .banner.attention-a-son-budget #factPanelBtn-2 {
             top: 43%;
             left: 86%; } }
-      #profile .banner.budget-crunch #factPanelBtn-3 {
+      #profile .banner.budget-crunch #factPanelBtn-3, #profile .banner.budget-conscious #factPanelBtn-3, #profile .banner.attention-a-son-budget #factPanelBtn-3 {
         top: 62%;
         left: 29%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.budget-crunch #factPanelBtn-3 {
+          #profile .banner.budget-crunch #factPanelBtn-3, #profile .banner.budget-conscious #factPanelBtn-3, #profile .banner.attention-a-son-budget #factPanelBtn-3 {
             top: 47%;
             left: 5%; } }
-      #profile .banner.budget-crunch #factPanelBtn-4 {
+      #profile .banner.budget-crunch #factPanelBtn-4, #profile .banner.budget-conscious #factPanelBtn-4, #profile .banner.attention-a-son-budget #factPanelBtn-4 {
         top: 80%;
         left: 35%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.budget-crunch #factPanelBtn-4 {
+          #profile .banner.budget-crunch #factPanelBtn-4, #profile .banner.budget-conscious #factPanelBtn-4, #profile .banner.attention-a-son-budget #factPanelBtn-4 {
             top: 60%;
             left: 22%; } }
-      #profile .banner.budget-crunch #factPanelBtn-5 {
+      #profile .banner.budget-crunch #factPanelBtn-5, #profile .banner.budget-conscious #factPanelBtn-5, #profile .banner.attention-a-son-budget #factPanelBtn-5 {
         top: 82%;
         left: 68%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.budget-crunch #factPanelBtn-5 {
+          #profile .banner.budget-crunch #factPanelBtn-5, #profile .banner.budget-conscious #factPanelBtn-5, #profile .banner.attention-a-son-budget #factPanelBtn-5 {
             top: 61%;
             left: 87%; } }
-    #profile .banner.breakfast {
+    #profile .banner.breakfast, #profile .banner.breakfast-challenge, #profile .banner.dejeuner-est-un-defi {
       /*#factPage {
                 top: 60%;
                 left: 63%;
@@ -1885,42 +1885,42 @@ footer #footerLogo {
                     left: 80%;
                 }
             }*/ }
-      #profile .banner.breakfast #factPanelBtn-1 {
+      #profile .banner.breakfast #factPanelBtn-1, #profile .banner.breakfast-challenge #factPanelBtn-1, #profile .banner.dejeuner-est-un-defi #factPanelBtn-1 {
         top: 48%;
         left: 38%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.breakfast #factPanelBtn-1 {
+          #profile .banner.breakfast #factPanelBtn-1, #profile .banner.breakfast-challenge #factPanelBtn-1, #profile .banner.dejeuner-est-un-defi #factPanelBtn-1 {
             top: 31%;
             left: 32%; } }
-      #profile .banner.breakfast #factPanelBtn-2 {
+      #profile .banner.breakfast #factPanelBtn-2, #profile .banner.breakfast-challenge #factPanelBtn-2, #profile .banner.dejeuner-est-un-defi #factPanelBtn-2 {
         top: 60%;
         left: 63%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.breakfast #factPanelBtn-2 {
+          #profile .banner.breakfast #factPanelBtn-2, #profile .banner.breakfast-challenge #factPanelBtn-2, #profile .banner.dejeuner-est-un-defi #factPanelBtn-2 {
             top: 41%;
             left: 80%; } }
-      #profile .banner.breakfast #factPanelBtn-3 {
+      #profile .banner.breakfast #factPanelBtn-3, #profile .banner.breakfast-challenge #factPanelBtn-3, #profile .banner.dejeuner-est-un-defi #factPanelBtn-3 {
         top: 72%;
         left: 46%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.breakfast #factPanelBtn-3 {
+          #profile .banner.breakfast #factPanelBtn-3, #profile .banner.breakfast-challenge #factPanelBtn-3, #profile .banner.dejeuner-est-un-defi #factPanelBtn-3 {
             top: 50%;
             left: 47%; } }
-      #profile .banner.breakfast #factPanelBtn-4 {
+      #profile .banner.breakfast #factPanelBtn-4, #profile .banner.breakfast-challenge #factPanelBtn-4, #profile .banner.dejeuner-est-un-defi #factPanelBtn-4 {
         top: 75%;
         left: 10%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.breakfast #factPanelBtn-4 {
+          #profile .banner.breakfast #factPanelBtn-4, #profile .banner.breakfast-challenge #factPanelBtn-4, #profile .banner.dejeuner-est-un-defi #factPanelBtn-4 {
             top: 54%;
             left: 9%; } }
-      #profile .banner.breakfast #factPanelBtn-5 {
+      #profile .banner.breakfast #factPanelBtn-5, #profile .banner.breakfast-challenge #factPanelBtn-5, #profile .banner.dejeuner-est-un-defi #factPanelBtn-5 {
         top: 79%;
         left: 62%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.breakfast #factPanelBtn-5 {
+          #profile .banner.breakfast #factPanelBtn-5, #profile .banner.breakfast-challenge #factPanelBtn-5, #profile .banner.dejeuner-est-un-defi #factPanelBtn-5 {
             top: 60%;
             left: 82%; } }
-    #profile .banner.healthy-wisdom {
+    #profile .banner.healthy-wisdom, #profile .banner.healthy-future, #profile .banner.avenir-en-sante {
       /*#factPage {
                 top: 49%;
                 left: 46%;
@@ -1930,39 +1930,39 @@ footer #footerLogo {
                     left: 46%;
                 }
             }*/ }
-      #profile .banner.healthy-wisdom #factPanelBtn-1 {
+      #profile .banner.healthy-wisdom #factPanelBtn-1, #profile .banner.healthy-future #factPanelBtn-1, #profile .banner.avenir-en-sante #factPanelBtn-1 {
         top: 40%;
         left: 24%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.healthy-wisdom #factPanelBtn-1 {
+          #profile .banner.healthy-wisdom #factPanelBtn-1, #profile .banner.healthy-future #factPanelBtn-1, #profile .banner.avenir-en-sante #factPanelBtn-1 {
             top: 25%;
             left: 8%; } }
-      #profile .banner.healthy-wisdom #factPanelBtn-2 {
+      #profile .banner.healthy-wisdom #factPanelBtn-2, #profile .banner.healthy-future #factPanelBtn-2, #profile .banner.avenir-en-sante #factPanelBtn-2 {
         top: 49%;
         left: 46%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.healthy-wisdom #factPanelBtn-2 {
+          #profile .banner.healthy-wisdom #factPanelBtn-2, #profile .banner.healthy-future #factPanelBtn-2, #profile .banner.avenir-en-sante #factPanelBtn-2 {
             top: 31%;
             left: 46%; } }
-      #profile .banner.healthy-wisdom #factPanelBtn-3 {
+      #profile .banner.healthy-wisdom #factPanelBtn-3, #profile .banner.healthy-future #factPanelBtn-3, #profile .banner.avenir-en-sante #factPanelBtn-3 {
         top: 63%;
         left: 68%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.healthy-wisdom #factPanelBtn-3 {
+          #profile .banner.healthy-wisdom #factPanelBtn-3, #profile .banner.healthy-future #factPanelBtn-3, #profile .banner.avenir-en-sante #factPanelBtn-3 {
             top: 40%;
             left: 84%; } }
-      #profile .banner.healthy-wisdom #factPanelBtn-4 {
+      #profile .banner.healthy-wisdom #factPanelBtn-4, #profile .banner.healthy-future #factPanelBtn-4, #profile .banner.avenir-en-sante #factPanelBtn-4 {
         top: 64%;
         left: 31%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.healthy-wisdom #factPanelBtn-4 {
+          #profile .banner.healthy-wisdom #factPanelBtn-4, #profile .banner.healthy-future #factPanelBtn-4, #profile .banner.avenir-en-sante #factPanelBtn-4 {
             top: 40%;
             left: 20%; } }
-      #profile .banner.healthy-wisdom #factPanelBtn-5 {
+      #profile .banner.healthy-wisdom #factPanelBtn-5, #profile .banner.healthy-future #factPanelBtn-5, #profile .banner.avenir-en-sante #factPanelBtn-5 {
         top: 86%;
         left: 26%; }
         @media screen and (max-width: 414px) {
-          #profile .banner.healthy-wisdom #factPanelBtn-5 {
+          #profile .banner.healthy-wisdom #factPanelBtn-5, #profile .banner.healthy-future #factPanelBtn-5, #profile .banner.avenir-en-sante #factPanelBtn-5 {
             top: 57%;
             left: 26%; } }
     @media screen and (max-width: 414px) {

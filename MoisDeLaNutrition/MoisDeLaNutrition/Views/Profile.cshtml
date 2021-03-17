@@ -39,10 +39,12 @@
         }
     }
 
+    var pnameClass = pageNode.UrlName.Replace("à", "a").Replace("é", "e").Replace("ê","e");
+
 }
 <section id="profile" class="@(pageNode.UrlName)">
     <div class="fluid">
-        <div class="banner @pageNode.UrlName mobile-switch" style="background: url(@bannerImgUrl) center center no-repeat;" data-mobile="background: url(@bannerMobileImgUrl) center top no-repeat @(pageNode.GetPropertyValue<string>("profileColor"));">
+        <div class="banner @pnameClass mobile-switch" style="background: url(@bannerImgUrl) center center no-repeat;" data-mobile="background: url(@bannerMobileImgUrl) center top no-repeat @(pageNode.GetPropertyValue<string>("profileColor"));">
             <div class="row no-gutters">
                 <div class="col-sm-10 offset-sm-1">
                     <div id="bannerInfo">

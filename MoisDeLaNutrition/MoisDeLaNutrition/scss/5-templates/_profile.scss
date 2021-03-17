@@ -174,7 +174,7 @@
             background-size: cover !important;
         }
 
-        &.taste-for-music {
+        &.taste-for-music, &.in-tune-with-the-times, &.en-harmonie-avec-son-temps {
             #factPanelBtn-1 {
                 top: 52%;
                 left: 51%;
@@ -235,7 +235,7 @@
             }*/
         }
 
-        &.yoga-lover {
+        &.yoga-lover, &.pursuing-wellness, &.recherche-du-bien-etre {
             #factPanelBtn-1 {
                 top: 45%;
                 left: 49%;
@@ -296,7 +296,7 @@
             }*/
         }
 
-        &.food-intolerance {
+        &.food-intolerance, &.tummy-troubles, &.troubles-digestifs {
             #factPanelBtn-1 {
                 top: 40%;
                 left: 46%;
@@ -357,7 +357,7 @@
             }*/
         }
 
-        &.on-the-go {
+        &.on-the-go, &.toujours-en-action {
 
             #factPanelBtn-1 {
                 top: 48%;
@@ -419,7 +419,7 @@
             }*/
         }
 
-        &.family-togetherness {
+        &.family-togetherness, &.little-mouths-to-feed, &.petites-bouches-a-nourrir {
             #factPanelBtn-1 {
                 top: 36%;
                 left: 22%;
@@ -480,7 +480,7 @@
             }*/
         }
 
-        &.active-lifestyle {
+        &.active-lifestyle, &.mode-de-vie-actif {
             #factPanelBtn-1 {
                 top: 48%;
                 left: 46%;
@@ -541,7 +541,7 @@
             }*/
         }
 
-        &.budget-crunch {
+        &.budget-crunch, &.budget-conscious, &.attention-a-son-budget {
             #factPanelBtn-1 {
                 top: 39%;
                 left: 45%;
@@ -602,7 +602,7 @@
             }*/
         }
 
-        &.breakfast {
+        &.breakfast, &.breakfast-challenge, &.dejeuner-est-un-defi {
             #factPanelBtn-1 {
                 top: 48%;
                 left: 38%;
@@ -663,7 +663,7 @@
             }*/
         }
 
-        &.healthy-wisdom {
+        &.healthy-wisdom, &.healthy-future, &.avenir-en-sante {
             #factPanelBtn-1 {
                 top: 40%;
                 left: 24%;
@@ -1132,6 +1132,7 @@
                     .recipeContentLeft {
                         margin-top: 0;
                     }
+
                     .recipeImage {
                         margin-top: 58px;
                     }

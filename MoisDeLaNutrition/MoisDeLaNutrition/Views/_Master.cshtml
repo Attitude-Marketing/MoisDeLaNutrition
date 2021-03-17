@@ -7,6 +7,7 @@
     var brandNode = Umbraco.TypedContent(siteid);
     var currentLang = Umbraco.Field("#CurrentLanguage").ToString();
     var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+    var lang = Umbraco.Field("#CurrentLanguage").ToString().ToLower();
     var pageNode = Model.Content;
 
     @*metas*@
@@ -46,6 +47,7 @@
 
     @*tracking*@
     var googleId = brandNode.GetPropertyValue<string>("gtagId");
+    var ddbTrackingId = lang == "fr" ? "v2p4vgrbw" : "v2p4uhrnz";
 
     @*custom script*@
     var customScript = brandNode.GetPropertyValue<string>("customScript");
@@ -144,6 +146,19 @@
             })(window, document, 'script', 'dataLayer', '@(googleId)');</script>
         <!-- End Google Tag Manager -->
     }
+
+    <!-- DDB Script -->
+    <!-- BEGIN ControlTag for "What you eat - @(lang.ToUpper())" -->
+    <script class="kxct" data-id="@ddbTrackingId" data-timing="async" data-version="3.0" type="text/javascript">
+        window.Krux || ((Krux = function () { Krux.q.push(arguments) }).q = []);
+        (function () {
+            var k = document.createElement('script'); k.type = 'text/javascript'; k.async = true;
+            k.src = (location.protocol === 'https:' ? 'https:' : 'http:') + '//cdn.krxd.net/controltag/@(ddbTrackingId).js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(k, s);
+        }());
+    </script>
+    <!-- END ControlTag -->
+    <!-- END DDB Script -->
 
     @*=================================================================
         --custom script
